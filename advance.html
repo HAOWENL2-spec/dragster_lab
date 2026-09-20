@@ -34,7 +34,7 @@
 <section class="design-grid" id="designSection"><div class="card"><div class="card-head"><h2>My design</h2></div>
 <div class="drawing-tools"><label class="name">Name<input id="studentName" placeholder="My name" maxlength="35" autocomplete="off"></label><label>Body length (mm)<input id="bodyLength" readonly type="number" value="305" min="180" max="305" step="1"></label></div>
 <div class="sketch-tools"><button id="selectPointBtn" class="small active">Select points</button><button id="curvePointBtn" class="small" disabled>Curve</button><button id="cornerPointBtn" class="small" disabled>Straight</button><button id="finishEditBtn" class="small primary">Finish</button><button id="resetTimberBtn" class="small">Reset timber</button><button id="trimLengthBtn" class="small">Trim length</button><button id="axleModeBtn" class="small">Axles</button><button id="cutRegionBtn" class="small">Select area</button><button id="applyCutBtn" class="small" disabled>Remove</button><label class="symmetry-label">Edit<select id="symmetryMode"><option value="symmetric">Symmetric</option><option value="asymmetric">Asymmetric</option></select></label><div class="spacer"></div><button id="undoBtn" class="small" disabled>↶ Undo</button><button id="redoBtn" class="small" disabled>↷ Redo</button></div><div id="trimActions" class="edit-panel hidden"><div class="row wrap"><label>Cut direction<select id="trimDirection"><option value="front">From front</option><option value="bottom">From bottom · Side view</option></select></label><label id="trimLengthLabel">Keep timber length (mm)<input id="trimLength" type="number" min="180" max="305" value="305" step="1"></label><label id="trimBottomLabel" class="hidden">Cut height from base (mm)<input id="trimBottom" type="number" min="0" max="4" value="0" step="0.5"></label><button id="applyTrimBtn" class="small primary">Cut front section</button><span id="trimSummary" class="tiny"></span></div><p id="trimHint">Drag the orange cut line. The shaded wood will be removed. The rear hole and axle supports are protected.</p></div>
-<div id="axleActions" class="edit-panel hidden"><div class="row wrap"><button id="removeAxlesBtn" class="small hidden">Remove axles</button><label>Front axle from nose (mm)<input id="frontAxleInput" type="number" min="5" max="300" step="1"></label><label>Rear axle from nose (mm)<input id="rearAxleInput" type="number" min="5" max="300" step="1"></label><span id="wheelbaseText" class="pill"></span></div><p>Click Axles above to add both axles. Drag the markers or enter positions here. Both axle checks must pass before saving.</p><p id="balanceText" role="status"></p></div><div id="pointActions" class="edit-panel hidden"><div class="row wrap"><label>Selected point<select id="pointChoice" aria-label="Point to inspect"></select></label><label>X: from timber front (mm)<input id="pointX" type="number" step="1" aria-label="Point X coordinate from the front in millimetres"></label><label><span id="pointYLabel">Y: from lower edge (mm)</span><input id="pointY" type="number" step="1" aria-label="Point width or height coordinate in millimetres"></label><span id="pointSelectionCount" class="pill"></span></div><p id="pointCoordinateHint"></p></div><div class="sketch-hint" id="sketchHint">Click to select or drag a dot. Select 2+ neighbouring dots for Curve.</div><div id="cutActions" class="cut-actions hidden"><label class="depth-label">Cut shape <select id="cutShape"><option value="rectangle">Rectangle</option><option value="smooth">Smooth nose</option><option value="pointed">Pointed nose</option></select></label><span id="cutSelectionText">Select an area, then click Remove.</span><label class="depth-label">Depth <input id="cutDepth" type="number" min="0.5" max="100" step="0.5" value="5" aria-label="Removal depth in millimetres"> mm</label><label class="through-label"><input id="cutThrough" type="checkbox"> Through</label><label class="depth-label">Start <input id="cutStartInput" type="number" min="0" max="304" step="1"> mm</label><label class="depth-label">End <input id="cutEndInput" type="number" min="1" max="305" step="1"> mm</label><label id="cutEndDepthLabel" class="depth-label">Rear depth <input id="cutEndDepth" type="number" min="0.5" max="100" step="0.5" value="5"> mm</label><span id="cutEditHint" class="cut-edit-hint">Side view: drag either wall or the floor. Round handles adjust front/rear depths.</span><div class="spacer"></div><button id="cancelCutBtn" class="small">Cancel</button></div><div class="view-block"><div class="view-title"><h3>TOP VIEW</h3><span>Drag the dots</span></div><canvas class="drawing-canvas" id="topCanvas" tabindex="0" aria-label="Top view. Select a dot, curve it or drag it."></canvas></div>
+<div id="axleActions" class="edit-panel hidden"><div class="row wrap"><button id="removeAxlesBtn" class="small hidden">Remove axles</button><label>Front axle from nose (mm)<input id="frontAxleInput" type="number" min="5" max="300" step="1"></label><label>Rear axle from nose (mm)<input id="rearAxleInput" type="number" min="5" max="300" step="1"></label><span id="wheelbaseText" class="pill"></span></div><p>Click Axles above to add both axles. Drag the markers or enter positions here. Both axle checks must pass before saving.</p><p id="balanceText" role="status"></p></div><div id="pointActions" class="edit-panel hidden"><div class="row wrap"><label>Selected point<select id="pointChoice" aria-label="Point to inspect"></select></label><label>X: from timber front (mm)<input id="pointX" type="number" step="1" aria-label="Point X coordinate from the front in millimetres"></label><label><span id="pointYLabel">Y: from lower edge (mm)</span><input id="pointY" type="number" step="1" aria-label="Point width or height coordinate in millimetres"></label><span id="pointSelectionCount" class="pill"></span></div><p id="pointCoordinateHint"></p></div><div class="sketch-hint" id="sketchHint">Click to select or drag a dot. Select 2+ neighbouring dots for Curve.</div><div id="cutActions" class="cut-actions hidden"><label class="depth-label">Cut shape <select id="cutShape"><option value="rectangle">Rectangle</option><option value="smooth">Rounded nose</option><option value="pointed">Pointed nose</option></select></label><span id="cutSelectionText">Select an area, then click Remove.</span><label class="depth-label">Depth <input id="cutDepth" type="number" min="0.5" max="100" step="0.5" value="5" aria-label="Removal depth in millimetres"> mm</label><label class="through-label"><input id="cutThrough" type="checkbox"> Through</label><label class="depth-label">Start <input id="cutStartInput" type="number" min="0" max="304" step="1"> mm</label><label class="depth-label">End <input id="cutEndInput" type="number" min="1" max="305" step="1"> mm</label><label id="cutEndDepthLabel" class="depth-label">Rear depth <input id="cutEndDepth" type="number" min="0.5" max="100" step="0.5" value="5"> mm</label><span id="cutEditHint" class="cut-edit-hint">Side view: drag either wall or the floor. Round handles adjust front/rear depths.</span><div class="spacer"></div><button id="cancelCutBtn" class="small">Cancel</button></div><div class="view-block"><div class="view-title"><h3>TOP VIEW</h3><span>Drag the dots</span></div><canvas class="drawing-canvas" id="topCanvas" tabindex="0" aria-label="Top view. Select a dot, curve it or drag it."></canvas></div>
 <div class="view-block"><div class="view-title"><h3>SIDE VIEW</h3><span>Front ← → Rear</span></div><canvas class="drawing-canvas" id="sideCanvas" tabindex="0" aria-label="Side view. Select a dot, curve it or drag it."></canvas></div>
 <div class="hintbar"><span class="mini-swatch"></span><span>Red = hole. Keep wood around it.</span></div>
 <div class="draw-bottom"><button id="saveCarBtn" class="primary">Save car</button><span id="saveCarLabel" class="tiny muted">Car 1</span><div class="spacer"></div><button id="exportPdfBtn">Export PDF</button></div></div>
@@ -85,7 +85,7 @@ const freshState=()=>({format:'dragster-design-lab',version:6,name:'',timber:clo
 let state=freshState(), current, currentStats, cutaway=false, redrawPending=false, toastTimer=0;
 let preview, raceView, raceData=null, raceMeshes=null, raceRAF=0, racing=false, raceFinished=false;
 let drawTool='select', undoStack=[], redoStack=[], selectedPoints=[], pendingCut=null, activePointKey='';
-let editingCutIds=[], cutSequence=0, trimKeep=305, trimBottom=0;
+let editingCutIds=[], cutSequence=0, trimKeep=305, trimBottom=0, editingNose=null;
 let activeDrawingCanvas=null, pendingDrawingMove=null, lastPreviewKey='', lastPreviewCut=null, previewMesh=null, raceMeshSources=null, raceReadyDrawn=false;
 let lastStatsKey='', lastStats=null, pendingCar=null, recordView=null, openedRecordId=null, clearedRecordsBackup=null;
 const COLORS=[ORANGE,BLUE,[.38,.72,.53],[.69,.49,.78]];
@@ -114,9 +114,9 @@ function bezierValue(p0,p1,p2,p3,t){const q=1-t;return q*q*q*p0+3*q*q*t*p1+3*q*t
 
 function curvePoint(d,f,i,t){const c=d.curves[f][i],x0=nodeU(d,f,i),x1=nodeU(d,f,i+1),dx=x1-x0;return {u:bezierValue(x0,x0+c.a*dx,x0+c.b*dx,x1,t),z:bezierValue(d[f][i],c.ya,c.yb,d[f][i+1],t)};}
 
-function fieldBounds(d,f,u){const x=u*d.L,R=d.hole.d/2+d.hole.wall,rear=x>=d.L-d.hole.depth-d.hole.wall-1e-7;if(f==='w'||f==='w2')return [rear?R:2.5,d.stockW/2];if(f==='t')return [Math.max(interpolate(d.b,d,u)+MIN_THICK,rear?d.hole.z+R:0),stockHeight(d,u)];return [0,Math.min(interpolate(d.t,d,u)-MIN_THICK,rear?d.hole.z-R:Infinity,stockHeight(d,u)-MIN_THICK)];}
+function fieldBounds(d,f,u){const x=u*d.L,R=d.hole.d/2+d.hole.wall,rear=x>=d.L-d.hole.depth-d.hole.wall-1e-7;if(f==='w'||f==='w2')return [rear?R:(d.noseShaped?1.5:2.5),d.stockW/2];if(f==='t')return [Math.max(interpolate(d.b,d,u)+MIN_THICK,rear?d.hole.z+R:0),stockHeight(d,u)];return [0,Math.min(interpolate(d.t,d,u)-MIN_THICK,rear?d.hole.z-R:Infinity,stockHeight(d,u)-MIN_THICK)];}
 
-function rawCurveProblem(d){if(d.L*(1-Math.min(nodeU(d,'w',0),nodeU(d,'w2',0)))<MIN_LENGTH-1e-7)return true;if(['w','w2'].some(f=>nodeU(d,f,0)>noseLimit(d,f)+1e-8))return true;for(const f of ['w','w2','t','b'])if(d.xs[f].some((x,i)=>!finite(x)||x<0||x>1||(i&&x-d.xs[f][i-1]<.003-1e-9)))return true;for(const f of ['w','w2','t','b'])for(let i=0;i<d.u.length-1;i++)if(d.curves[f][i]){const c=d.curves[f][i];if(![c.a,c.b,c.ya,c.yb].every(finite)||c.a<.02||c.a>.48||c.b<.52||c.b>.98)return true;for(let j=0;j<=40;j++){const p=curvePoint(d,f,i,j/40),[lo,hi]=fieldBounds(d,f,p.u);if(p.z<lo-.002||p.z>hi+.002)return true;}}return false;}
+function rawCurveProblem(d){if(d.L*(1-Math.min(nodeU(d,'w',0),nodeU(d,'w2',0)))<MIN_LENGTH-1e-7)return true;if(['w','w2'].some(f=>nodeU(d,f,0)>noseLimit(d,f)+1e-8))return true;for(const f of ['w','w2','t','b'])if(d.xs[f].some((x,i)=>!finite(x)||x<0||x>1||(i&&x-d.xs[f][i-1]<.003-1e-9)))return true;for(const f of ['w','w2','t','b'])for(let i=0;i<d.u.length-1;i++)if(d.curves[f][i]){const c=d.curves[f][i];if(![c.a,c.b,c.ya,c.yb].every(finite)||c.a<0||c.b>1||c.a>c.b)return true;for(let j=0;j<=40;j++){const p=curvePoint(d,f,i,j/40),[lo,hi]=fieldBounds(d,f,p.u);if(p.z<lo-.002||p.z>hi+.002)return true;}}return false;}
 
 function safeCurveProposal(before,after){if(!rawCurveProblem(after))return after;let lo=0,hi=1,best=before;for(let n=0;n<10;n++){const t=(lo+hi)/2,d=clone(before);for(const f of ['w','w2','t','b']){d[f]=d[f].map((v,i)=>mix(v,after[f][i],t));d.xs[f]=d.xs[f].map((v,i)=>mix(v,after.xs[f][i],t));for(let i=0;i<d.curves[f].length;i++)if(d.curves[f][i]&&after.curves[f][i])for(const k of ['a','b','ya','yb'])d.curves[f][i][k]=mix(before.curves[f][i][k],after.curves[f][i][k],t);}if(rawCurveProblem(d))hi=t;else{lo=t;best=d;}}return best;}
 
@@ -202,7 +202,7 @@ function trimDesign(before,length){
  for(const f of ['w','w2','t','b']){
   const segments=fields[f];while(segments.length<count){let k=0;for(let i=1;i<segments.length;i++)if(segments[i][3][0]-segments[i][0][0]>segments[k][3][0]-segments[k][0][0])k=i;segments.splice(k,1,...splitCubic(segments[k],.5));}
   const points=[segments[0][0],...segments.map(p=>p[3])];d.xs[f]=points.map(p=>clamp(p[0]/length,0,1));d.xs[f][count]=1;d[f]=points.map(p=>p[1]);d.curved[f]=points.map(()=>false);
-  d.curves[f]=segments.map(p=>{const span=p[3][0]-p[0][0],a=(p[1][0]-p[0][0])/span,b=(p[2][0]-p[0][0])/span;const straight=Math.abs(p[1][1]-mix(p[0][1],p[3][1],a))<.001&&Math.abs(p[2][1]-mix(p[0][1],p[3][1],b))<.001;return straight?null:{a:clamp(a,.02,.48),b:clamp(b,.52,.98),ya:p[1][1],yb:p[2][1]};});
+  d.curves[f]=segments.map(p=>{const span=p[3][0]-p[0][0],a=(p[1][0]-p[0][0])/span,b=(p[2][0]-p[0][0])/span;const straight=Math.abs(p[1][1]-mix(p[0][1],p[3][1],a))<.001&&Math.abs(p[2][1]-mix(p[0][1],p[3][1],b))<.001;return straight?null:{a:clamp(a,0,1),b:clamp(b,0,1),ya:p[1][1],yb:p[2][1]};});
  }
  d.cuts=before.cuts.filter(c=>c.u1*before.L>removed+1e-7).map(c=>{const start=Math.max(removed,c.u0*before.L);return {...c,u0:(start-removed)/length,u1:(c.u1*before.L-removed)/length,depth:cutDepthAt(c,start/before.L),depthEnd:cutDepthAt(c,c.u1),...(c.profile?{profileStart:((c.profileStart??c.u0)*before.L-removed)/length,profileEnd:((c.profileEnd??c.u1)*before.L-removed)/length}:{})};});
  const targetFront=before.frontAxle-removed,targetRear=length-before.rearInset;
@@ -266,9 +266,9 @@ function syncEditUI(){
  $('cutEditHint').textContent=pendingCut?.profile?'Top view: shape the nose with a selection extending beyond the timber. End sets nose length. Add or move the axles after shaping.':pendingCut?.view==='side'?'Side cut: drag the left/right walls or the lower line. Depth goes into the body; type Depth or use the orange line in Top view.':'Side view: drag either wall or the floor. Round handles adjust front/rear depths.';
 }
 function refreshCutPreview(){scheduleUpdate();}
-function cutHasChanges(){if(!pendingCut)return false;if(!editingCutIds.length)return true;const cut=state.design.cuts.find(c=>c.id===editingCutIds[0]),proposal=selectionCuts()[0];return !cut||['u0','u1','lo','hi','depth','depthEnd','profile','profileStart','profileEnd','noseSide'].some(k=>(cut[k]??null)!==(proposal[k]??null));}
+function cutHasChanges(){if(!pendingCut)return false;if(!editingCutIds.length)return true;const cut=editingNose?.cuts[0]||state.design.cuts.find(c=>c.id===editingCutIds[0]),proposal=selectionCuts()[0];return !cut||['u0','u1','lo','hi','depth','depthEnd','profile','profileStart','profileEnd','noseSide'].some(k=>(cut[k]??null)!==(proposal[k]??null));}
 function loadCutForEditing(c){
- drawTool='area';selectedPoints=[];const list=state.design.cuts;editingCutIds=c.group?list.filter(q=>q.group===c.group).map(q=>q.id):[c.id];
+ editingNose=null;drawTool='area';selectedPoints=[];const list=state.design.cuts;editingCutIds=c.group?list.filter(q=>q.group===c.group).map(q=>q.id):[c.id];
  pendingCut={...clone(c),mirror:editingCutIds.length>1};$('cutThrough').checked=!finite(c.depth);$('cutDepth').value=finite(c.depth)?c.depth:5;$('cutEndDepth').value=finite(c.depthEnd)?c.depthEnd:$('cutDepth').value;
  $('cutShape').value=c.profile||'rectangle';$('cutActions').classList.remove('hidden');$('cutRegionBtn').classList.add('active');$('selectPointBtn').classList.remove('active');$('sketchHint').textContent='Adjust the orange lines or values, then Update cut or Finish.';refreshCutPreview();
 }
@@ -288,8 +288,8 @@ function drawEditOverlays(canvas,ctx,px,py,which){
   const cg=balanceEstimate(d);ctx.fillStyle='#527a64';ctx.font='10px Segoe UI,Arial';ctx.textAlign='center';ctx.fillText('Balance',px(cg.x),py(which==='top'?0:AXLE_Z)-7);return;
  }
  if(drawTool!=='area')return;
- for(const c of d.cuts){const x=(c.u0+c.u1)/2*d.L,r=cutRect(v,x,c),axis=which==='top'?0:1,sec=v.section(x),lo=Math.max(r.lo[axis],axis===0?-sec.w2:sec.b),hi=Math.min(r.hi[axis],axis===0?sec.w:sec.t);canvas._cutHits.push({cut:c,x0:px(c.u0*d.L),x1:px(c.u1*d.L),y0:py(hi),y1:py(lo)});}
- if(!pendingCut||(pendingCut.u1-pendingCut.u0)*d.L<1)return;
+ for(const c of d.cuts){if(c.profile&&which==='side')continue;const x=(c.u0+c.u1)/2*d.L,r=cutRect(v,x,c),axis=which==='top'?0:1,sec=v.section(x),lo=Math.max(r.lo[axis],axis===0?-sec.w2:sec.b),hi=Math.min(r.hi[axis],axis===0?sec.w:sec.t);canvas._cutHits.push({cut:c,x0:px(c.u0*d.L),x1:px(c.u1*d.L),y0:py(hi),y1:py(lo)});}
+ if(!pendingCut||(pendingCut.profile&&which==='side')||(pendingCut.u1-pendingCut.u0)*d.L<1)return;
  const c=selectionCuts()[0],axis=which==='top'?0:1,x0=c.u0*d.L,x1=c.u1*d.L,sample=x=>{const r=cutRect(v,x,c),s=v.section(x);return {lo:Math.max(r.lo[axis],axis===0?-s.w2:s.b),hi:Math.min(r.hi[axis],axis===0?s.w:s.t)};},a=sample(x0),b=sample(x1);
  line('start',[[px(x0),py(a.lo)],[px(x0),py(a.hi)]]);line('end',[[px(x1),py(b.lo)],[px(x1),py(b.hi)]]);
  dot('start',px(x0),py((a.lo+a.hi)/2),'');dot('end',px(x1),py((b.lo+b.hi)/2),'');
@@ -305,6 +305,7 @@ function beginExtendedDrag(canvas,e,p,which){
  const lines=(canvas._editLines||[]).map(h=>({...h,distance:Math.min(...h.points.slice(1).map((q,i)=>segmentDistance(p,h.points[i],q)))})).filter(h=>h.distance<=7).sort((a,b)=>a.distance-b.distance);
  const hit=dots[0]||lines[0];if(hit){canvas._extendedDrag={kind:hit.kind,start:p,before:clone(state.design),pending:clone(pendingCut),depth:Number($('cutDepth').value),depthEnd:Number($('cutEndDepth').value),moved:false,undoLength:undoStack.length,redo:clone(redoStack)};canvas.setPointerCapture(e.pointerId);e.preventDefault();return true;}
  if(drawTool==='area'){
+  if(which==='side'&&pendingCut?.profile)return false;
   const cut=[...(canvas._cutHits||[])].reverse().find(h=>p.x>=h.x0&&p.x<=h.x1&&p.y>=h.y0-4&&p.y<=h.y1+4);if(cut&&!e.shiftKey){loadCutForEditing(cut.cut);e.preventDefault();return true;}
   return false;
  }
@@ -335,17 +336,95 @@ function attachExtendedUI(){
  $('trimDirection').onchange=()=>{trimKeep=state.design.L;trimBottom=0;refreshCutPreview();};$('trimBottom').oninput=()=>{const n=Number($('trimBottom').value);if(finite(n)&&n>=0&&n<=bottomTrimLimit(state.design)){trimBottom=n;refreshCutPreview();}else $('applyTrimBtn').disabled=true;};
  $('trimLength').oninput=()=>{const n=Number($('trimLength').value);if(finite(n)&&n>=minimumTrimKeep(state.design)&&n<=state.design.L){trimKeep=Math.round(n);refreshCutPreview();}else $('applyTrimBtn').disabled=true;};
  for(const [id,which]of [['frontAxleInput','front'],['rearAxleInput','rear']])$(id).onchange=()=>{setAxlePosition(which,Number($(id).value)+noseOffset(state.design));$(id).value=noseDistance(state.design,which==='front'?state.design.frontAxle:state.design.L-state.design.rearInset);};
- $('cutShape').onchange=()=>{if($('cutShape').value==='rectangle'){pendingCut=null;editingCutIds=[];}else{const previous=pendingCut,wasNose=!!previous?.profile;pendingCut=makeNoseSelection($('cutShape').value,wasNose?previous.u1:undefined);if(wasNose){pendingCut.mirror=previous.mirror;pendingCut.noseSide=previous.noseSide;}else editingCutIds=[];$('cutThrough').checked=true;}refreshCutPreview();};$('cutEndDepth').oninput=refreshCutPreview;
+ $('cutShape').onchange=()=>{if($('cutShape').value==='rectangle'){pendingCut=null;editingCutIds=[];editingNose=null;}else{const previous=pendingCut,wasNose=!!previous?.profile;pendingCut=makeNoseSelection($('cutShape').value,wasNose?previous.u1:undefined);if(wasNose){pendingCut.mirror=previous.mirror;pendingCut.noseSide=previous.noseSide;}else editingCutIds=[];$('cutThrough').checked=true;}refreshCutPreview();};$('cutEndDepth').oninput=refreshCutPreview;
  for(const [id,key]of [['cutStartInput','u0'],['cutEndInput','u1']])$(id).onchange=()=>{if(!pendingCut)return;const x=Number($(id).value),min=key==='u0'?-state.design.L*.25:pendingCut.u0*state.design.L+1,max=key==='u0'?pendingCut.u1*state.design.L-1:state.design.L*1.25;if(!finite(x)||x<min||x>max){toast(`Choose ${min.toFixed(1)}–${max.toFixed(1)} mm.`);}else {pendingCut[key]=x/state.design.L;if(pendingCut.profile){pendingCut.profileStart=0;pendingCut.profileEnd=pendingCut.u1;}}$(id).value=+(pendingCut[key]*state.design.L).toFixed(1);refreshCutPreview();};
 }
 function makeNoseSelection(profile,end){const d=state.design,u1=clamp(end??Math.min(60,d.L-d.hole.depth-d.hole.wall)/d.L,1/d.L,1);return {view:'top',u0:0,u1,lo:1.5,hi:d.stockW/2+15,profile,noseWidth:d.stockW/2,noseSide:1,profileStart:0,profileEnd:u1,mirror:state.symmetry==='symmetric'};}
 function noseCuts(c){const cut={...c,depth:$('cutThrough').checked?null:Number($('cutDepth').value),depthEnd:$('cutThrough').checked?null:Number($('cutEndDepth').value)},cuts=[cut];if(c.mirror)cuts.push({...cut,noseSide:-cut.noseSide,lo:-cut.hi,hi:-cut.lo});return cuts;}
+
+// Commit a through nose cut to the editable outline. This keeps its dots,
+// coordinates, curves, preview and exported drawing on the same geometry.
+function cubicAtX(p,x){
+ let lo=0,hi=1;for(let i=0;i<36;i++){const t=(lo+hi)/2;if(bezierValue(...p.map(q=>q[0]),t)<x)lo=t;else hi=t;}
+ const t=(lo+hi)/2;return {t,y:bezierValue(...p.map(q=>q[1]),t)};
+}
+function sliceCubic(p,a,b){
+ const ta=cubicAtX(p,a).t,tb=cubicAtX(p,b).t;
+ let q=splitCubic(p,tb)[0];if(ta>1e-9)q=splitCubic(q,ta/tb)[1];
+ q[0][0]=a;q[3][0]=b;return q;
+}
+function noseCubics(c,L){
+ const x0=c.profileStart*L,span=(c.profileEnd-c.profileStart)*L,w=c.noseWidth-1.5;
+ if(c.profile==='pointed')return [[[x0,1.5],[x0+span/3,1.5+w/3],[x0+span*2/3,1.5+w*2/3],[x0+span,c.noseWidth]]];
+ const parts=[];
+ for(let i=0;i<4;i++){
+  const a=i*Math.PI/8,b=(i+1)*Math.PI/8,k=4/3*Math.tan((b-a)/4);
+  const p=t=>[x0+span*(1-Math.cos(t)),1.5+w*Math.sin(t)],p0=p(a),p3=p(b);
+  parts.push([p0,[p0[0]+k*span*Math.sin(a),p0[1]+k*w*Math.cos(a)],[p3[0]-k*span*Math.sin(b),p3[1]-k*w*Math.cos(b)],p3]);
+ }
+ return parts;
+}
+function lowerOutline(base,clip,start,end){
+ const out=[];
+ for(const p of base){
+  const a=p[0][0],b=p[3][0],knots=[a,b];
+  const candidates=clip.filter(q=>Math.min(b,end,q[3][0])-Math.max(a,start,q[0][0])>1e-7);
+  for(const q of candidates){
+   const lo=Math.max(a,start,q[0][0]),hi=Math.min(b,end,q[3][0]);knots.push(lo,hi);
+   const diff=x=>cubicAtX(p,x).y-cubicAtX(q,x).y;
+   let x=lo,y=diff(x);
+   for(let j=1;j<=32;j++){
+    const nx=mix(lo,hi,j/32),ny=diff(nx);
+    if(y*ny<0&&Math.max(Math.abs(y),Math.abs(ny))>1e-7){let l=x,r=nx;for(let k=0;k<32;k++){const m=(l+r)/2;if(diff(l)*diff(m)<=0)r=m;else l=m;}knots.push((l+r)/2);}
+    x=nx;y=ny;
+   }
+  }
+  const xs=knots.sort((a,b)=>a-b).filter((x,i,list)=>!i||x-list[i-1]>1e-6);
+  for(let j=1;j<xs.length;j++){
+   const lo=xs[j-1],hi=xs[j],mid=(lo+hi)/2;
+   let source=p;
+   if(mid>=start&&mid<=end)for(const q of candidates)if(mid>=q[0][0]&&mid<=q[3][0]&&cubicAtX(q,mid).y<cubicAtX(source,mid).y)source=q;
+   out.push(sliceCubic(source,lo,hi));
+  }
+ }
+ return out;
+}
+function editableNoseDesign(input){
+ const d=clone(input),cuts=d.cuts.filter(c=>c.profile&&!finite(c.depth));if(!cuts.length)return d;
+ const fields={};
+ for(const f of ['w','w2','t','b']){
+  let segments=fieldCubics(d,f);
+  for(const c of cuts)if((f==='w'&&c.noseSide===1)||(f==='w2'&&c.noseSide===-1))segments=lowerOutline(segments,noseCubics(c,d.L),c.u0*d.L,c.u1*d.L);
+  // Avoid almost coincident handles at a cut/point intersection.
+  for(let i=0;i<segments.length&&segments.length>1;i++)if(segments[i][3][0]-segments[i][0][0]<d.L*.0031){
+   const j=i===0?0:i-1,a=segments[j],b=segments[j+1],span=b[3][0]-a[0][0];
+   const left=a[1].map((v,k)=>v-a[0][k]),right=b[3].map((v,k)=>v-b[2][k]);
+   const l=Math.min(span/3/Math.max(left[0],.001),1),r=Math.min(span/3/Math.max(right[0],.001),1);
+   segments.splice(j,2,[a[0],[a[0][0]+left[0]*l,a[0][1]+left[1]*l],[b[3][0]-right[0]*r,b[3][1]-right[1]*r],b[3]]);i=Math.max(-1,j-1);
+  }
+  fields[f]=segments;
+ }
+ const count=Math.max(...Object.values(fields).map(s=>s.length));
+ if(count>=80)throw Error('This nose has too many outline points. Undo a cut before trying again.');
+ d.u=Array.from({length:count+1},(_,i)=>i/count);
+ for(const f of ['w','w2','t','b']){
+  const segments=fields[f];
+  while(segments.length<count){let j=0;for(let i=1;i<segments.length;i++)if(segments[i][3][0]-segments[i][0][0]>segments[j][3][0]-segments[j][0][0])j=i;segments.splice(j,1,...splitCubic(segments[j],.5));}
+  const points=[segments[0][0],...segments.map(p=>p[3])];d.xs[f]=points.map(p=>p[0]/d.L);d.xs[f][count]=1;d[f]=points.map(p=>p[1]);d.curved[f]=points.map(()=>false);
+  d.curves[f]=segments.map(p=>{const span=p[3][0]-p[0][0],a=clamp((p[1][0]-p[0][0])/span,0,1),b=clamp((p[2][0]-p[0][0])/span,0,1);return Math.abs(p[1][1]-mix(p[0][1],p[3][1],a))<1e-7&&Math.abs(p[2][1]-mix(p[0][1],p[3][1],b))<1e-7?null:{a,b,ya:p[1][1],yb:p[2][1]};});
+ }
+ d.cuts=d.cuts.filter(c=>!cuts.includes(c));d.noseShaped=true;
+ if(rawCurveProblem(d))throw Error('This nose reaches a protected area. Try a shorter nose cut.');
+ const problem=cutShapeProblem(evaluateShape({design:d,L:d.L,k:1}));if(problem)throw Error(problem);
+ return d;
+}
+
 function normalizeCutIds(d){for(const c of d.cuts||[])c.id??=`restored-${Date.now()}-${++cutSequence}`;}
 
 function stockHeight(d,u){return mix(d.stockFrontH,d.stockRearH,u);}
 function protectedNode(d,i,f='t'){const xs=d.xs?.[f]||d.u;return xs[Math.min(xs.length-1,i+1)]*d.L>=d.L-d.hole.depth-d.hole.wall-1e-7;}
 function constrainDesign(d){normalizeDesign(d);const R=d.hole.d/2+d.hole.wall;for(const f of ['w','w2','b','t'])for(let i=0;i<d.u.length;i++){const u=nodeU(d,f,i),rear=protectedNode(d,i,f);let [lo,hi]=fieldBounds(d,f,u);if(f==='w'||f==='w2'){if(rear)lo=Math.max(lo,R);}else if(f==='t'){if(rear)lo=Math.max(lo,d.hole.z+R);}else{if(rear)hi=Math.min(hi,d.hole.z-R);}d[f][i]=clamp(d[f][i],lo,Math.max(lo,hi));}}
-function evaluateShape(desc){const d=desc.design,h=d.hole,L=d.L,fix=h.depth+h.wall;return {desc,d,h,L,k:1,fix,oldFront:L-fix,newFront:L-fix,frontAxle:d.frontAxle,rearAxle:L-d.rearInset,section:x=>{x=clamp(x,0,L);const u=x/L,R=h.d/2+h.wall,rear=x>=L-fix-1e-7;let w=interpolate(d.w,d,u),w2=interpolate(d.w2||d.w,d,u),t=interpolate(d.t,d,u),b=interpolate(d.b,d,u);w=clamp(w,rear?R:2.5,d.stockW/2);w2=clamp(w2,rear?R:2.5,d.stockW/2);b=clamp(b,0,Math.min(stockHeight(d,u)-MIN_THICK,rear?h.z-R:Infinity));t=clamp(t,Math.max(b+MIN_THICK,rear?h.z+R:0),stockHeight(d,u));return {x,oldX:x,w,w2,t,b};}};}
+function evaluateShape(desc){const d=desc.design,h=d.hole,L=d.L,fix=h.depth+h.wall;return {desc,d,h,L,k:1,fix,oldFront:L-fix,newFront:L-fix,frontAxle:d.frontAxle,rearAxle:L-d.rearInset,section:x=>{x=clamp(x,0,L);const u=x/L,R=h.d/2+h.wall,rear=x>=L-fix-1e-7;let w=interpolate(d.w,d,u),w2=interpolate(d.w2||d.w,d,u),t=interpolate(d.t,d,u),b=interpolate(d.b,d,u);w=clamp(w,rear?R:(d.noseShaped?1.5:2.5),d.stockW/2);w2=clamp(w2,rear?R:(d.noseShaped?1.5:2.5),d.stockW/2);b=clamp(b,0,Math.min(stockHeight(d,u)-MIN_THICK,rear?h.z-R:Infinity));t=clamp(t,Math.max(b+MIN_THICK,rear?h.z+R:0),stockHeight(d,u));return {x,oldX:x,w,w2,t,b};}};}
 function clipPlane(poly,axis,value,keepAbove){if(poly.length<3)return [];const out=[];let a=poly.at(-1),da=(a[axis]-value)*(keepAbove?1:-1);for(const b of poly){const db=(b[axis]-value)*(keepAbove?1:-1);if((da>=-1e-9)!==(db>=-1e-9)){const t=da/(da-db);out.push(a.map((v,j)=>v+(b[j]-v)*t));}if(db>=-1e-9)out.push(b);a=b;da=db;}return out.length>=3?out:[];}
 function polygonArea(poly){let a=0;for(let i=0;i<poly.length;i++){const p=poly[i],q=poly[(i+1)%poly.length];a+=p[0]*q[1]-q[0]*p[1];}return Math.abs(a)/2;}
 function cutsAt(v,x){return (v.d.cuts||[]).filter(c=>
@@ -638,7 +717,7 @@ function drawView(which){
   const samples=samplePositions(v,100).map(x=>{const s=v.section(x),ring=noseSection(v,x);return ring.length?{...s,w:Math.max(...ring.map(p=>p[0])),w2:-Math.min(...ring.map(p=>p[0])),t:Math.max(...ring.map(p=>p[1])),b:Math.min(...ring.map(p=>p[1]))}:null;}).filter(Boolean);
   function bodyPath(secs,fill=true,line='#087f80',dash=[]){ctx.beginPath();secs.forEach((s,i)=>{const y=which==='top'?s.w:s.t;i?ctx.lineTo(px(s.x),py(y)):ctx.moveTo(px(s.x),py(y));});for(let i=secs.length-1;i>=0;i--){const s=secs[i];ctx.lineTo(px(s.x),py(which==='top'?-s.w2:s.b));}ctx.closePath();if(fill){ctx.fillStyle='#47b7a62b';ctx.fill();}ctx.strokeStyle=line;ctx.lineWidth=2;ctx.setLineDash(dash);ctx.stroke();ctx.setLineDash([]);}
   bodyPath(samples);
-  function cutProjection(c,pending=false){const axis=which==='top'?0:1,xs=[c.u0*v.L,...samplePositions(v,64).filter(x=>x>c.u0*v.L&&x<c.u1*v.L),c.u1*v.L],points=xs.map(x=>{const r=cutRect(v,x,c),section=v.section(x);return {x,lo:Math.max(r.lo[axis],axis===0?-section.w2:section.b),hi:Math.min(r.hi[axis],axis===0?section.w:section.t)};});if(points.every(p=>p.hi<=p.lo))return;ctx.beginPath();points.forEach((p,i)=>{i?ctx.lineTo(px(p.x),py(p.hi)):ctx.moveTo(px(p.x),py(p.hi));});for(let i=points.length-1;i>=0;i--)ctx.lineTo(px(points[i].x),py(points[i].lo));ctx.closePath();ctx.fillStyle=pending?'#ed9a4140':finite(c.depth)||c.view!==which?'#eaa05130':'#f5f9f7';ctx.fill();ctx.strokeStyle='#be6c24';ctx.lineWidth=pending?1.6:1.2;ctx.setLineDash(pending||c.view!==which?[5,3]:[]);ctx.stroke();ctx.setLineDash([]);if(finite(c.depth)&&((c.view==='top'&&which==='side')||c.view===which)){const q=points[Math.floor(points.length/2)];ctx.fillStyle='#99551f';ctx.font='bold 10px Segoe UI,Arial';ctx.textAlign='center';ctx.fillText(cutDepthLabel(c),px(q.x),py((q.hi+q.lo)/2)+3);}}
+  function cutProjection(c,pending=false){if(c.profile&&which==='side')return;const axis=which==='top'?0:1,xs=[c.u0*v.L,...samplePositions(v,64).filter(x=>x>c.u0*v.L&&x<c.u1*v.L),c.u1*v.L],points=xs.map(x=>{const r=cutRect(v,x,c),section=v.section(x);return {x,lo:Math.max(r.lo[axis],axis===0?-section.w2:section.b),hi:Math.min(r.hi[axis],axis===0?section.w:section.t)};});if(points.every(p=>p.hi<=p.lo))return;ctx.beginPath();points.forEach((p,i)=>{i?ctx.lineTo(px(p.x),py(p.hi)):ctx.moveTo(px(p.x),py(p.hi));});for(let i=points.length-1;i>=0;i--)ctx.lineTo(px(points[i].x),py(points[i].lo));ctx.closePath();ctx.fillStyle=pending?'#ed9a4140':finite(c.depth)||c.view!==which?'#eaa05130':'#f5f9f7';ctx.fill();ctx.strokeStyle='#be6c24';ctx.lineWidth=pending?1.6:1.2;ctx.setLineDash(pending||c.view!==which?[5,3]:[]);ctx.stroke();ctx.setLineDash([]);if(finite(c.depth)&&((c.view==='top'&&which==='side')||c.view===which)){const q=points[Math.floor(points.length/2)];ctx.fillStyle='#99551f';ctx.font='bold 10px Segoe UI,Arial';ctx.textAlign='center';ctx.fillText(cutDepthLabel(c),px(q.x),py((q.hi+q.lo)/2)+3);}}
   ctx.save();ctx.clip();for(const c of d.cuts||[])if(!editingCutIds.includes(c.id))cutProjection(c);ctx.restore();
   // Fixed blind bore is projected as a rectangle in both orthographic views.
   const h=v.h,R=h.d/2,hh=which==='top'?0:h.z,hx=v.L-h.depth;
@@ -660,17 +739,20 @@ function drawView(which){
 }
 function rememberDesign(){undoStack.push(captureEdit());if(undoStack.length>60)undoStack.shift();redoStack=[];updateUndo();}
 function updateUndo(){const chain=selectedChain();$('undoBtn').disabled=racing||!undoStack.length;$('redoBtn').disabled=racing||!redoStack.length;$('curvePointBtn').disabled=racing||!chain;$('cornerPointBtn').disabled=racing||!chain;$('curvePointBtn').classList.toggle('active',drawTool==='curve'&&!!chain&&Array.from({length:chain.last-chain.first},(_,i)=>state.design.curves[chain.field][chain.first+i]).every(Boolean));$('cornerPointBtn').classList.toggle('active',!!chain&&Array.from({length:chain.last-chain.first},(_,i)=>state.design.curves[chain.field][chain.first+i]).every(c=>!c));if(drawTool==='select')$('sketchHint').textContent='Click to select or drag a dot. Select 2+ neighbouring dots for Curve.';if(drawTool==='curve')$('sketchHint').textContent=activeCurveChain()?'Drag the middle dot in any direction.':'Select 2+ neighbouring dots, then Curve.';$('finishEditBtn').disabled=racing||drawTool==='done';$('cutDepth').disabled=racing||$('cutThrough').checked;$('cutEndDepth').disabled=racing||$('cutThrough').checked;syncEditUI();$('applyCutBtn').disabled=racing||(!$('cutThrough').checked&&(!finite(Number($('cutDepth').value))||Number($('cutDepth').value)<.5||Number($('cutDepth').value)>100||!finite(Number($('cutEndDepth').value))||Number($('cutEndDepth').value)<.5||Number($('cutEndDepth').value)>100))||!pendingCut||(pendingCut.u1-pendingCut.u0)*state.design.L<1||pendingCut.hi-pendingCut.lo<1;if(!pendingCut)$('cutSelectionText').textContent='Select an area, then click Remove.';}
-function setDrawTool(tool){drawTool=tool;pendingCut=null;editingCutIds=[];trimKeep=state.design.L;trimBottom=0;$('cutShape').value='rectangle';for(const [id,t]of [['selectPointBtn','select'],['cutRegionBtn','area'],['trimLengthBtn','trim'],['axleModeBtn','axle']])$(id).classList.toggle('active',tool===t);$('sketchHint').textContent=tool==='done'?'Choose a tool to edit.':tool==='area'?'Select an area, choose the depth, then Remove.':tool==='curve'?'Drag the middle dot in any direction.':'Click to select or drag a dot. Select 2+ neighbouring dots for Curve.';$('cutActions').classList.toggle('hidden',tool!=='area');$('trimActions').classList.toggle('hidden',tool!=='trim');$('axleActions').classList.toggle('hidden',tool!=='axle');if(tool==='trim')$('sketchHint').textContent='Choose the cut direction, then drag the orange line.';if(tool==='axle')$('sketchHint').textContent=state.design.axlesInstalled?'Move axles freely; support is checked before saving.':'Click Axles above to add both axles.';updateUndo();scheduleUpdate();}
+function setDrawTool(tool){editingNose=null;drawTool=tool;pendingCut=null;editingCutIds=[];trimKeep=state.design.L;trimBottom=0;$('cutShape').value='rectangle';for(const [id,t]of [['selectPointBtn','select'],['cutRegionBtn','area'],['trimLengthBtn','trim'],['axleModeBtn','axle']])$(id).classList.toggle('active',tool===t);$('sketchHint').textContent=tool==='done'?'Choose a tool to edit.':tool==='area'?'Select an area, choose the depth, then Remove.':tool==='curve'?'Drag the middle dot in any direction.':'Click to select or drag a dot. Select 2+ neighbouring dots for Curve.';$('cutActions').classList.toggle('hidden',tool!=='area');$('trimActions').classList.toggle('hidden',tool!=='trim');$('axleActions').classList.toggle('hidden',tool!=='axle');if(tool==='trim')$('sketchHint').textContent='Choose the cut direction, then drag the orange line.';if(tool==='axle')$('sketchHint').textContent=state.design.axlesInstalled?'Move axles freely; support is checked before saving.':'Click Axles above to add both axles.';updateUndo();scheduleUpdate();}
 function applyPointCurve(on){const chain=selectedChain();if(racing||!chain){toast('Select at least 2 neighbouring points on one outline.');return;}const d=clone(state.design),f=chain.field;for(let i=chain.first;i<chain.last;i++){d.curves[f][i]=on?(d.curves[f][i]||{a:1/3,b:2/3,ya:mix(d[f][i],d[f][i+1],1/3),yb:mix(d[f][i],d[f][i+1],2/3)}):null;d.curved[f][i]=false;d.curved[f][i+1]=false;mirrorSegment(d,f,i);}if(rawCurveProblem(d)){toast('Keep this curve inside the stock and protected areas.');return;}if(JSON.stringify(d)!==JSON.stringify(state.design)){rememberDesign();state.design=d;dataChanged();}setDrawTool(on?'curve':'select');$('sketchHint').textContent=on?'Drag the middle dot in any direction.':'Selected segments are straight.';}
 function applyRegionCut(){
  if(racing||!pendingCut)return false;
  if(!$('cutThrough').checked&&[$('cutDepth'),$('cutEndDepth')].some(el=>!finite(Number(el.value))||Number(el.value)<.5||Number(el.value)>100)){toast('Choose depths from 0.5 to 100 mm.');return false;}
- const d=clone(state.design);d.cuts=d.cuts.filter(c=>!editingCutIds.includes(c.id));const rawCuts=selectionCuts();if(!pendingCut.profile&&!editingCutIds.length&&$('cutThrough').checked&&pendingCut.u0<=0&&pendingCut.u1>0&&pendingCut.u1<1&&((pendingCut.view==='top'&&pendingCut.lo<=-d.stockW/2&&pendingCut.hi>=d.stockW/2)||(pendingCut.view==='side'&&pendingCut.lo<=0&&pendingCut.hi>=stockHeight(d,pendingCut.u1)))){$('trimLength').value=Math.round(d.L*(1-pendingCut.u1));applyLengthTrim();return state.design.L!==d.L;}const cuts=rawCuts.map(c=>({...c,u0:clamp(c.u0,0,1),u1:clamp(c.u1,0,1),depth:cutDepthAt(c,clamp(c.u0,0,1)),depthEnd:cutDepthAt(c,clamp(c.u1,0,1))})),group=`cut-${Date.now()}-${++cutSequence}`;
+ const d=clone(editingNose?.base||state.design);d.cuts=d.cuts.filter(c=>!editingCutIds.includes(c.id));const base=clone(d),rawCuts=selectionCuts();if(!pendingCut.profile&&!editingCutIds.length&&$('cutThrough').checked&&pendingCut.u0<=0&&pendingCut.u1>0&&pendingCut.u1<1&&((pendingCut.view==='top'&&pendingCut.lo<=-d.stockW/2&&pendingCut.hi>=d.stockW/2)||(pendingCut.view==='side'&&pendingCut.lo<=0&&pendingCut.hi>=stockHeight(d,pendingCut.u1)))){$('trimLength').value=Math.round(d.L*(1-pendingCut.u1));applyLengthTrim();return state.design.L!==d.L;}const cuts=rawCuts.map(c=>({...c,u0:clamp(c.u0,0,1),u1:clamp(c.u1,0,1),depth:cutDepthAt(c,clamp(c.u0,0,1)),depthEnd:cutDepthAt(c,clamp(c.u1,0,1))})),group=`cut-${Date.now()}-${++cutSequence}`;
  for(let i=0;i<cuts.length;i++){const c=cuts[i];delete c.mirror;c.group=group;c.id=`${group}-${i}`;if((c.u1-c.u0)*d.L<1-1e-6||c.hi-c.lo<1-1e-6){toast('Select an area at least 1 mm wide and high.');return false;}const guard=cutGuardProblem(d,c);if(guard){toast(guard);return false;}}
  if(d.cuts.length+cuts.length>40){toast('Use up to 40 cuts per car.');return false;}
  const before=volume(evaluateShape({design:d,L:d.L,k:1}));d.cuts.push(...cuts);const after=evaluateShape({design:d,L:d.L,k:1}),problem=cutShapeProblem(after);
  if(problem){toast(problem);return false;}if(before-volume(after)<1){toast('This area has no wood to remove.');return false;}
- if(cutHasChanges()){rememberDesign();state.design=d;}else return true;
+ if(!cutHasChanges())return true;
+ let committed=d;const nose=cuts.some(c=>c.profile&&!finite(c.depth));
+ try{if(nose)committed=editableNoseDesign(d);}catch(e){toast(e.message);return false;}
+ rememberDesign();state.design=committed;editingNose=nose?{base,cuts:clone(cuts)}:null;
  selectedPoints=[];editingCutIds=cuts.map(c=>c.id);pendingCut={...clone(cuts[0]),mirror:cuts.length>1};dataChanged();toast('Cut applied. Adjust the orange lines or click Finish.');return true;
 }
 
@@ -697,7 +779,7 @@ function attachDrawing(which){const canvas=$(which==='top'?'topCanvas':'sideCanv
  const xy=e=>{const r=canvas.getBoundingClientRect();return {x:e.clientX-r.left,y:e.clientY-r.top};};
  const modelPoint=p=>{const plot=canvas._plot,d=state.design;return {u:clamp((p.x-plot.x0)/plot.scale/d.L,-.25,1.25),z:clamp((plot.y0-p.y)/plot.scale,-100,100)};};
  const nearest=(items,p,radius)=>{const h=items.reduce((a,h)=>!a||Math.hypot(h.x-p.x,h.y-p.y)<Math.hypot(a.x-p.x,a.y-p.y)?h:a,null);return h&&Math.hypot(h.x-p.x,h.y-p.y)<=radius?h:null;};
- canvas.addEventListener('pointerdown',e=>{if(racing||drawTool==='done'||activeDrawingCanvas&&activeDrawingCanvas!==canvas)return;activeDrawingCanvas=canvas;canvas.setPointerCapture(e.pointerId);const p=xy(e);if(beginExtendedDrag(canvas,e,p,which))return;if(drawTool==='area'){cutStart=modelPoint(p);editingCutIds=[];if(which==='side')$('cutEndDepth').value=$('cutDepth').value;pendingCut={view:which,u0:cutStart.u,u1:cutStart.u,lo:cutStart.z,hi:cutStart.z};canvas.setPointerCapture(e.pointerId);e.preventDefault();return;}const anchor=nearest(canvas._handles||[],p,4.5),handle=nearest(canvas._curveHandles||[],p,10);if(handle){drag={...handle,kind:'curve'};moved=false;canvas.setPointerCapture(e.pointerId);e.preventDefault();return;}const point=nearest(canvas._handles||[],p,15);if(!point){selectedPoints=[];scheduleUpdate();return;}
+ canvas.addEventListener('pointerdown',e=>{if(racing||drawTool==='done'||activeDrawingCanvas&&activeDrawingCanvas!==canvas)return;activeDrawingCanvas=canvas;canvas.setPointerCapture(e.pointerId);const p=xy(e);if(beginExtendedDrag(canvas,e,p,which))return;if(drawTool==='area'){cutStart=modelPoint(p);editingCutIds=[];editingNose=null;if(which==='side')$('cutEndDepth').value=$('cutDepth').value;pendingCut={view:which,u0:cutStart.u,u1:cutStart.u,lo:cutStart.z,hi:cutStart.z};canvas.setPointerCapture(e.pointerId);e.preventDefault();return;}const anchor=nearest(canvas._handles||[],p,4.5),handle=nearest(canvas._curveHandles||[],p,10);if(handle){drag={...handle,kind:'curve'};moved=false;canvas.setPointerCapture(e.pointerId);e.preventDefault();return;}const point=nearest(canvas._handles||[],p,15);if(!point){selectedPoints=[];scheduleUpdate();return;}
  activePointKey=point.field+':'+point.i;drag={...point,kind:drawTool==='curve'?'select':'point',start:p,shift:!!e.shiftKey};moved=false;canvas.setPointerCapture(e.pointerId);e.preventDefault();});
  const processMove=e=>{if(racing)return;const p=xy(e);if(moveExtendedDrag(canvas,e,p,which))return;if(cutStart){const end=modelPoint(p);pendingCut={view:which,u0:Math.min(cutStart.u,end.u),u1:Math.max(cutStart.u,end.u),lo:Math.min(cutStart.z,end.z),hi:Math.max(cutStart.z,end.z)};if($('cutShape').value!=='rectangle'){if(which!=='top'){$('cutShape').value='rectangle';}else{pendingCut=makeNoseSelection($('cutShape').value,pendingCut.u1);}}$('cutSelectionText').textContent=`${((pendingCut.u1-pendingCut.u0)*state.design.L).toFixed(0)} × ${(pendingCut.hi-pendingCut.lo).toFixed(0)} mm`;scheduleUpdate();return;}if(!drag||drag.kind==='select')return;if(!moved){if(drag.kind==='point'&&Math.hypot(p.x-drag.start.x,p.y-drag.start.y)<3)return;if(drag.kind==='point'&&!selectedPoints.some(q=>q.i===drag.i&&q.field===drag.field))selectedPoints=[{i:drag.i,field:drag.field}];rememberDesign();moved=true;}const plot=canvas._plot,before=clone(state.design),d=clone(state.design),f=drag.field,i=drag.i,sign=f==='w2'?-1:1,z=(plot.y0-p.y)/plot.scale*sign,u=(p.x-plot.x0)/plot.scale/d.L;
  if(drag.kind==='curve'){const middle=chainMiddle(d,f,i,drag.last);bendChain(d,f,i,drag.last,z-middle.z,u-middle.u);
@@ -844,6 +926,7 @@ function buildDesignPdf(descriptor=snapshot(),name=state.name,date=new Date()){
   // Clip cut footprints to the current body. A dashed footprint is a projection from the other view.
   emit('q '+outline.map((p,i)=>`${n(p[0])} ${n(H-p[1])} ${i?'l':'m'}`).join(' ')+' h W n');
   for(const [index,c]of (d.cuts||[]).entries()){
+   if(c.profile&&!top)continue;
    const axis=top?0:1,cutXs=[c.u0*v.L,...xs.filter(x=>x>c.u0*v.L&&x<c.u1*v.L),c.u1*v.L];
    const points=cutXs.map(x=>{const r=cutRect(v,x,c),q=v.section(x);return {x,lo:Math.max(r.lo[axis],top?-q.w2:q.b),hi:Math.min(r.hi[axis],top?q.w:q.t)};});
    if(points.every(p=>p.hi<=p.lo))continue;
@@ -899,19 +982,14 @@ function buildDesignPdf(descriptor=snapshot(),name=state.name,date=new Date()){
   textAt(`Est. mass ${num(stats.mass)} g`,442,144,10,true);
   diagram(which);coordinates(which,start);dimensions(which);
  }
- const curves=[];
- for(const [f,prefix,sign]of [['w','A',1],['w2','B',-1],['t','C',1],['b','D',1]])for(let i=0;i<d.u.length-1;i++){
-  const c=d.curves?.[f]?.[i];if(!c)continue;const x0=nodeU(d,f,i)*v.L,x1=nodeU(d,f,i+1)*v.L;
-  curves.push([`${prefix}${i+1}-${prefix}${i+2}`,num(mix(x0,x1,c.a)),num(coordinateY(d,f,c.ya*sign)),num(mix(x0,x1,c.b)),num(coordinateY(d,f,c.yb*sign))]);
- }
- if(d.cuts.length||curves.length){
+ if(d.cuts.length){
   let y=0;
-  function detailPage(){newPage('Shape details','K = cut region | Curve endpoints are in the Top / Side coordinate tables');y=149;}
+  function detailPage(){newPage('Shape details','K = cut region | Point coordinates are in the Top / Side tables');y=149;}
   const room=height=>{if(y+height>775)detailPage();};detailPage();
   if(d.cuts.length){textAt('Cuts',margin,y,13,true,orange);y+=25;
    for(const [i,c]of d.cuts.entries()){
     room(65);rect(margin,y-13,W-margin*2,59,[.99,.96,.91]);
-    const type=c.profile==='smooth'?'Smooth nose':c.profile==='pointed'?'Pointed nose':'Rectangle';
+    const type=c.profile==='smooth'?'Rounded nose':c.profile==='pointed'?'Pointed nose':'Rectangle';
     textAt(`K${i+1}  ${c.view==='top'?'Top: cut downward':'Side: cut inward'}  |  ${type}`,margin+9,y,10,true,orange);
     textAt(`X: ${num(c.u0*v.L)} to ${num(c.u1*v.L)} mm  |  ${c.view==='top'?'Y':'Z'}: ${num(coordinateY(d,c.view==='top'?'w':'t',c.lo))} to ${num(coordinateY(d,c.view==='top'?'w':'t',c.hi))} mm`,margin+9,y+16,9);
     const depth=finite(c.depth)?`${num(c.depth)} to ${num(c.depthEnd??c.depth)} mm (front to rear)`:'Through';
@@ -919,11 +997,7 @@ function buildDesignPdf(descriptor=snapshot(),name=state.name,date=new Date()){
    }
    room(36);textAt('Orange = cut footprint; white = through cut in its selected view.',margin,y,8,false,muted);textAt('Dashed orange = projected cut. Red = rear hole and its protected wall.',margin,y+13,8,false,muted);y+=38;
   }
-  if(curves.length){
-   function curveHeader(){textAt('Curve control coordinates (mm)',margin,y,13,true,teal);y+=21;textAt('Cubic curves: two control positions for each segment. Values use Y or Z of that view.',margin,y,8,false,muted);y+=14;rect(margin,y,W-margin*2,22,[.92,.96,.95]);['Segment','Control 1 X','Control 1 Y/Z','Control 2 X','Control 2 Y/Z'].forEach((t,i)=>textAt(t,margin+9+i*104,y+14,8,true));y+=22;}
-   room(81);curveHeader();
-   for(let i=0;i<curves.length;i++){if(y+21>775){detailPage();curveHeader();}if(i%2===0)rect(margin,y,W-margin*2,21,[.97,.98,.98]);curves[i].forEach((t,j)=>textAt(t,margin+9+j*104,y+14,9));y+=21;}
-  }
+
  }
  pages.forEach((p,i)=>{page=p;line(margin,799,W-margin,799,[.79,.86,.84]);textAt('Classroom simulation | Scaled drawing, not a full-size cutting template',margin,815,7,false,muted);textAt(`${i+1} / ${pages.length}`,W-margin-28,815,8,false,muted);});
  // All non-image content is ASCII. Byte offsets therefore remain exact without external libraries.
@@ -996,7 +1070,7 @@ function assertDesign(input){
   if(typeof d.axlesInstalled!=='boolean'||d.frontAxle>d.L-AXLE_EDGE||d.rearInset>d.L-AXLE_EDGE||d.L-d.rearInset-d.frontAxle<minimumWheelbase(d))throw Error('Invalid axle layout.');if(!d.hole)throw Error('Missing hole settings.');for(const [key,lo,hi]of [['d',8,26],['depth',50,52],['z',20,50],['wall',3,6]])if(!finite(d.hole[key])||d.hole[key]<lo||d.hole[key]>hi)throw Error(`Invalid hole ${key}.`);
   for(const key of ['u','w','w2','t','b'])if(!Array.isArray(d[key])||d[key].length!==d.u.length||d.u.length<4||d.u.length>80||d[key].some(x=>!finite(x)))throw Error('Invalid control points.');
   if(d.u[0]!==0||d.u.at(-1)!==1||d.u.some((u,i)=>u<0||u>1||(i>0&&u-d.u[i-1]<.0029)))throw Error('Invalid point positions.');if(!d.curved)d.curved={w:d.u.map(()=>d.curve!=='straight'),t:d.u.map(()=>d.curve!=='straight'),b:d.u.map(()=>d.curve!=='straight')};if(!d.cuts)d.cuts=[];for(const key of ['w','w2','t','b'])if(!Array.isArray(d.curved[key])||d.curved[key].length!==d.u.length||d.curved[key].some(x=>typeof x!=='boolean'))throw Error('Invalid curved points.');if(!Array.isArray(d.cuts)||d.cuts.length>40)throw Error('Invalid cuts.');for(const c of d.cuts)if(!c||!['top','side'].includes(c.view)||![c.u0,c.u1,c.lo,c.hi].every(finite)||c.u0<0||c.u1>1||c.u1<=c.u0||c.hi<=c.lo||Math.abs(c.lo)>100||Math.abs(c.hi)>100||(c.depth!=null&&(!finite(c.depth)||c.depth<.5||c.depth>100))||(c.depthEnd!=null&&(!finite(c.depthEnd)||c.depthEnd<.5||c.depthEnd>100)))throw Error('Invalid cut region.');for(const c of d.cuts)if(c.profile&&(!['smooth','pointed'].includes(c.profile)||![c.noseWidth,c.profileStart,c.profileEnd].every(finite)||c.noseWidth<1.5||c.noseWidth>35||c.profileEnd<=c.profileStart||![-1,1].includes(c.noseSide)))throw Error('Invalid nose cut.');
-  for(const f of ['w','w2','t','b']){if(!Array.isArray(d.xs[f])||d.xs[f].length!==d.u.length||d.xs[f][0]<0||d.xs[f][0]>(d.L-MIN_LENGTH)/d.L+1e-8||d.xs[f].at(-1)!==1||d.xs[f].some((x,i)=>!finite(x)||x<0||x>1||(i&&x-d.xs[f][i-1]<.0029)))throw Error('Invalid point locations.');if(!Array.isArray(d.curves[f])||d.curves[f].length!==d.u.length-1)throw Error('Invalid curve segments.');for(const c of d.curves[f])if(c&&(!['a','b','ya','yb'].every(k=>finite(c[k]))||c.a<.02||c.a>.48||c.b<.52||c.b>.98||Math.abs(c.ya)>100||Math.abs(c.yb)>100))throw Error('Invalid curve handle.');}const problem=configProblem(d);if(problem)throw Error(problem);constrainDesign(d);if(rawCurveProblem(d))throw Error('A curve exceeds its allowed area.');return d;
+  for(const f of ['w','w2','t','b']){if(!Array.isArray(d.xs[f])||d.xs[f].length!==d.u.length||d.xs[f][0]<0||d.xs[f][0]>(d.L-MIN_LENGTH)/d.L+1e-8||d.xs[f].at(-1)!==1||d.xs[f].some((x,i)=>!finite(x)||x<0||x>1||(i&&x-d.xs[f][i-1]<.0029)))throw Error('Invalid point locations.');if(!Array.isArray(d.curves[f])||d.curves[f].length!==d.u.length-1)throw Error('Invalid curve segments.');for(const c of d.curves[f])if(c&&(!['a','b','ya','yb'].every(k=>finite(c[k]))||c.a<0||c.b>1||c.a>c.b||Math.abs(c.ya)>100||Math.abs(c.yb)>100))throw Error('Invalid curve handle.');}const problem=configProblem(d);if(problem)throw Error(problem);constrainDesign(d);if(rawCurveProblem(d))throw Error('A curve exceeds its allowed area.');return d;
 }
 function assertDescriptor(input){if(!input||input.k!==1||input.L!==input.design?.L)throw Error('Invalid model.');const desc={design:assertDesign(input.design),L:input.L,k:1};const valid=validate(evaluateShape(desc));if(!valid.ok)throw Error(valid.reasons[0]);return desc;}
 function timberFromDesign(d){return {width:d.stockW,frontHeight:d.stockFrontH,rearHeight:d.stockRearH,density:d.density,hardware:d.hardware,hole:clone(d.hole),frontAxle:d.frontAxle,rearInset:d.rearInset};}
