@@ -854,9 +854,26 @@ function movePointGeometry(d,f,i,u,z){
  if(state.symmetry==='symmetric'&&other){for(let j=left;j<=right;j++){d[other][j]=d[f][j];d.xs[other][j]=d.xs[f][j];}for(let j=left;j<right;j++)mirrorSegment(d,f,j);d.editPoints[other]=[...d.editPoints[f]];if(d.pointCounts)d.pointCounts[other]=d.editPoints[f].length;}
  if(i===0&&(f==='w'||f==='w2'))syncNoseReference(d);constrainDesign(d);
 }
+// Explain the existing limits without changing the accepted geometry.
+function pointMoveLimitMessage(d,f,i,u,z){
+ const tolerance=.01,vertical=Math.abs(z-d[f][i])>tolerance,horizontal=Math.abs(u-nodeU(d,f,i))*d.L>tolerance;
+ if(!vertical&&!horizontal)return null;
+ if(vertical){
+  const R=d.hole.d/2+d.hole.wall,rear=protectedNode(d,i,f);
+  if(rear&&((f==='t'&&z<d.hole.z+R-tolerance)||(f==='b'&&z>d.hole.z-R+tolerance)||(['w','w2'].includes(f)&&z<R-tolerance)))return `This point helps protect the rear hole. Keep at least ${d.hole.wall} mm of wood around it. Try a point nearer the front.`;
+  if((f==='t'&&z>stockHeight(d,nodeU(d,f,i))+tolerance)||(f==='b'&&z<0-tolerance)||(['w','w2'].includes(f)&&z>d.stockW/2+tolerance))return 'Timber edge reached. You can remove wood, but you cannot move outside the original timber.';
+  if(f==='t'||f==='b')return `The body must stay at least ${MIN_THICK} mm thick. The top and bottom edges cannot move any closer.`;
+  return `Keep at least ${d.noseShaped?1.5:2.5} mm between this edge and the centre line.`;
+ }
+ if(i===0&&['w','w2'].includes(f)&&u*d.L>d.L-MIN_LENGTH+tolerance)return `Keep the body at least ${MIN_LENGTH} mm long. The nose cannot move farther back.`;
+ if(i===0&&['w','w2'].includes(f)&&u<0)return 'Timber edge reached. The nose cannot move beyond the front of the original timber.';
+ if((i===0&&!['w','w2'].includes(f))||i===d.u.length-1)return 'This end point has a fixed X position. You can only move it up or down.';
+ return 'Keep neighbouring points in order. This point cannot move past the point beside it.';
+}
+function curveMoveLimitMessage(){return 'This curve has reached a design limit. Keep it inside the timber and clear of the rear hole. Try a smaller curve.';}
 function applyPointCoordinate(axis){const p=coordinateTarget();if(racing||!p||drawTool==='curve'&&!p.curve)return;const input=$(axis==='x'?'pointX':'pointY'),value=Number(input.value);if(!input.value.trim()||!finite(value)){toast('Enter a coordinate in millimetres.');syncPointUI(true);return;}const d=clone(state.design),x=axis==='x'?value:p.x,y=axis==='y'?value-coordinateY(d,p.field,0):p.y,sign=p.field==='w2'?-1:1;const bounds=p.curve?[nodeU(d,p.field,p.chain.first)*d.L,nodeU(d,p.field,p.chain.last)*d.L]:pointXBounds(d,p.field,p.i);if(x<bounds[0]-1e-7||x>bounds[1]+1e-7){toast(`Keep X between ${coordinateNumber(bounds[0])} and ${coordinateNumber(bounds[1])} mm.`);syncPointUI(true);return;}
  if(p.curve)bendChain(d,p.field,p.chain.first,p.chain.last,(y-p.y)*sign,(x-p.x)/d.L);else movePointGeometry(d,p.field,p.i,x/d.L,y*sign);
- const proposal=safeCurveProposal(state.design,d),problem=cutShapeProblem(evaluateShape({design:proposal,L:proposal.L,k:1}));if(problem){toast(problem);syncPointUI(true);return;}if(JSON.stringify(proposal)!==JSON.stringify(state.design)){rememberDesign();state.design=proposal;dataChanged();}syncPointUI(true);
+ const proposal=safeCurveProposal(state.design,d),problem=cutShapeProblem(evaluateShape({design:proposal,L:proposal.L,k:1}));if(problem){toast(problem);syncPointUI(true);return;}const limit=(!p.curve&&pointMoveLimitMessage(d,p.field,p.i,x/d.L,y*sign))||(proposal!==d&&curveMoveLimitMessage());if(JSON.stringify(proposal)!==JSON.stringify(state.design)){rememberDesign();state.design=proposal;dataChanged();}if(limit)toast(limit);syncPointUI(true);
 }
 function drawCoordinateReadout(which,canvas,ctx,px,py){const p=coordinateTarget();if(!p||(['w','w2'].includes(p.field)?'top':'side')!==which)return;const x=px(p.x),y=py(p.y),label=`(${coordinateNumber(p.x)}, ${coordinateNumber(coordinateY(state.design,p.field,p.y))}) mm`;ctx.font='bold 10px Segoe UI,Arial';const width=ctx.measureText(label).width+10,plot=canvas.getBoundingClientRect(),left=clamp(x-width/2,4,plot.width-width-4),top=clamp(y-26,24,plot.height-46);ctx.fillStyle='#ffffffee';ctx.fillRect(left,top,width,17);ctx.fillStyle='#376faa';ctx.textAlign='center';ctx.fillText(label,left+width/2,top+12);ctx.strokeStyle='#376faa';ctx.lineWidth=1.5;ctx.beginPath();ctx.arc(x,y,p.curve?10:6,0,Math.PI*2);ctx.stroke();}
 
@@ -870,7 +887,11 @@ function attachDrawing(which){const canvas=$(which==='top'?'topCanvas':'sideCanv
  if(drag.kind==='curve'){const middle=chainMiddle(d,f,i,drag.last);bendChain(d,f,i,drag.last,z-middle.z,u-middle.u);
  }else{movePointGeometry(d,f,i,u,z);}
 
- const proposal=safeCurveProposal(before,d);if(!cutShapeProblem(evaluateShape({design:proposal,L:proposal.L,k:1})))state.design=proposal;dataChanged();};
+ const proposal=safeCurveProposal(before,d),problem=cutShapeProblem(evaluateShape({design:proposal,L:proposal.L,k:1}));if(!problem)state.design=proposal;
+ const limit=problem||(drag.kind==='point'&&pointMoveLimitMessage(d,f,i,u,z))||(proposal!==d&&curveMoveLimitMessage());
+ // Show each reason once per drag, rather than restarting the toast on every frame.
+ if(limit){drag.limitMessages??=new Set();if(!drag.limitMessages.has(limit)){drag.limitMessages.add(limit);toast(limit);}}
+ dataChanged();};
  canvas.addEventListener('pointermove',e=>{if(activeDrawingCanvas!==canvas||racing||!drag&&!cutStart&&!canvas._extendedDrag)return;pendingDrawingMove=()=>processMove(e);scheduleUpdate();});
  const end=(cancel=false)=>{if(activeDrawingCanvas!==canvas)return;const pending=pendingDrawingMove;pendingDrawingMove=null;if(pending&&!cancel)pending();endExtendedDrag(canvas,cancel);activeDrawingCanvas=null;if(!cancel&&drag&&!moved&&drag.kind!=='curve'){const hit={i:drag.i,field:drag.field};if(drag.shift&&selectedPoints.length&&selectedPoints[0].field===hit.field){const start=selectedPoints[0].i;selectedPoints=visiblePointIndices(state.design,hit.field).filter(i=>i>=Math.min(start,hit.i)&&i<=Math.max(start,hit.i)).map(i=>({i,field:hit.field}));}else{const index=selectedPoints.findIndex(q=>q.i===hit.i&&q.field===hit.field);index>=0?selectedPoints.splice(index,1):selectedPoints.push(hit);}scheduleUpdate();}drag=null;cutStart=null;scheduleUpdate();};canvas.addEventListener('pointerup',()=>end());canvas.addEventListener('lostpointercapture',()=>{if(activeDrawingCanvas===canvas)end(true);});canvas.addEventListener('pointercancel',()=>{end(true);pendingCut=null;editingCutIds=[];updateUndo();drawView('top');drawView('side');});
 }
