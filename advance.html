@@ -89,9 +89,9 @@ function syncBodyColor(){const paint=bodyPaint(state.design);$('bodyColorName').
 function setBodyColor(id){if(racing||!CAR_PALETTE.some(c=>c.id===id)||state.design.bodyColor===id)return;rememberDesign();state.design.bodyColor=id;if(editingNose)editingNose.base.bodyColor=id;dataChanged();}
 
 const INITIAL_TIMBER={
- width:44,
- frontHeight:24,
- rearHeight:66,
+ width:42,
+ frontHeight:21,
+ rearHeight:72,
  density:320,hardware:22,hole:{d:19,depth:51,z:35.5,wall:3},frontAxle:28,rearInset:20
 };
 const defaultDesign=(timber=INITIAL_TIMBER)=>normalizeDesign({
