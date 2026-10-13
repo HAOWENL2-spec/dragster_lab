@@ -20,12 +20,12 @@
 @media print{.race-slots,.race-select,.history-card th:first-child,.history-card td:first-child,#saveCarBtn,.step{display:none!important}.record-link{color:var(--ink)}.race-stage{height:300px}.race-status-bar{display:flex}.record-link img{display:block}}
 .sketch-tools{padding:10px 16px;display:flex;align-items:center;gap:6px;flex-wrap:wrap;border-bottom:1px solid var(--line);background:#f6faf8}.curve-label{display:flex;align-items:center;gap:6px;font-size:11px}.curve-label select{display:inline-block;font-size:12px;margin:0;padding:4px 6px}.sketch-hint{padding:6px 18px 0;font-size:11px;color:var(--muted)}@media print{.sketch-tools,.sketch-hint{display:none}}
 .cut-actions{display:flex;gap:8px;align-items:center;padding:9px 16px;background:#fff3e4;border-top:1px solid #f1d8b3;font-size:12px}.sketch-tools button.active{border-color:#078381}.cut-actions button{white-space:nowrap}.drawing-canvas.cutting{cursor:crosshair}.hintbar{padding:8px 18px}.header-actions{margin-left:auto}@media(max-width:600px){.cut-actions{flex-wrap:wrap}}@media print{.cut-actions{display:none}}
-.symmetry-label{display:flex;align-items:center;gap:5px;font-size:11px}.symmetry-label select{margin:0;padding:5px 7px;font-size:12px}.sketch-tools{gap:6px}.sketch-tools button{white-space:nowrap}.sketch-hint{min-height:26px}#applyCutBtn:not(:disabled){background:#ae582c;border-color:#ae582c;color:white}@media print{.symmetry-label{display:none}}
+.symmetry-label{display:flex;align-items:center;gap:5px;font-size:11px}.symmetry-label select{margin:0;padding:5px 7px;font-size:12px}.sketch-tools{gap:6px}.sketch-tools button{white-space:nowrap}.sketch-hint{min-height:26px}.sketch-hint.at-limit{color:#8c491f;background:#fff5e7;border-left:3px solid #d18a40;padding-bottom:6px}#applyCutBtn:not(:disabled){background:#ae582c;border-color:#ae582c;color:white}@media print{.symmetry-label{display:none}}
 .depth-label,.through-label{display:flex;align-items:center;gap:6px;margin:0;font-size:12px}.depth-label input{width:72px;padding:6px;margin:0}.through-label input{width:auto;margin:0}#finishEditBtn{margin-right:5px}
 .edit-panel{padding:12px 16px;border-bottom:1px solid var(--line);background:#f0f7f9}.edit-panel p{font-size:11px;color:var(--muted);margin-top:7px}.edit-panel input{width:96px}.cut-actions{flex-wrap:wrap;gap:10px}.cut-actions select{margin:0;padding:5px 7px;font-size:12px}.cut-edit-hint{flex-basis:100%;font-size:11px;color:#885723;order:3}.depth-label input{width:65px}.drawing-canvas{height:220px}.drawing-tools input[readonly]{background:#f2f6f5;color:var(--deep)}#cutSelectionText{flex-basis:100%;font-weight:650}.specs{grid-template-columns:repeat(3,minmax(0,1fr))}@media(max-width:500px){.drawing-canvas{height:200px}.edit-panel .row{gap:8px}.depth-label{font-size:11px}}@media print{.edit-panel{display:none}}
 .validation.waiting:before{content:'→';background:#e6f0f7;color:#376faa}.axle-checks{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0 6px}.axle-check{padding:10px;border:1px solid #d3dfe3;background:#f5f8fa;border-radius:8px}.axle-check strong{font-size:11px}.axle-check p{font-size:11px;line-height:1.5;margin:7px 0 0;color:var(--muted)}.check-state{font-size:9px;font-weight:750;letter-spacing:.3px;white-space:nowrap}.axle-check.pass{background:#edf8f1;border-color:#b9d9c7}.axle-check.pass .check-state{color:#206b48}.axle-check.fail{background:#fff3ed;border-color:#e8c9b6}.axle-check.fail .check-state{color:#9d4725}#clearRecordsBtn,#clearSelectedRecordsBtn{color:#a04832}.history-card .card-head{flex-wrap:wrap}#undoClearRecordsBtn{color:var(--teal)}@media(max-width:400px){.axle-checks{grid-template-columns:1fr}}
 .model-thumbnail{height:105px;display:grid;place-items:center;color:var(--muted);font-size:12px}
-.race-playback{padding:0 18px 14px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}.race-playback label{display:inline-flex;align-items:center;gap:7px;color:var(--ink);cursor:pointer}.race-playback label input{display:inline-block;margin:0;width:17px;height:17px}.race-playback small{font-size:11px}@media print{.race-playback{display:none!important}}
+.race-playback{padding:0 18px 14px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}.race-playback label{display:inline-flex;align-items:center;gap:7px;color:var(--ink);cursor:pointer}.race-playback label input{display:inline-block;margin:0;width:17px;height:17px}.race-playback select{display:inline-block;margin:0;padding:5px 8px;font-size:12px}.race-playback small{font-size:11px}@media print{.race-playback{display:none!important}}
 #pdfDialog{max-width:530px}#pdfStudentName{width:100%}#pdfRaceSummary{margin-top:14px;font-size:14px;color:var(--deep)}#pdfRaceHint{margin-top:6px;font-size:12px;color:var(--muted)}
 </style>
 <style>.paint-controls{padding:12px 17px;border-top:1px solid var(--line);background:#fff}.paint-controls strong{font-size:12px}.paint-options{display:flex;flex-wrap:wrap;gap:9px;margin-top:9px}.paint-swatch{background:var(--paint);border:2px solid #b9c9c5;border-radius:50%;width:32px;height:32px;padding:0;display:grid;place-items:center}.paint-swatch:hover{background:var(--paint);border-color:var(--teal)}.paint-swatch.chosen{outline:2px solid var(--teal);outline-offset:2px;border-color:#fff}.paint-swatch span{visibility:hidden;color:white;font-size:17px;text-shadow:0 1px 3px #000}.paint-swatch.chosen span{visibility:visible}@media print{.paint-controls{display:none}}</style>
@@ -36,25 +36,25 @@
 <section class="intro"><div><h1>Design. Save. Race.</h1></div><nav class="steps" aria-label="Workflow"><button class="step active" id="stepDraw"><b>1</b> Design</button><button class="step" id="stepRace"><b>2</b> Race</button><button class="step" id="stepRecord"><b>3</b> Record</button></nav></section>
 <section class="design-grid" id="designSection"><div class="card"><div class="card-head"><h2>My design</h2></div>
 <div class="drawing-tools"><label class="name">Name<input id="studentName" placeholder="My name" maxlength="35" autocomplete="off"></label><label>Body length (mm)<input id="bodyLength" readonly type="number" value="305" min="180" max="305" step="1"></label></div>
-<div class="sketch-tools"><button id="selectPointBtn" class="small active">Select points</button><button id="morePointsBtn" class="small" aria-pressed="false" title="Optional: click an outline to add a point">More control points</button><button id="curvePointBtn" class="small" disabled>Curve</button><button id="cornerPointBtn" class="small" disabled>Straight</button><button id="finishEditBtn" class="small primary">Finish</button><button id="resetTimberBtn" class="small">Reset timber</button><button id="trimLengthBtn" class="small">Trim length</button><button id="axleModeBtn" class="small">Axles</button><button id="cutRegionBtn" class="small">Select area</button><button id="applyCutBtn" class="small" disabled>Remove</button><label class="symmetry-label">Edit<select id="symmetryMode"><option value="symmetric">Symmetric</option><option value="asymmetric">Asymmetric</option></select></label><div class="spacer"></div><button id="undoBtn" class="small" disabled>↶ Undo</button><button id="redoBtn" class="small" disabled>↷ Redo</button></div><div id="trimActions" class="edit-panel hidden"><div class="row wrap"><label id="trimLengthLabel">Keep timber length (mm)<input id="trimLength" type="number" min="180" max="305" value="305" step="1"></label><button id="applyTrimBtn" class="small primary">Cut front section</button><span id="trimSummary" class="tiny"></span></div><p id="trimHint">Drag the vertical line to shorten the car from the front. Keep at least 180 mm.</p></div>
-<div id="axleActions" class="edit-panel hidden"><div class="row wrap"><button id="removeAxlesBtn" class="small hidden">Remove axles</button><label>Front axle from nose (mm)<input id="frontAxleInput" type="number" min="5" max="300" step="1"></label><label>Rear axle from nose (mm)<input id="rearAxleInput" type="number" min="5" max="300" step="1"></label><span id="wheelbaseText" class="pill"></span></div><p>Click Axles above to add both axles. Drag the markers or enter positions here. Both axle checks must pass before saving.</p><p id="balanceText" role="status"></p></div><div id="pointActions" class="edit-panel hidden"><div class="row wrap"><label>Selected point<select id="pointChoice" aria-label="Point to inspect"></select></label><label>X: from timber front (mm)<input id="pointX" type="number" step="1" aria-label="Point X coordinate from the front in millimetres"></label><label><span id="pointYLabel">Y: from lower edge (mm)</span><input id="pointY" type="number" step="1" aria-label="Point width or height coordinate in millimetres"></label><span id="pointSelectionCount" class="pill"></span></div><p id="pointCoordinateHint"></p></div><div class="sketch-hint" id="sketchHint">Click to select or drag a dot. Select 2+ neighbouring dots for Curve.</div><div id="cutActions" class="cut-actions hidden"><label class="depth-label">Cut shape <select id="cutShape"><option value="rectangle">Rectangle</option><option value="smooth">Rounded nose</option><option value="pointed">Pointed nose</option></select></label><span id="cutSelectionText">Select an area, then click Remove.</span><label class="depth-label">Depth <input id="cutDepth" type="number" min="0.5" max="100" step="0.5" value="5" aria-label="Removal depth in millimetres"> mm</label><label class="through-label"><input id="cutThrough" type="checkbox"> Through</label><label class="depth-label">Start <input id="cutStartInput" type="number" min="0" max="304" step="1"> mm</label><label class="depth-label">End <input id="cutEndInput" type="number" min="1" max="305" step="1"> mm</label><label id="cutEndDepthLabel" class="depth-label">Rear depth <input id="cutEndDepth" type="number" min="0.5" max="100" step="0.5" value="5"> mm</label><span id="cutEditHint" class="cut-edit-hint">Side view: drag either wall or the floor. Round handles adjust front/rear depths.</span><div class="spacer"></div><button id="cancelCutBtn" class="small">Cancel</button></div><div class="view-block"><div class="view-title"><h3>TOP VIEW</h3><span>Drag the dots</span></div><canvas class="drawing-canvas" id="topCanvas" tabindex="0" aria-label="Top view. Select a dot, curve it or drag it."></canvas></div>
-<div class="view-block"><div class="view-title"><h3>SIDE VIEW</h3><span>Front ← → Rear</span></div><canvas class="drawing-canvas" id="sideCanvas" tabindex="0" aria-label="Side view. Select a dot, curve it or drag it."></canvas></div>
+<div class="sketch-tools"><button id="selectPointBtn" class="small active">Select points</button><button id="morePointsBtn" class="small" aria-pressed="false" title="Optional: click an outline to add a point">More control points</button><button id="curvePointBtn" class="small" aria-pressed="false" title="Smooth the selected point, then drag it" disabled>Curve</button><button id="cornerPointBtn" class="small" aria-pressed="false" title="Make a sharp join; set both ends to Corner for a straight section" disabled>Corner</button><button id="finishEditBtn" class="small primary">Finish</button><button id="resetTimberBtn" class="small">Reset timber</button><button id="trimLengthBtn" class="small">Trim length</button><button id="axleModeBtn" class="small">Axles</button><button id="cutRegionBtn" class="small">Select area</button><button id="applyCutBtn" class="small" disabled>Remove</button><label class="symmetry-label">Edit<select id="symmetryMode"><option value="symmetric">Symmetric</option><option value="asymmetric">Asymmetric</option></select></label><div class="spacer"></div><button id="undoBtn" class="small" disabled>↶ Undo</button><button id="redoBtn" class="small" disabled>↷ Redo</button></div><div id="trimActions" class="edit-panel hidden"><div class="row wrap"><label id="trimLengthLabel">Keep timber length (mm)<input id="trimLength" type="number" min="180" max="305" value="305" step="1"></label><button id="applyTrimBtn" class="small primary">Cut front section</button><span id="trimSummary" class="tiny"></span></div><p id="trimHint">Drag the vertical line to shorten the car from the front. Keep at least 180 mm.</p></div>
+<div id="axleActions" class="edit-panel hidden"><div class="row wrap"><button id="removeAxlesBtn" class="small hidden">Remove axles</button><label>Front axle from nose (mm)<input id="frontAxleInput" type="number" min="5" max="300" step="1"></label><label>Rear axle from nose (mm)<input id="rearAxleInput" type="number" min="5" max="300" step="1"></label><span id="wheelbaseText" class="pill"></span></div><p>Click Axles above to add both axles. Drag the markers or enter positions here. Both axle checks must pass before saving.</p><p id="balanceText" role="status"></p></div><div id="pointActions" class="edit-panel hidden"><div class="row wrap"><label>Selected point<select id="pointChoice" aria-label="Point to inspect"></select></label><label>X: from timber front (mm)<input id="pointX" type="number" step="1" aria-label="Point X coordinate from the front in millimetres"></label><label><span id="pointYLabel">Y: from lower edge (mm)</span><input id="pointY" type="number" step="1" aria-label="Point width or height coordinate in millimetres"></label><span id="pointSelectionCount" class="pill"></span></div><p id="pointCoordinateHint"></p></div><div class="sketch-hint" id="sketchHint" role="status" aria-live="polite">Select one dot → Curve → drag the dot. Both Side view outlines can curve.</div><div id="cutActions" class="cut-actions hidden"><label class="depth-label">Cut shape <select id="cutShape"><option value="rectangle">Rectangle</option><option value="smooth">Rounded nose</option><option value="pointed">Pointed nose</option></select></label><span id="cutSelectionText">Select an area, then click Remove.</span><label class="depth-label">Depth <input id="cutDepth" type="number" min="0.5" max="100" step="0.5" value="5" aria-label="Removal depth in millimetres"> mm</label><label class="through-label"><input id="cutThrough" type="checkbox"> Through</label><label class="depth-label">Start <input id="cutStartInput" type="number" min="0" max="304" step="1"> mm</label><label class="depth-label">End <input id="cutEndInput" type="number" min="1" max="305" step="1"> mm</label><label id="cutEndDepthLabel" class="depth-label">Rear depth <input id="cutEndDepth" type="number" min="0.5" max="100" step="0.5" value="5"> mm</label><span id="cutEditHint" class="cut-edit-hint">Side view: drag either wall or the floor. Round handles adjust front/rear depths.</span><div class="spacer"></div><button id="cancelCutBtn" class="small">Cancel</button></div><div class="view-block"><div class="view-title"><h3>TOP VIEW</h3><span>Drag the dots</span></div><canvas class="drawing-canvas" id="topCanvas" tabindex="0" aria-label="Top view. Select a dot, curve it or drag it."></canvas></div>
+<div class="view-block"><div class="view-title"><h3>SIDE VIEW</h3><span>Upper + lower dots can curve · Front ← → Rear</span></div><canvas class="drawing-canvas" id="sideCanvas" tabindex="0" aria-label="Side view. Upper and lower outlines, including the front, support curves. Select a dot, click Curve and drag it."></canvas></div>
 <div class="hintbar"><span class="mini-swatch"></span><span>Red = hole. Keep wood around it.</span></div>
 <div class="draw-bottom"><button id="saveCarBtn" class="primary">Save car</button><span id="saveCarLabel" class="tiny muted">Car 1</span><div class="spacer"></div><button id="exportPdfBtn">Export PDF</button></div></div>
 <div class="card" id="previewCard"><div class="card-head"><h2>3D preview</h2><small id="previewHint">Drag to rotate</small></div><div class="preview-wrap"><canvas class="preview-canvas" id="previewCanvas" tabindex="0" aria-label="3D model. Drag to rotate. Scroll to zoom."></canvas><span id="renderStatus" class="hidden"></span><div class="preview-controls"><button id="isoView" class="active">3D</button><button id="rearView">Rear hole</button><button id="sideView">Side</button><button id="topView">Top</button><div class="spacer"></div><button id="cutawayBtn" aria-pressed="false">Cutaway</button></div></div>
 <div class="paint-controls"><div class="row between"><strong>Body colour</strong><span id="bodyColorName" class="tiny muted">Timber</span></div><div class="paint-options" role="group" aria-label="Choose body colour"><button type="button" class="paint-swatch chosen" data-car-color="timber" style="--paint:#e89e54" aria-label="Timber body colour" title="Timber" aria-pressed="true"><span aria-hidden="true">✓</span></button><button type="button" class="paint-swatch" data-car-color="red" style="--paint:#df5054" aria-label="Red body colour" title="Red" aria-pressed="false"><span aria-hidden="true">✓</span></button><button type="button" class="paint-swatch" data-car-color="blue" style="--paint:#438fdf" aria-label="Blue body colour" title="Blue" aria-pressed="false"><span aria-hidden="true">✓</span></button><button type="button" class="paint-swatch" data-car-color="green" style="--paint:#41ad77" aria-label="Green body colour" title="Green" aria-pressed="false"><span aria-hidden="true">✓</span></button><button type="button" class="paint-swatch" data-car-color="purple" style="--paint:#a575d5" aria-label="Purple body colour" title="Purple" aria-pressed="false"><span aria-hidden="true">✓</span></button><button type="button" class="paint-swatch" data-car-color="yellow" style="--paint:#f2c64c" aria-label="Yellow body colour" title="Yellow" aria-pressed="false"><span aria-hidden="true">✓</span></button><button type="button" class="paint-swatch" data-car-color="white" style="--paint:#edf1f3" aria-label="White body colour" title="White" aria-pressed="false"><span aria-hidden="true">✓</span></button><button type="button" class="paint-swatch" data-car-color="charcoal" style="--paint:#4b5563" aria-label="Charcoal body colour" title="Charcoal" aria-pressed="false"><span aria-hidden="true">✓</span></button></div></div>
-<div class="stats"><div class="stat"><div class="value"><span id="statLength">305</span><span class="unit"> mm</span></div><div class="label">Length</div></div><div class="stat"><div class="value"><span id="statHeight">—</span><span class="unit"> mm</span></div><div class="label">Body height</div></div><div class="stat"><div class="value"><span id="statMass">—</span><span class="unit"> g</span></div><div class="label">Estimated mass</div></div></div>
-<div class="preview-footer"><div class="validation" id="validationText"></div><div class="axle-checks" aria-label="Automatic axle checks"><div class="axle-check" id="frontAxleCheckCard"><div class="row between wrap"><strong>Front axle check</strong><span id="frontAxleCheckState" class="check-state" role="status">ADD AXLES</span></div><p id="frontAxleCheckDetail">Add the front and rear axles after shaping.</p></div><div class="axle-check" id="rearAxleCheckCard"><div class="row between wrap"><strong>Rear axle check</strong><span id="rearAxleCheckState" class="check-state" role="status">ADD AXLES</span></div><p id="rearAxleCheckDetail">Add the front and rear axles after shaping.</p></div></div><div class="tiny muted">Both checks update automatically and must pass before saving or racing. Simulation checks only.</div></div><div class="specs"><div>Length<b>180–305 mm</b></div><div>Mass with wheels<b>≥ 45 g</b></div><div>Hole depth<b>50–52 mm</b></div><div>Hole wall<b>≥ 3 mm</b></div><div>Hole above track<b>26–36 mm</b></div><div>Axle above body base<b>7 mm</b></div></div></div></section>
+<div class="stats"><div class="stat"><div class="value"><span id="statLength">305</span><span class="unit"> mm</span></div><div class="label">Length</div></div><div class="stat"><div class="value"><span id="statHeight">—</span><span class="unit"> mm</span></div><div class="label">Body height</div></div><div class="stat"><div class="value"><span id="statMass">—</span><span class="unit"> g</span></div><div class="label" id="statMassLabel" title="Timber only until wheels are added.">Timber mass</div></div></div>
+<div class="preview-footer"><div class="validation" id="validationText"></div><div class="axle-checks" aria-label="Automatic axle checks"><div class="axle-check" id="frontAxleCheckCard"><div class="row between wrap"><strong>Front axle check</strong><span id="frontAxleCheckState" class="check-state" role="status">ADD AXLES</span></div><p id="frontAxleCheckDetail">Add the front and rear axles after shaping.</p></div><div class="axle-check" id="rearAxleCheckCard"><div class="row between wrap"><strong>Rear axle check</strong><span id="rearAxleCheckState" class="check-state" role="status">ADD AXLES</span></div><p id="rearAxleCheckDetail">Add the front and rear axles after shaping.</p></div></div><div class="tiny muted">Both checks update automatically and must pass before saving or racing. Simulation checks only.</div></div><div class="specs"><div>Length<b>180–305 mm</b></div><div>Mass with wheels<b>≥ 45 g</b></div><div>Hole depth<b>50–52 mm</b></div><div>Hole wall<b>≥ 3 mm</b></div><div title="Default hole lower edge: 21 mm above the original timber base, 26 mm above track.">Hole bottom above track<b>26–36 mm</b></div><div>Axle above body base<b>7 mm</b></div></div></div></section>
 <section class="card race-card" id="raceSection"><div class="card-head"><h2>Race</h2><div class="race-head-actions"><span class="pill">20 m · Simulation</span><button id="skipAnimation" class="small hidden">Finish</button><button id="raceBtn" class="primary" disabled>▶ Race</button></div></div>
-<div class="race-select"><strong id="selectionCount">0 / 4 selected</strong><span class="tiny muted">Select 1–4 cars in Record.</span></div><div class="race-playback"><label for="playRaceAnimation"><input type="checkbox" id="playRaceAnimation" aria-describedby="raceAnimationHint" checked>Play animation</label><small id="raceAnimationHint">Animation is on by default. Untick for instant results.</small></div><div class="race-slots" id="raceSlots"></div>
-<div class="race-stage"><canvas id="raceCanvas" aria-label="Virtual race for one to four saved cars."></canvas><div class="race-overlay"><span class="race-tag" id="raceStatus">Save a car to race</span><span class="race-tag" id="raceClock">0.00 s</span></div><div class="countdown hidden" id="countdown"></div></div>
+<div class="race-select"><strong id="selectionCount">0 / 4 selected</strong><span class="tiny muted">Select 1–4 cars in Record.</span></div><div class="race-playback"><label for="playRaceAnimation"><input type="checkbox" id="playRaceAnimation" aria-describedby="raceAnimationHint" checked>Play animation</label><label for="racePlaybackRate">Playback<select id="racePlaybackRate" aria-describedby="raceAnimationHint"><option value="1" selected>1× · Real time</option><option value="0.5">0.5× · Slow</option><option value="0.25">0.25× · Slow</option></select></label><small id="raceAnimationHint">1× real time. The countdown is separate.</small></div><div class="race-slots" id="raceSlots"></div>
+<div class="race-stage"><canvas id="raceCanvas" aria-label="Virtual race for one to four saved cars."></canvas><div class="race-overlay"><span class="race-tag" id="raceStatus">Save a car to race</span><span class="race-tag" id="raceClock">0.000 s</span></div><div class="countdown hidden" id="countdown"></div></div>
 </section>
 <section class="card history-card" id="recordSection"><div class="card-head"><h2>Record</h2><div class="row wrap"><button id="undoClearRecordsBtn" class="small hidden">Undo clear</button><button id="clearSelectedRecordsBtn" class="small" disabled>Clear selected records</button><button id="clearRecordsBtn" class="small">Clear all records</button></div></div><div class="table-wrap"><table><thead><tr><th>SELECT</th><th>MODEL</th><th>LENGTH</th><th>EST. MASS</th><th>TIME</th><th>WHAT DID I CHANGE?</th></tr></thead><tbody id="historyRows"></tbody></table></div><div id="historyEmpty" class="empty">Saved cars will appear here.</div></section>
 <footer class="footer"><div><span>Simulation only. Real race results may differ.</span><br><span class="save-state">Session only. Export PDF before closing or reloading.</span></div></footer></main>
 <dialog id="pdfDialog" aria-labelledby="pdfTitle"><div class="dialog-head"><h2 id="pdfTitle">Export your design</h2><button type="button" data-close="pdfDialog" aria-label="Close">✕</button></div><form id="pdfExportForm" novalidate><div class="dialog-body note-form"><label for="pdfStudentName">Your name</label><input id="pdfStudentName" placeholder="Enter your name" maxlength="35" autocomplete="off" required aria-describedby="pdfNameError"><div id="pdfNameError" class="field-error hidden" role="alert">Enter your name before downloading.</div><p id="pdfRaceSummary"></p><p id="pdfRaceHint"></p></div><div class="dialog-actions"><button type="button" data-close="pdfDialog">Cancel</button><button id="pdfDownloadBtn" type="submit" class="primary">Download PDF</button></div></form></dialog>
 <dialog id="saveDialog" aria-labelledby="saveTitle"><div class="dialog-head"><h2 id="saveTitle">Save Car 1</h2><button type="button" data-close="saveDialog" aria-label="Close">✕</button></div><form id="saveForm"><div class="dialog-body note-form"><label for="changeNote">What did I change?</label><textarea id="changeNote" rows="2" maxlength="160" required placeholder="e.g. I made the body narrower."></textarea><div id="noteHints" class="note-hints"><button type="button" data-note="My first design.">First design</button><button type="button" data-note="I made the body narrower.">Narrower</button><button type="button" data-note="I made the body lower.">Lower</button><button type="button" data-note="I shortened the body.">Shorter</button><button type="button" data-note="I rounded the nose.">Rounded nose</button></div><div id="noteError" class="field-error hidden" role="alert">Write a short note first.</div></div><div class="dialog-actions"><button type="button" data-close="saveDialog">Cancel</button><button type="submit" class="primary">Done</button></div></form></dialog>
 <dialog id="recordDialog" aria-labelledby="recordTitle"><div class="dialog-head"><h2 id="recordTitle">Car 1</h2><div class="row"><small>Drag to rotate</small><button data-close="recordDialog" aria-label="Close">✕</button></div></div><canvas id="recordCanvas" tabindex="0" aria-label="Saved 3D model. Drag to rotate; scroll to zoom."></canvas><div class="record-meta" id="recordMeta"></div><div class="record-note"><small>What did I change?</small><span id="recordNote"></span></div><div class="dialog-actions"><button id="recordRearBtn">Rear hole</button><button id="record3DBtn">3D</button><div class="spacer"></div><button id="copyRecordBtn" class="primary">Use this design</button></div></dialog>
-<dialog id="helpDialog"><div class="dialog-head"><h2>How to use</h2><button data-close="helpDialog" aria-label="Close">✕</button></div><div class="dialog-body"><p><b>1. Select points:</b> click two or more neighbouring dots on the same outline. Click Curve, then drag the single middle dot left, right, inward or outward to bend the whole selection; both ends stay fixed. Straight removes the curve.</p><p><b>2. Drag points:</b> click to select, or drag a dot directly. The coordinate panel shows X from the timber front (the fixed grid origin), Y upwards from the original timber's lower edge in Top view, and Z above the base in Side view. Type a value to adjust it. In Curve mode, use the single middle dot instead. Click Finish when done to leave editing. Reset timber restores the starting body; Undo brings your edits back. Start with 8 points on each outline. For an optional challenge, click More control points, then click the outline where you want an extra point. Drag the new point or type its coordinates. Repeat to add more, up to 16 per outline. In Symmetric mode, the matching top-view point is added too. Adding a point keeps the current shape; Undo removes the addition and Reset timber restores the original 8 points. Click Select points to cancel adding. Curves stay inside the stock and clear of the rear hole. Axles do not restrict body editing.</p><p><b>3. Symmetric / Asymmetric:</b> symmetric mode mirrors your next top-view edits and cuts across the centre line. Asymmetric mode changes only the chosen side.</p><p><b>Trim length:</b> start with 305 mm timber. Choose Trim length and drag the orange line, or enter the timber length to keep (180–305 mm). Body length shows the finished shape; point coordinates use the timber grid. Cut from the front; the rear hole is preserved. Shortening removes wood instead of stretching the shape. Choose From bottom to drag a horizontal line upward in Side view, or enter its height from the original base. The rear hole and axle supports are protected. Reset timber restores 305 mm.</p><p><b>Axles:</b> click Axles once to add both axles and show their positions here. Drag the markers or type positions measured from the actual nose. Moving the nose updates these distances and the finished body length. Point coordinates remain measured from the timber front. Remove axles returns to a body-only view. Body editing never locks to axle positions. There is no 60%-of-length rule: only a small gap between wheels. The Front axle check and Rear axle check update automatically. Both must pass before saving or racing. Each checks its mounting area, wheel clearance and its position relative to the estimated balance point. These are classroom model checks; real construction still needs inspection. Rectangular cuts must retain at least 4 mm in the remaining floor or wall.</p><p><b>4. Select area → Remove:</b> drag a rectangle and check the highlighted area. Choose a depth in millimetres or Through, then Remove. Top cuts go down; side cuts go in from the shown side. Selections may extend outside the timber; only overlapping wood is removed. For a smooth or pointed nose, choose Cut shape in Top view, then adjust End and Remove. In Side view, drag the left/right walls to change the cut range and the bottom line to change depth. The round end handles set different front and rear depths. Type values for precise changes. Click Update cut to apply, then Finish. Click an existing cut in Select area to edit it again. Both views and the 3D model show applied cuts. Undo restores wood.</p><p><b>5. Save car:</b> add one short change note. Select 1–4 saved cars to Race. Tick Play animation to watch the countdown and race; untick it for instant results. Animation is on by default, including on devices with reduced motion enabled. You can turn it off before any race. Finish skips an animation already playing. Animation does not change your result. Click a Record to reopen the model. Tick records, then Clear selected records to delete those cars. Clear all records empties Record and the race lanes in one click. Undo clear restores them until the next save or page reload; the current body design is kept.</p><p><b>Export PDF:</b> enter or confirm your name, then download the current Top and Side views with point coordinates, axle positions and cut details. Every page includes your name and the latest recorded race time for this design. Save and race again after changing the shape; an untested version is marked Not raced. This is a drawing for keeping or printing; it cannot reopen the editable model.</p><p><b>Session only:</b> Save car and Record last until you close or reload this page. Each new session starts with fresh timber.</p></div><div class="dialog-actions"><button data-close="helpDialog" class="primary">Ready</button></div></dialog>
+<dialog id="helpDialog"><div class="dialog-head"><h2>How to use</h2><button data-close="helpDialog" aria-label="Close">✕</button></div><div class="dialog-body"><p><b>1. Make a curve:</b> select one outline dot, click Curve, then drag that same dot. The line passes through your dots and smooths the nearby sections automatically. There is no separate middle handle. This works on both Top view outlines and on the upper and lower Side view outlines, including their front sections. Straight rows of dots stay straight until you move a dot. To shape the front, try C1/C2 for the upper outline or D1/D2 for the lower outline. Move upper dots down or lower dots up to remove wood. Front and rear Side view end points move vertically; move the next dot to change the length of the bend.</p><p><b>2. Select and adjust:</b> click a dot to select it; Shift-click another dot on the same outline to select the whole range. Curve smooths all selected dots. Corner makes a sharp join at a dot; set both ends to Corner to make the section between them straight. Drag a dot or type X and Y/Z in the coordinate panel. X starts at the timber front, Y at the original lower edge in Top view, and Z at the original base in Side view. Movement stops at the timber edge, the 4 mm body-thickness limit or the rear-hole protection area, with a hint below the tools. Move back to continue. Click Finish to leave editing; Select points resumes. Reset timber restores the starting body and Undo brings your edits back.</p><p><b>More control points:</b> start with 8 dots per outline. If you need a shorter or more detailed bend, click More control points, then click an outline to add a dot, up to 16 per outline. Adding a dot preserves the current shape. Select it, click Curve if needed and drag it. Symmetric mode also adds the matching Top view dot. Undo removes the addition; Reset timber restores 8 dots. Side upper C7 starts at X = 230 mm, ahead of the hole guard, so the front point can sit lower while the line rises towards the rear. The actual outline must retain 3 mm of wood around the hole. Axles do not restrict body editing; their supports are checked before saving.</p><p><b>3. Symmetric / Asymmetric:</b> symmetric mode mirrors your next top-view edits and cuts across the centre line. Asymmetric mode changes only the chosen side.</p><p><b>Trim length:</b> start with 305 mm timber. Choose Trim length and drag the orange line, or enter the timber length to keep (180–305 mm). Body length shows the finished shape; point coordinates use the timber grid. Cut from the front; the rear hole is preserved. Shortening removes wood instead of stretching the shape. Choose From bottom to drag a horizontal line upward in Side view, or enter its height from the original base. The rear hole and axle supports are protected. Reset timber restores 305 mm.</p><p><b>Axles:</b> click Axles once to add both axles and show their positions here. Drag the markers or type positions measured from the actual nose. Moving the nose updates these distances and the finished body length. Point coordinates remain measured from the timber front. Remove axles returns to a body-only view. Body editing never locks to axle positions. There is no 60%-of-length rule: only a small gap between wheels. The Front axle check and Rear axle check update automatically. Both must pass before saving or racing. Each checks its mounting area, wheel clearance and its position relative to the estimated balance point. These are classroom model checks; real construction still needs inspection. Rectangular cuts must retain at least 4 mm in the remaining floor or wall.</p><p><b>4. Select area → Remove:</b> drag a rectangle and check the highlighted area. Choose a depth in millimetres or Through, then Remove. Top cuts go down; side cuts go in from the shown side. Selections may extend outside the timber; only overlapping wood is removed. For a smooth or pointed nose, choose Cut shape in Top view, then adjust End and Remove. In Side view, drag the left/right walls to change the cut range and the bottom line to change depth. The round end handles set different front and rear depths. Type values for precise changes. Click Update cut to apply, then Finish. Click an existing cut in Select area to edit it again. Both views and the 3D model show applied cuts. Undo restores wood.</p><p><b>5. Save car:</b> add one short change note. Select 1–4 saved cars to Race. Tick Play animation to watch the countdown and race; untick it for instant results. Animation is on by default, including on devices with reduced motion enabled. You can turn it off before any race. Finish skips an animation already playing. Animation does not change your result. Click a Record to reopen the model. Tick records, then Clear selected records to delete those cars. Clear all records empties Record and the race lanes in one click. Undo clear restores them until the next save or page reload; the current body design is kept.</p><p><b>Export PDF:</b> enter or confirm your name, then download the current Top and Side views with point coordinates, axle positions and cut details. Every page includes your name and the latest recorded race time for this design. Save and race again after changing the shape; an untested version is marked Not raced. This is a drawing for keeping or printing; it cannot reopen the editable model.</p><p><b>Rear hole:</b> the starting hole is 20 mm in diameter and 51 mm deep. Its lower edge is 21 mm above the original timber base, so its centre is at Z = 31 mm and its upper edge is at Z = 41 mm. The dashed protection outline extends from Z = 18 mm to Z = 44 mm, including the required 3 mm wall around the hole. With the wheels fitted, the hole's lower edge is 26 mm above the track.</p><p><b>Mass estimate:</b> wood density is 122 kg/m³ (0.122 g/cm³). The starting timber is approximately 70 g, assuming its rear hole has already been drilled. Clicking Axles adds all four wheels and exactly 6 g, giving approximately 76 g before shaping. Remove axles subtracts 6 g. Cutting removes wood according to its volume; the wheel mass stays fixed. The wheels have thin front discs and wider, recessed rear rims, with six open holes. Axle mass has not been measured separately.</p><p><b>Aerodynamics:</b> air resistance is calculated throughout the race as F = ½ × air density × CdA × speed². Doubling speed gives four times the drag for the same shape. The air density is 1.2 kg/m³, separate from the timber density of 122 kg/m³. CdA combines body drag, estimated surface friction and a fixed allowance for the installed wheels. Body drag responds to the cut body's frontal silhouette, front and rear face areas, and the area and steepness of its outer surfaces. A tiny steep patch no longer sets the resistance of the whole car. Two cars of the same mass can therefore have different race times; removing wood does not always improve the airflow. These shape coefficients are classroom estimates, not measured values or CFD. Detailed flow inside cavities, ground effects and wheel-to-body airflow are not resolved. <a href="https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/drag-equation/" target="_blank" rel="noopener noreferrer">Drag equation reference (NASA)</a>.</p><p><b>Race estimates:</b> the model provisionally assumes a 20 m track. Propulsion uses an effective initial force of 7.2 N, decreasing during a 0.26-second pulse. This has been roughly adjusted towards the typical times in the supplied classroom results, not measured from a CO₂ cartridge. An illustrative 55.5 g car including wheels takes about 1.16 s; other shapes and masses produce different times. This is an approximate classroom comparison, not a validated prediction of a real car. Confirm the actual track length and whether measured weights include wheels before further calibration. Timber density controls mass only; it is not used to fit race times.</p><p><b>Animation timing:</b> the 3-second countdown is separate from the race clock. At 1×, 1 second on screen equals 1 simulated second. At 0.5× or 0.25×, the animation takes twice or four times as long, while the clock, recorded result and PDF keep the original simulated time. Untick Play animation for instant results, or click Finish to skip the animation. Playback speed does not change the winner or result.</p><p><b>Session only:</b> Save car and Record last until you close or reload this page. Each new session starts with fresh timber.</p></div><div class="dialog-actions"><button data-close="helpDialog" class="primary">Ready</button></div></dialog>
 
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
 <script>
@@ -72,7 +72,12 @@ const MAX_EDIT_POINTS=16;
 const MIN_LENGTH=180, MAX_LENGTH=305, AXLE_EDGE=5;
 const CORNER_N=8, HOLE_N=64, MIN_THICK=4, AXLE_Z=7, AXLE_R=1.2, WHEEL_R=12, BODY_OFFSET=WHEEL_R-AXLE_Z;
 const ORANGE=[.91,.62,.33], BLUE=[.40,.64,.80];
-const PHYSICS={rho:1.2,rolling:.015,g:9.81,track:20,dt:.002,pulseDuration:.26,pulseN:4,wheelCdA:.000216,skin:.004};
+// Provisional 20 m timing adjustment; this is not a measured CO2 thrust curve.
+// The 10 supplied best times have median 1.157 s. One illustrative valid shape
+// (55.5 g total, CdA 0.00168498 m²) runs about 1.157 s with pulseN 7.2.
+// No measured car shapes are paired with those times; measured mass inclusion
+// is unconfirmed. Tune one effective thrust parameter, not density or drag.
+const PHYSICS={rho:1.2,rolling:.015,g:9.81,track:20,dt:.002,pulseDuration:.26,pulseN:7.2,wheelCdA:.000216,skin:.004};
 const CAR_PALETTE=[
  {id:'timber',name:'Timber',hex:'#e89e54'},
  {id:'red',name:'Red',hex:'#df5054'},
@@ -92,21 +97,34 @@ const INITIAL_TIMBER={
  width:42,
  frontHeight:21,
  rearHeight:72,
- density:320,hardware:22,hole:{d:19,depth:51,z:35.5,wall:3},frontAxle:28,rearInset:20
+ // Density calibrated from approximately 70 g of already-drilled starting wood.
+ // The 20 mm bore leaves about 572.39 cm³, or 69.83 g at 122 kg/m³.
+ // All four wheels add 6 g only when installed; no separate axle mass supplied.
+ // Bore lower edge is 21 mm above the original timber base: centre 21 + 20/2.
+ density:122,hardware:6,hole:{d:20,depth:51,z:31,wall:3},frontAxle:28,rearInset:20
 };
-const defaultDesign=(timber=INITIAL_TIMBER)=>normalizeDesign({
+const defaultDesign=(timber=INITIAL_TIMBER)=>{
+ const d=normalizeDesign({
  L:MAX_LENGTH,u:[...U],w:U.map(()=>timber.width/2),
  t:U.map(u=>Math.floor(mix(timber.frontHeight,timber.rearHeight,u)+1e-9)),b:U.map(()=>0),
  curved:{w:U.map(()=>false),t:U.map(()=>false),b:U.map(()=>false)},cuts:[],bodyColor:'timber',
  stockW:timber.width,stockFrontH:timber.frontHeight,stockRearH:timber.rearHeight,
  hole:clone(timber.hole),density:timber.density,hardware:timber.hardware,
  frontAxle:timber.frontAxle,rearInset:timber.rearInset,axlesInstalled:false
-});
+ });
+ // Give Side upper C7 room ahead of the hole guard (251 mm). Reposition the
+ // adjacent straight segments with the same side-profile area / timber mass.
+ const i=6,x=230,left=START_X[i-1],right=START_X[i+1];
+ d.t[i]+=(x-START_X[i])*(d.t[i+1]-d.t[i-1])/(right-left);
+ d.xs.t[i]=x/d.L;
+ return d;
+};
 const freshState=()=>({format:'dragster-design-lab',version:6,name:'',timber:clone(INITIAL_TIMBER),design:defaultDesign(),mode:'draw',symmetry:'symmetric',records:[],selected:[],nextId:1});
 let state=freshState(), current, currentStats, cutaway=false, redrawPending=false, toastTimer=0;
 let preview, raceView, raceData=null, raceMeshes=null, raceRAF=0, racing=false, raceFinished=false;
 let drawTool='select', undoStack=[], redoStack=[], selectedPoints=[], pendingCut=null, activePointKey='';
 let editingCutIds=[], cutSequence=0, trimKeep=305, editingNose=null;
+let pointEditMessage='', pointEditLimit=false;
 let activeDrawingCanvas=null, pendingDrawingMove=null, lastPreviewKey='', lastPreviewCut=null, previewMesh=null, raceMeshSources=null, raceReadyDrawn=false;
 let lastStatsKey='', lastStats=null, pendingCar=null, recordView=null, openedRecordId=null, clearedRecordsBackup=null;
 const COLORS=[ORANGE,BLUE,[.38,.72,.53],[.69,.49,.78]];
@@ -119,9 +137,42 @@ function snapshot(){return {design:clone(state.design),L:state.design.L,k:1};}
 
 // Work exists only in this page session. No browser storage is read or written.
 function dataChanged(){scheduleUpdate();}
-function interpolate(arr,d,u){const key=arr===d.w?'w':arr===d.w2?'w2':arr===d.t?'t':'b',xs=d.xs?.[key]||d.u;u=clamp(u,xs[0],1);let i=0;while(i<xs.length-2&&xs[i+1]<u)i++;const h=xs[i+1]-xs[i],t=(u-xs[i])/h,delta=(arr[i+1]-arr[i])/h,c=d.curves?.[key]?.[i];if(c){let lo=0,hi=1;for(let j=0;j<18;j++){const q=(lo+hi)/2;if(bezierValue(0,c.a,c.b,1,q)<t)lo=q;else hi=q;}return bezierValue(arr[i],c.ya,c.yb,arr[i+1],(lo+hi)/2);}const flags=d.curved?.[key]||[];if(!flags[i]&&!flags[i+1])return mix(arr[i],arr[i+1],t);
- function slope(j){if(j===0)return (arr[1]-arr[0])/(xs[1]-xs[0]);if(j===xs.length-1)return (arr[j]-arr[j-1])/(xs[j]-xs[j-1]);const h0=xs[j]-xs[j-1],h1=xs[j+1]-xs[j],a=(arr[j]-arr[j-1])/h0,b=(arr[j+1]-arr[j])/h1;if(a*b<=0)return 0;return (3*(h0+h1))/((2*h1+h0)/a+(h1+2*h0)/b);}
- const a=flags[i]?slope(i):delta,b=flags[i+1]?slope(i+1):delta;return (2*t*t*t-3*t*t+1)*arr[i]+(t*t*t-2*t*t+t)*h*a+(-2*t*t*t+3*t*t)*arr[i+1]+(t*t*t-t*t)*h*b;
+// Shape-preserving tangents. Each smooth point affects only its nearby spans.
+function autoSlope(d,f,j){
+ const a=d[f],x=d.xs[f],n=a.length,sec=i=>(a[i+1]-a[i])/(x[i+1]-x[i]);
+ if(n===2)return sec(0);
+ if(j===0||j===n-1){
+  const end=j===n-1,h0=end?x[n-1]-x[n-2]:x[1]-x[0],h1=end?x[n-2]-x[n-3]:x[2]-x[1],v0=sec(end?n-2:0),v1=sec(end?n-3:1);
+  let m=((2*h0+h1)*v0-h0*v1)/(h0+h1);
+  if(m*v0<=0)m=0;else if(v0*v1<=0&&Math.abs(m)>3*Math.abs(v0))m=3*v0;
+  return m;
+ }
+ const h0=x[j]-x[j-1],h1=x[j+1]-x[j],v0=sec(j-1),v1=sec(j);
+ return v0*v1<=0?0:3*(h0+h1)/((2*h1+h0)/v0+(h1+2*h0)/v1);
+}
+function outlineSlope(d,f,j){
+ const m=autoSlope(d,f,j);if(f!=='t')return m;
+ // A shared tangent keeps both spans smooth while their control points stay
+ // below the sloping stock edge, even when the next dot hugs that edge.
+ const x=nodeU(d,f,j),y=d[f][j];let low=-Infinity,high=Infinity;
+ if(j>0){const h=x-nodeU(d,f,j-1);low=Math.max(low,3*(y-stockHeight(d,x-h/3))/h);}
+ if(j<d.u.length-1){const h=nodeU(d,f,j+1)-x;high=Math.min(high,3*(stockHeight(d,x+h/3)-y)/h);}
+ return low<=high?clamp(m,low,high):m;
+}
+function segmentCurve(d,f,i){
+ const saved=d.curves?.[f]?.[i];if(saved)return saved;
+ const flags=d.curved?.[f]||[];if(!flags[i]&&!flags[i+1])return null;
+ const h=nodeU(d,f,i+1)-nodeU(d,f,i),delta=(d[f][i+1]-d[f][i])/h;
+ return {a:1/3,b:2/3,ya:d[f][i]+h*(flags[i]?outlineSlope(d,f,i):delta)/3,yb:d[f][i+1]-h*(flags[i+1]?outlineSlope(d,f,i+1):delta)/3};
+}
+function interpolate(arr,d,u){
+ const f=arr===d.w?'w':arr===d.w2?'w2':arr===d.t?'t':'b',xs=d.xs?.[f]||d.u;
+ u=clamp(u,xs[0],xs.at(-1));let i=0;while(i<xs.length-2&&xs[i+1]<u)i++;
+ const t=(u-xs[i])/(xs[i+1]-xs[i]);if(t<=0)return arr[i];if(t>=1)return arr[i+1];
+ const c=segmentCurve(d,f,i);if(!c)return mix(arr[i],arr[i+1],t);
+ if(Math.abs(c.a-1/3)<1e-12&&Math.abs(c.b-2/3)<1e-12)return bezierValue(arr[i],c.ya,c.yb,arr[i+1],t);
+ let lo=0,hi=1;for(let j=0;j<28;j++){const q=(lo+hi)/2;if(bezierValue(0,c.a,c.b,1,q)<t)lo=q;else hi=q;}
+ return bezierValue(arr[i],c.ya,c.yb,arr[i+1],(lo+hi)/2);
 }
 function normalizeDesign(d){d.axlesInstalled??=true;d.w2??=[...d.w];d.curved??={w:d.u.map(()=>d.curve!=='straight'),t:d.u.map(()=>d.curve!=='straight'),b:d.u.map(()=>d.curve!=='straight')};d.curved.w2??=[...d.curved.w];d.xs??={};d.curves??={};for(const f of ['w','w2','t','b']){d.xs[f]??=[...d.u];d.curves[f]??=Array(d.u.length-1).fill(null);}d.cuts??=[];if(!CAR_PALETTE.some(c=>c.id===d.bodyColor))d.bodyColor='timber';for(const f of ['w','w2','t','b'])visiblePointIndices(d,f);return d;}
 
@@ -161,7 +212,7 @@ function designWithExtraPoint(before,f,u){
   index=segment+1;d.u.splice(index,0,station);
   for(const key of fields){
    const segments=cubics[key],points=[segments[0][0],...segments.map(p=>p[3])];
-   d.xs[key]=points.map(p=>p[0]/d.L);d[key]=points.map(p=>p[1]);d.curved[key]=points.map(()=>false);
+   d.xs[key]=points.map(p=>p[0]/d.L);d[key]=points.map(p=>p[1]);d.curved[key]=[...before.curved[key]];d.curved[key].splice(index,0,!!(before.curved[key][segment]||before.curved[key][segment+1]));
    d.curves[key]=segments.map(p=>{const span=p[3][0]-p[0][0],a=(p[1][0]-p[0][0])/span,b=(p[2][0]-p[0][0])/span;
     return Math.abs(p[1][1]-mix(p[0][1],p[3][1],a))<1e-9&&Math.abs(p[2][1]-mix(p[0][1],p[3][1],b))<1e-9?null:{a:clamp(a,0,1),b:clamp(b,0,1),ya:p[1][1],yb:p[2][1]};});
    visible[key]=visible[key].map(i=>i>=index?i+1:i);
@@ -198,24 +249,48 @@ function noseDistance(d,x){return coordinateNumber(x-noseOffset(d));}
 
 function bezierValue(p0,p1,p2,p3,t){const q=1-t;return q*q*q*p0+3*q*q*t*p1+3*q*t*t*p2+t*t*t*p3;}
 
-function curvePoint(d,f,i,t){const c=d.curves[f][i],x0=nodeU(d,f,i),x1=nodeU(d,f,i+1),dx=x1-x0;return {u:bezierValue(x0,x0+c.a*dx,x0+c.b*dx,x1,t),z:bezierValue(d[f][i],c.ya,c.yb,d[f][i+1],t)};}
+function curvePoint(d,f,i,t){const c=segmentCurve(d,f,i),x0=nodeU(d,f,i),x1=nodeU(d,f,i+1),dx=x1-x0;return c?{u:bezierValue(x0,x0+c.a*dx,x0+c.b*dx,x1,t),z:bezierValue(d[f][i],c.ya,c.yb,d[f][i+1],t)}:{u:mix(x0,x1,t),z:mix(d[f][i],d[f][i+1],t)};}
 
 function fieldBounds(d,f,u){const x=u*d.L,R=d.hole.d/2+d.hole.wall,rear=x>=d.L-d.hole.depth-d.hole.wall-1e-7;if(f==='w'||f==='w2')return [rear?R:(d.noseShaped?1.5:2.5),d.stockW/2];if(f==='t')return [Math.max(interpolate(d.b,d,u)+MIN_THICK,rear?d.hole.z+R:0),stockHeight(d,u)];return [0,Math.min(interpolate(d.t,d,u)-MIN_THICK,rear?d.hole.z-R:Infinity,stockHeight(d,u)-MIN_THICK)];}
 
-function rawCurveProblem(d){if(d.L*(1-Math.min(nodeU(d,'w',0),nodeU(d,'w2',0)))<MIN_LENGTH-1e-7)return true;if(['w','w2'].some(f=>nodeU(d,f,0)>noseLimit(d,f)+1e-8))return true;for(const f of ['w','w2','t','b'])if(d.xs[f].some((x,i)=>!finite(x)||x<0||x>1||(i&&x-d.xs[f][i-1]<.003-1e-9)))return true;for(const f of ['w','w2','t','b'])for(let i=0;i<d.u.length-1;i++)if(d.curves[f][i]){const c=d.curves[f][i];if(![c.a,c.b,c.ya,c.yb].every(finite)||c.a<0||c.b>1||c.a>c.b)return true;for(let j=0;j<=40;j++){const p=curvePoint(d,f,i,j/40),[lo,hi]=fieldBounds(d,f,p.u);if(p.z<lo-.002||p.z>hi+.002)return true;}}return false;}
-
-function safeCurveProposal(before,after){if(!rawCurveProblem(after))return after;let lo=0,hi=1,best=before;for(let n=0;n<10;n++){const t=(lo+hi)/2,d=clone(before);for(const f of ['w','w2','t','b']){d[f]=d[f].map((v,i)=>mix(v,after[f][i],t));d.xs[f]=d.xs[f].map((v,i)=>mix(v,after.xs[f][i],t));for(let i=0;i<d.curves[f].length;i++)if(d.curves[f][i]&&after.curves[f][i])for(const k of ['a','b','ya','yb'])d.curves[f][i][k]=mix(before.curves[f][i][k],after.curves[f][i][k],t);}if(rawCurveProblem(d))hi=t;else{lo=t;best=d;}}return best;}
-
-function selectedChain(){if(selectedPoints.length<2)return null;const f=selectedPoints[0].field;if(selectedPoints.some(p=>p.field!==f))return null;const indices=[...new Set(selectedPoints.map(p=>p.i))].sort((a,b)=>a-b);const visible=visiblePointIndices(state.design,f);if(indices.length<2||indices.some((n,j)=>!visible.includes(n)||(j&&visible.indexOf(n)!==visible.indexOf(indices[j-1])+1)))return null;return {field:f,first:indices[0],last:indices.at(-1)};}
-
-function activeCurveChain(){if(drawTool!=='curve')return null;const c=selectedChain();return c&&Array.from({length:c.last-c.first},(_,i)=>state.design.curves[c.field][c.first+i]).every(Boolean)?c:null;}
-// Add one smooth bow across the entire selection; endpoints remain fixed.
-function chainMiddle(d,f,first,last){const m=(d.u[first]+d.u[last])/2;let i=first;while(i<last-1&&d.u[i+1]<m)i++;return curvePoint(d,f,i,(m-d.u[i])/(d.u[i+1]-d.u[i]));}
-function bendChain(d,f,first,last,dy,dx){const start=d.u[first],span=d.u[last]-start,old=clone(d),weight=u=>{const t=(u-start)/span;return 4*t*(1-t);},slope=u=>4*(1-2*(u-start)/span)/span;
- for(let j=first+1;j<last;j++){const w=weight(d.u[j]);d[f][j]+=dy*w;d.xs[f][j]+=dx*w;}
- for(let j=first;j<last;j++){const c=d.curves[f][j],u0=d.u[j],u1=d.u[j+1],du=u1-u0,w1=weight(u0)+slope(u0)*du/3,w2=weight(u1)-slope(u1)*du/3,x0=nodeU(old,f,j),x1=nodeU(old,f,j+1),new0=nodeU(d,f,j),new1=nodeU(d,f,j+1);c.a=(mix(x0,x1,c.a)+dx*w1-new0)/(new1-new0);c.b=(mix(x0,x1,c.b)+dx*w2-new0)/(new1-new0);c.ya+=dy*w1;c.yb+=dy*w2;}
- for(let j=first;j<last;j++)mirrorSegment(d,f,j);
+function rawCurveProblem(d){
+ if(d.L*(1-Math.min(nodeU(d,'w',0),nodeU(d,'w2',0)))<MIN_LENGTH-1e-7)return true;
+ if(['w','w2'].some(f=>nodeU(d,f,0)>noseLimit(d,f)+1e-8))return true;
+ const fields=['w','w2','t','b'];
+ for(const f of fields)if(d[f].some(v=>!finite(v))||d.xs[f].some((x,i)=>!finite(x)||x<0||x>1||(i&&x-d.xs[f][i-1]<.003-1e-9)))return true;
+ const guard=(d.L-d.hole.depth-d.hole.wall)/d.L;
+ for(const f of fields){
+  const value=interpolate(d[f],d,guard),[lo,hi]=fieldBounds(d,f,guard);
+  if(!finite(value)||value<lo-.001||value>hi+.001)return true;
+  for(let i=0;i<d.u.length-1;i++){
+   const c=segmentCurve(d,f,i);if(c&&(![c.a,c.b,c.ya,c.yb].every(finite)||c.a<0||c.b>1||c.a>c.b))return true;
+   // Check all outlines, including automatic curves, before render-time clipping.
+   for(let j=0;j<=40;j++){const p=curvePoint(d,f,i,j/40),[low,high]=fieldBounds(d,f,p.u);if(!finite(p.z)||p.z<low-.001||p.z>high+.001)return true;}
+  }
+ }
+ return false;
 }
+
+function safeCurveProposal(before,after){
+ if(!rawCurveProblem(after))return after;
+ const fields=['w','w2','t','b'],controls={};
+ for(const f of fields)controls[f]=before.curves[f].map((c,i)=>{
+  if(!c&&!after.curves[f][i])return null;
+  const straight=d=>({a:1/3,b:2/3,ya:mix(d[f][i],d[f][i+1],1/3),yb:mix(d[f][i],d[f][i+1],2/3)});
+  return [segmentCurve(before,f,i)||straight(before),segmentCurve(after,f,i)||straight(after)];
+ });
+ let lo=0,hi=1,best=before;
+ for(let n=0;n<12;n++){
+  const t=(lo+hi)/2,d=clone(before);
+  for(const f of fields){
+   d[f]=d[f].map((v,i)=>mix(v,after[f][i],t));d.xs[f]=d.xs[f].map((v,i)=>mix(v,after.xs[f][i],t));
+   controls[f].forEach((pair,i)=>{if(pair)d.curves[f][i]=Object.fromEntries(['a','b','ya','yb'].map(k=>[k,mix(pair[0][k],pair[1][k],t)]));});
+  }
+  if(rawCurveProblem(d))hi=t;else{lo=t;best=d;}
+ }
+ return best;
+}
+
 function oppositeField(f){return f==='w'?'w2':f==='w2'?'w':null;}
 
 function mirrorSegment(d,f,i){const other=oppositeField(f);if(state.symmetry!=='symmetric'||!other)return;for(const k of [i,i+1]){d[other][k]=d[f][k];d.xs[other][k]=d.xs[f][k];d.curved[other][k]=d.curved[f][k];}d.curves[other][i]=clone(d.curves[f][i]);}
@@ -226,12 +301,13 @@ function selectionCuts(){if(!pendingCut)return [];if(pendingCut.profile)return n
 function minimumWheelbase(d){return WHEEL_R*2+4;}
 function cutDepthAt(c,u){return finite(c.depth)?mix(c.depth,finite(c.depthEnd)?c.depthEnd:c.depth,clamp((u-c.u0)/(c.u1-c.u0),0,1)):null;}
 function cutDepthLabel(c){return finite(c.depthEnd)&&Math.abs(c.depthEnd-c.depth)>.05?`${c.depth.toFixed(1)} → ${c.depthEnd.toFixed(1)} mm`:`${c.depth} mm`;}
+function installedHardwareMass(d){return d.axlesInstalled?d.hardware:0;}
 function balanceEstimate(d){
  const v=evaluateShape({design:d,L:d.L,k:1}),xs=samplePositions(v,60);let vol=0,moment=0;
  for(let i=1;i<xs.length;i++){const a=xs[i-1],b=xs[i],x=(a+b)/2,active=cutsAt(v,x),va=woodArea(v,a,active),vb=woodArea(v,b,active),vm=woodArea(v,x,active);vol+=(b-a)*(va+4*vm+vb)/6;moment+=(b-a)*(a*va+4*x*vm+b*vb)/6;}
  const bore=holeArea(d.hole)*d.hole.depth;vol-=bore;moment-=bore*(d.L-d.hole.depth/2);
- const woodMass=vol*d.density/1e6,total=woodMass+d.hardware;
- return {x:(moment*d.density/1e6+d.hardware*(d.frontAxle+d.L-d.rearInset)/2)/total,woodMass,total};
+ const woodMass=vol*d.density/1e6,hardwareMass=installedHardwareMass(d),total=woodMass+hardwareMass;
+ return {x:(moment*d.density/1e6+hardwareMass*(d.frontAxle+d.L-d.rearInset)/2)/total,woodMass,total};
 }
 function axleSupportProblem(d,x){
  if(!finite(x)||x<noseOffset(d)+AXLE_EDGE-1e-7||x>d.L-AXLE_EDGE)return 'Keep each axle at least 5 mm from the actual body ends.';
@@ -264,13 +340,14 @@ function renderAxleChecks(checks){
 
 function placeAxles(d,frontTarget,rearTarget){
  const positions=[];for(let x=AXLE_EDGE;x<=d.L-AXLE_EDGE;x++)if(!axleSupportProblem(d,x))positions.push(x);
- const fronts=[...positions].sort((a,b)=>Math.abs(a-frontTarget)-Math.abs(b-frontTarget)),rears=[...positions].sort((a,b)=>Math.abs(a-rearTarget)-Math.abs(b-rearTarget)),cg=balanceEstimate(d);
- for(const front of fronts)for(const rear of rears){if(rear-front<minimumWheelbase(d))continue;const candidate={...d,frontAxle:front,rearInset:d.L-rear};const balance={...cg,x:(cg.x*cg.total-d.hardware*(d.frontAxle+d.L-d.rearInset)/2+d.hardware*(front+rear)/2)/cg.total};if(!axlePlacementProblem(candidate,balance)&&!rawCurveProblem(candidate)){d.frontAxle=front;d.rearInset=d.L-rear;return true;}}
+ const fronts=[...positions].sort((a,b)=>Math.abs(a-frontTarget)-Math.abs(b-frontTarget)),rears=[...positions].sort((a,b)=>Math.abs(a-rearTarget)-Math.abs(b-rearTarget)),cg=balanceEstimate(d),hardwareMass=installedHardwareMass(d);
+ for(const front of fronts)for(const rear of rears){if(rear-front<minimumWheelbase(d))continue;const candidate={...d,frontAxle:front,rearInset:d.L-rear};const balance={...cg,x:(cg.x*cg.total-hardwareMass*(d.frontAxle+d.L-d.rearInset)/2+hardwareMass*(front+rear)/2)/cg.total};if(!axlePlacementProblem(candidate,balance)&&!rawCurveProblem(candidate)){d.frontAxle=front;d.rearInset=d.L-rear;return true;}}
  return false;
 }
 // De Casteljau subdivision preserves the remaining profile when the front is cut off.
 function splitCubic(points,t){const lerp=(a,b)=>a.map((v,i)=>mix(v,b[i],t)),a=lerp(points[0],points[1]),b=lerp(points[1],points[2]),c=lerp(points[2],points[3]),e=lerp(a,b),f=lerp(b,c),g=lerp(e,f);return [[points[0],a,e,g],[g,f,c,points[3]]];}
-function fieldCubics(d,f){return d.u.slice(1).map((_,i)=>{const x0=nodeU(d,f,i)*d.L,x1=nodeU(d,f,i+1)*d.L,c=d.curves[f][i];if(c)return [[x0,d[f][i]],[mix(x0,x1,c.a),c.ya],[mix(x0,x1,c.b),c.yb],[x1,d[f][i+1]]];const h=(x1-x0),epsilon=Math.min(.001,h*.001),s0=(interpolate(d[f],d,(x0+epsilon)/d.L)-d[f][i])/epsilon,s1=(d[f][i+1]-interpolate(d[f],d,(x1-epsilon)/d.L))/epsilon;return [[x0,d[f][i]],[x0+h/3,d[f][i]+s0*h/3],[x1-h/3,d[f][i+1]-s1*h/3],[x1,d[f][i+1]]];});}
+function fieldCubics(d,f){return d.u.slice(1).map((_,i)=>{const x0=nodeU(d,f,i)*d.L,x1=nodeU(d,f,i+1)*d.L,c=segmentCurve(d,f,i);return c?[[x0,d[f][i]],[mix(x0,x1,c.a),c.ya],[mix(x0,x1,c.b),c.yb],[x1,d[f][i+1]]]:[[x0,d[f][i]],[mix(x0,x1,1/3),mix(d[f][i],d[f][i+1],1/3)],[mix(x0,x1,2/3),mix(d[f][i],d[f][i+1],2/3)],[x1,d[f][i+1]]];});}
+
 function trimDesign(before,length){
  if(!finite(length)||length<MIN_LENGTH||length>before.L)throw Error('Keep 180 mm or more. Use Undo or Reset timber to restore length.');
  if(length===before.L)return clone(before);
@@ -496,7 +573,20 @@ function normalizeCutIds(d){for(const c of d.cuts||[])c.id??=`restored-${Date.no
 
 function stockHeight(d,u){return mix(d.stockFrontH,d.stockRearH,u);}
 function protectedNode(d,i,f='t'){const xs=d.xs?.[f]||d.u;return xs[Math.min(xs.length-1,i+1)]*d.L>=d.L-d.hole.depth-d.hole.wall-1e-7;}
-function constrainDesign(d){normalizeDesign(d);const R=d.hole.d/2+d.hole.wall;for(const f of ['w','w2','b','t'])for(let i=0;i<d.u.length;i++){const u=nodeU(d,f,i),rear=protectedNode(d,i,f);let [lo,hi]=fieldBounds(d,f,u);if(f==='w'||f==='w2'){if(rear)lo=Math.max(lo,R);}else if(f==='t'){if(rear)lo=Math.max(lo,d.hole.z+R);}else{if(rear)hi=Math.min(hi,d.hole.z-R);}d[f][i]=clamp(d[f][i],lo,Math.max(lo,hi));}}
+function pointFieldBounds(d,f,i){
+ const u=nodeU(d,f,i),R=d.hole.d/2+d.hole.wall,guard=(d.L-d.hole.depth-d.hole.wall)/d.L;
+ let [lo,hi]=fieldBounds(d,f,u);
+ if(u>=guard-1e-9||i===d.u.length-1)return [lo,hi];
+ const next=nodeU(d,f,i+1);if(next<=guard+1e-9||segmentCurve(d,f,i))return [lo,hi];
+ // Forward points may sit outside the guard's height; the outline at the
+ // actual guard boundary must retain the wall. Curves use rawCurveProblem.
+ const fraction=(guard-u)/(next-u);
+ if(f==='b')hi=Math.min(hi,(d.hole.z-R-fraction*d.b[i+1])/(1-fraction));
+ else lo=Math.max(lo,((f==='t'?d.hole.z+R:R)-fraction*d[f][i+1])/(1-fraction));
+ return [lo,hi];
+}
+
+function constrainDesign(d){normalizeDesign(d);for(const f of ['w','w2','b','t'])for(let i=d.u.length-1;i>=0;i--){const [lo,hi]=pointFieldBounds(d,f,i);d[f][i]=clamp(d[f][i],lo,Math.max(lo,hi));}}
 function evaluateShape(desc){const d=desc.design,h=d.hole,L=d.L,fix=h.depth+h.wall;return {desc,d,h,L,k:1,fix,oldFront:L-fix,newFront:L-fix,frontAxle:d.frontAxle,rearAxle:L-d.rearInset,section:x=>{x=clamp(x,0,L);const u=x/L,R=h.d/2+h.wall,rear=x>=L-fix-1e-7;let w=interpolate(d.w,d,u),w2=interpolate(d.w2||d.w,d,u),t=interpolate(d.t,d,u),b=interpolate(d.b,d,u);w=clamp(w,rear?R:(d.noseShaped?1.5:2.5),d.stockW/2);w2=clamp(w2,rear?R:(d.noseShaped?1.5:2.5),d.stockW/2);b=clamp(b,0,Math.min(stockHeight(d,u)-MIN_THICK,rear?h.z-R:Infinity));t=clamp(t,Math.max(b+MIN_THICK,rear?h.z+R:0),stockHeight(d,u));return {x,oldX:x,w,w2,t,b};}};}
 function clipPlane(poly,axis,value,keepAbove){if(poly.length<3)return [];const out=[];let a=poly.at(-1),da=(a[axis]-value)*(keepAbove?1:-1);for(const b of poly){const db=(b[axis]-value)*(keepAbove?1:-1);if((da>=-1e-9)!==(db>=-1e-9)){const t=da/(da-db);out.push(a.map((v,j)=>v+(b[j]-v)*t));}if(db>=-1e-9)out.push(b);a=b;da=db;}return out.length>=3?out:[];}
 function polygonArea(poly){let a=0;for(let i=0;i<poly.length;i++){const p=poly[i],q=poly[(i+1)%poly.length];a+=p[0]*q[1]-q[0]*p[1];}return Math.abs(a)/2;}
@@ -637,20 +727,46 @@ function projectedFrontalArea(crossSections,minZ,maxZ,steps=180){
  }
  let area=0;for(const row of rows)for(const [lo,hi]of intervalUnion(row))area+=(hi-lo)*dz;return area;
 }
-function statistics(v){
-  const ss=samplePositions(v,130).map(x=>v.section(x)),vol=volume(v);
-  const crossSections=ss.map(s=>cutSection(v,s.x)),vertices=crossSections.flat(2);
-  const minZ=vertices.length?Math.min(...vertices.map(p=>p[1])):0,maxZ=vertices.length?Math.max(...vertices.map(p=>p[1])):0;
+function aerodynamicEstimate(v){
+  const xs=samplePositions(v,130),crossSections=[],flow=[];
+  // Use the cut geometry on both sides of each boundary. This preserves real
+  // shoulders without inventing a full-width face at a cut's exact endpoint.
+  for(let i=1;i<xs.length;i++){
+    const active=cutsAt(v,(xs[i-1]+xs[i])/2);
+    for(const x of [xs[i-1],xs[i]]){
+      const pieces=cutSection(v,x,active),points=pieces.flat(),area=pieces.reduce((sum,p)=>sum+polygonArea(p),0);
+      if(area<1e-7)continue;
+      crossSections.push(pieces);
+      flow.push({x,area,lo:Math.min(...points.map(p=>p[0])),hi:Math.max(...points.map(p=>p[0])),b:Math.min(...points.map(p=>p[1])),t:Math.max(...points.map(p=>p[1]))});
+    }
+  }
+  const minZ=flow.length?Math.min(...flow.map(s=>s.b)):0,maxZ=flow.length?Math.max(...flow.map(s=>s.t)):0;
   const frontal=projectedFrontalArea(crossSections,minZ,maxZ);
-  let wetted=0,slopeMax=0,meanHeight=0;
-  for(let i=1;i<ss.length;i++){const a=ss[i-1],b=ss[i],dx=b.x-a.x;if(dx<1e-8)continue;const aw=Math.sqrt(dx*dx+(b.w-a.w)**2),at=Math.sqrt(dx*dx+(b.t-a.t)**2),ab=Math.sqrt(dx*dx+(b.b-a.b)**2);const aw2=Math.sqrt(dx*dx+(b.w2-a.w2)**2);wetted+=(a.w+a.w2+b.w+b.w2)/2*(at+ab)+(a.t-a.b+b.t-b.b)/2*(aw+aw2);slopeMax=Math.max(slopeMax,Math.abs(b.w-a.w)/dx,Math.abs(b.w2-a.w2)/dx,Math.abs(b.t-a.t)/dx);}
+  let wetted=0,pressureArea=0,slopeMax=0;
+  for(let i=1;i<flow.length;i++){
+    const a=flow[i-1],b=flow[i],dx=b.x-a.x,width=(a.hi-a.lo+b.hi-b.lo)/2,height=(a.t-a.b+b.t-b.b)/2;
+    for(const [delta,span]of [[b.hi-a.hi,height],[b.lo-a.lo,height],[b.t-a.t,width],[b.b-a.b,width]]){
+      const distance=Math.hypot(dx,delta);wetted+=span*distance;
+      // Area-weighted inclination: a tiny steep patch affects only its own
+      // projected area, instead of setting the drag of the entire body.
+      if(distance>1e-9)pressureArea+=span*Math.abs(delta)*(delta/distance)**2;
+      if(dx>1e-8)slopeMax=Math.max(slopeMax,Math.abs(delta)/dx);
+    }
+  }
+  const frontRatio=clamp((flow[0]?.area||0)/Math.max(frontal,1),0,1),tailRatio=clamp((flow.at(-1)?.area||0)/Math.max(frontal,1),0,1);
+  const surfacePressure=pressureArea/Math.max(frontal,1);
+  // Uncalibrated classroom shape heuristic, not CFD or wind-tunnel Cd data.
+  // Frontal silhouette, end faces and changes in the exterior all contribute.
+  // The envelope bridges internal cavities; their detailed airflow is omitted.
+  const cd=clamp(.28+.38*frontRatio+.15*tailRatio+.38*surfacePressure,.28,1.1);
+  const bodyCdA=cd*frontal*1e-6,skinCdA=PHYSICS.skin*wetted*1e-6,wheelCdA=v.d.axlesInstalled?PHYSICS.wheelCdA:0;
+  return {frontal,wetted,cd,cdA:bodyCdA+skinCdA+wheelCdA,bodyCdA,skinCdA,wheelCdA,frontRatio,tailRatio,surfacePressure,slopeMax,minHeight:minZ,maxHeight:maxZ,bodyHeight:maxZ-minZ};
+}
+function statistics(v){
+  const vol=volume(v),aero=aerodynamicEstimate(v);let meanHeight=0;
   const nh=140;for(let i=0;i<nh;i++){const s=v.section((i+.5)*v.newFront/nh);meanHeight+=s.t-s.b;}meanHeight/=nh;
-  const frontRatio=sectionArea(v.section(0))/Math.max(frontal,1),tailRatio=sectionArea(v.section(v.L))/Math.max(frontal,1);
-  // Teaching heuristic, deliberately labelled as uncalibrated. No claimed CFD.
-  const cd=clamp(.28+.38*frontRatio+.15*tailRatio+.16*clamp(slopeMax,0,2),.28,1.1);
-  const cdA=cd*frontal*1e-6+PHYSICS.wheelCdA+PHYSICS.skin*wetted*1e-6;
-  const checks=axleChecks(v.d);
-  return {axlesInstalled:v.d.axlesInstalled,axleChecks:checks,volume:vol,mass:vol*v.d.density/1e6+v.d.hardware,frontal,wetted,cd,cdA,meanHeight,bodyLength:bodyLength(v.d),bodyHeight:maxZ-minZ,maxHeight:maxZ,minHeight:minZ,frontRatio,tailRatio,slopeMax,valid:validate(v,checks,vol),wheelbase:v.rearAxle-v.frontAxle};
+  const checks=axleChecks(v.d),woodMass=vol*v.d.density/1e6,hardwareMass=installedHardwareMass(v.d);
+  return {axlesInstalled:v.d.axlesInstalled,axleChecks:checks,volume:vol,woodMass,hardwareMass,mass:woodMass+hardwareMass,...aero,meanHeight,bodyLength:bodyLength(v.d),valid:validate(v,checks,vol),wheelbase:v.rearAxle-v.frontAxle};
 }
 
 
@@ -667,6 +783,50 @@ class MeshBuilder{
   tri(a,b,c,color,kind=0,out=null){let n=V.norm(V.cross(V.sub(b,a),V.sub(c,a)));if(out&&V.dot(n,out)<0){[b,c]=[c,b];n=n.map(v=>-v);}if(![...a,...b,...c].every(finite))throw Error('Invalid mesh vertex');for(const p of [a,b,c])this.data.push(...p,...n,...color,kind);}
   quad(a,b,c,d,color,kind=0,out=null){this.tri(a,b,c,color,kind,out);this.tri(a,c,d,color,kind,out);}
   finish(){return {data:new Float32Array(this.data),count:this.data.length/10};}
+}
+// Reference wheels: thin six-hole front discs, deep rear rims with recessed webs.
+// Widths reproduce their appearance; the existing radius and axle height are kept.
+const WHEEL_STYLE={frontWidth:1.4,rearWidth:8,gap:2.5,web:1.2,rimInner:10.3,hub:3,bore:1.25};
+function wheelBand(m,x,y,z0,z1,inner,outer,color,bevel=0){
+ const b=Math.min(bevel,(z1-z0)/3,(outer-inner)/3),n=48;
+ const profile=b?[[inner,z0+b],[inner+b,z0],[outer-b,z0],[outer,z0+b],[outer,z1-b],[outer-b,z1],[inner+b,z1],[inner,z1-b]]:[[inner,z0],[outer,z0],[outer,z1],[inner,z1]];
+ const point=(p,a)=>[x+p[0]*Math.cos(a),y+p[0]*Math.sin(a),p[1]];
+ for(let k=0;k<profile.length;k++){
+  const p=profile[k],q=profile[(k+1)%profile.length],dr=q[0]-p[0],dz=q[1]-p[1];
+  for(let j=0;j<n;j++){const a=j/n*Math.PI*2,b=(j+1)/n*Math.PI*2,c=(a+b)/2;m.quad(point(p,a),point(p,b),point(q,b),point(q,a),color,0,[dz*Math.cos(c),dz*Math.sin(c),-dr]);}
+ }
+}
+function addWheelMesh(m,x,y,bodyEdge,side,rear){
+ const style=WHEEL_STYLE,width=rear?style.rearWidth:style.frontWidth,start=bodyEdge+style.gap;
+ const span=(a,b)=>[Math.min(side*a,side*b),Math.max(side*a,side*b)];
+ const rim=[.105,.13,.13],web=rear?[.14,.17,.17]:[.18,.215,.21],hub=[.17,.195,.19];
+ const [z0,z1]=span(start,start+width);
+ wheelBand(m,x,y,z0,z1,style.rimInner,WHEEL_R,rim,.22);
+ // Rear web sits close to the inboard face, leaving a visibly hollow outer cup.
+ const webStart=start+(rear?.6:.1),[f0,f1]=span(webStart,webStart+style.web);
+ wheelBand(m,x,y,f0,f1,style.bore,style.hub,web);
+ wheelBand(m,x,y,...span(start-.7,webStart+style.web+1),style.bore,2.3,hub,.15);
+ const half=Math.PI/6,steps=18,arcSteps=5;
+ const radii=Array.from({length:steps+1},(_,i)=>{
+  const t=i/steps,holeHalf=.46*Math.pow(Math.sin(Math.PI*t),.45)*(.7+.3*t);
+  return {r:mix(style.hub,style.rimInner,t),a:half-holeHalf};
+ });
+ const point=(r,a,z)=>[x+r*Math.cos(a),y+r*Math.sin(a),z];
+ // Build only the six webs around the openings. Nothing covers the holes.
+ for(let spoke=0;spoke<6;spoke++){
+  const angle=spoke*Math.PI/3;
+  for(let j=1;j<radii.length;j++){
+   const a=radii[j-1],b=radii[j];
+   for(let k=0;k<arcSteps;k++){
+    const u=k/arcSteps,w=(k+1)/arcSteps;
+    for(const z of [f0,f1])m.quad(point(a.r,angle+mix(-a.a,a.a,u),z),point(b.r,angle+mix(-b.a,b.a,u),z),point(b.r,angle+mix(-b.a,b.a,w),z),point(a.r,angle+mix(-a.a,a.a,w),z),web,0,[0,0,z===f0?-1:1]);
+   }
+   for(const sign of [-1,1]){
+    const aa=angle+sign*a.a,bb=angle+sign*b.a,A=point(a.r,aa,f0),B=point(b.r,bb,f0),dx=B[0]-A[0],dy=B[1]-A[1];
+    m.quad(A,B,point(b.r,bb,f1),point(a.r,aa,f1),web,0,[-sign*dy,sign*dx,0]);
+   }
+  }
+ }
 }
 function makeCarMesh(v,color=bodyRGB(v.d)){
   const m=new MeshBuilder(),L=v.L,h=v.h,offset=BODY_OFFSET;
@@ -714,10 +874,11 @@ function makeCarMesh(v,color=bodyRGB(v.d)){
     m.tri(coord(L-h.depth,[0,h.z]),b,c,[.30,.19,.12],0,[1,0,0]);
   }
   function cylinderZ(x,y,z0,z1,r,c,n=30){for(let j=0;j<n;j++){const a=j/n*2*Math.PI,b=(j+1)/n*2*Math.PI,p=[x+r*Math.cos(a),y+r*Math.sin(a),z0],q=[x+r*Math.cos(b),y+r*Math.sin(b),z0],p2=[p[0],p[1],z1],q2=[q[0],q[1],z1];m.quad(p,p2,q2,q,c,0,[(p[0]+q[0])/2-x,(p[1]+q[1])/2-y,0]);m.tri([x,y,z0],p,q,c,0,[0,0,-1]);m.tri([x,y,z1],p2,q2,c,0,[0,0,1]);}}
-  for(const ax of v.d.axlesInstalled?[v.frontAxle,v.rearAxle]:[]){
-    const s=v.section(ax),x=ax-L/2,y=offset+AXLE_Z,spanP=s.w+4,spanN=s.w2+4;
-    cylinderZ(x,y,-spanN-3,spanP+3,AXLE_R,[.52,.59,.60],16);
-    for(const side of [-1,1]){const z=side>0?spanP:-spanN; cylinderZ(x,y,z-2.5,z+2.5,WHEEL_R,[.13,.18,.20],36);cylinderZ(x,y,z-2.62,z+2.62,7.5,[.64,.74,.75],28);cylinderZ(x,y,z-2.75,z+2.75,3.2,color,20);}
+  for(const [index,ax] of (v.d.axlesInstalled?[v.frontAxle,v.rearAxle]:[]).entries()){
+    const s=v.section(ax),x=ax-L/2,y=offset+AXLE_Z,rear=index===1;
+    const tip=WHEEL_STYLE.gap+(rear?.6:.1)+WHEEL_STYLE.web+1.1;
+    cylinderZ(x,y,-s.w2-tip,s.w+tip,AXLE_R,[.52,.59,.60],16);
+    for(const side of [-1,1])addWheelMesh(m,x,y,side>0?s.w:s.w2,side,rear);
   }
   return meshWithCuts(noseMesh(m.finish(),v,color),v,color);
 }
@@ -761,10 +922,20 @@ class Renderer{
         if(!ground&&V.dot(n,cameraOut)<-.00001)continue;
         const ps=[0,10,20].map(k=>transform(mat,[a[i+k],a[i+k+1],a[i+k+2]]));
         const light=.66+.30*Math.max(0,V.dot(n,V.norm([-.25,.9,.55])));
-        const tr={ps,z:(ps[0][2]+ps[1][2]+ps[2][2])/3,c:`rgb(${[a[i+6],a[i+7],a[i+8]].map(c=>Math.round(clamp(c*light,0,1)*255)).join(',')})`};
+        const color=`rgb(${[a[i+6],a[i+7],a[i+8]].map(c=>Math.round(clamp(c*light,0,1)*255)).join(',')})`;
+        // Split large wood faces for the painter fallback: their centroids must
+        // not paint over the much smaller open wheel webs beside the body.
+        const enqueue=(points,depth=0)=>{
+          if(!ground&&a[i+9]===1&&depth<7){
+            const edges=points.map((p,j)=>{const q=points[(j+1)%3];return ((p[0]-q[0])*w/2)**2+((p[1]-q[1])*h/2)**2;}),longest=Math.max(...edges);
+            if(longest>24**2){const j=edges.indexOf(longest),p=points[j],q=points[(j+1)%3],r=points[(j+2)%3],mid=p.map((v,k)=>(v+q[k])/2);enqueue([p,mid,r],depth+1);enqueue([mid,q,r],depth+1);return;}
+          }
+          const tr={ps:points,z:(points[0][2]+points[1][2]+points[2][2])/3,c:color};
+          if(ground)paint(tr);else sceneTriangles.push(tr);
+        };
         // Paint the flat ground in construction order. Sorting long coplanar
         // ground triangles by centroid would incorrectly cover the cars.
-        if(ground)paint(tr);else sceneTriangles.push(tr);
+        enqueue(ps);
       }
     }
     sceneTriangles.sort((a,b)=>b.z-a.z);for(const tr of sceneTriangles)paint(tr);
@@ -800,20 +971,47 @@ function drawView(which){
   if(which==='top'){ctx.beginPath();ctx.setLineDash([5,4]);ctx.moveTo(px(0)-5,py(0));ctx.lineTo(px(v.L)+5,py(0));ctx.strokeStyle='#708fa1';ctx.lineWidth=.8;ctx.stroke();ctx.setLineDash([]);}
   // The same selected axle positions are projected into both views.
   for(const x of d.axlesInstalled?[v.frontAxle,v.rearAxle]:[]){ctx.beginPath();ctx.setLineDash([2,3]);if(which==='top'){ctx.moveTo(px(x),py(d.stockW/2));ctx.lineTo(px(x),py(-d.stockW/2));}else{ctx.moveTo(px(x),py(0));ctx.lineTo(px(x),py(Math.max(AXLE_Z+3,v.section(x).t)));}ctx.strokeStyle='#7e939a';ctx.lineWidth=.85;ctx.stroke();ctx.setLineDash([]);}
-  const handles=[],active=activeCurveChain();
-  if(state.mode==='draw'&&['select','curve','addPoint'].includes(drawTool))for(let i=0;i<d.u.length;i++){
+  const handles=[];
+  if(state.mode==='draw'&&['select','addPoint'].includes(drawTool))for(let i=0;i<d.u.length;i++){
     const x=d.u[i]*v.L,vals=which==='top'?[['w',d.w[i]],['w2',-d.w2[i]]]:[['t',d.t[i]],['b',d.b[i]]];
-    for(const [field,y]of vals){if(!visiblePointIndices(d,field).includes(i))continue;if(which==='side'&&nodeU(d,field,i)+1e-8<Math.min(nodeU(d,'w',0),nodeU(d,'w2',0)))continue;const X=px(nodeU(d,field,i)*v.L),Y=py(y);const editable=true;ctx.beginPath();ctx.arc(X,Y,editable?4.0:2.1,0,2*Math.PI);const selected=selectedPoints.some(p=>p.i===i&&p.field===field);ctx.fillStyle=selected?'#f6ac55':(d.curved?.[field]?.[i]?'#c7ede7':'#fff');ctx.fill();ctx.strokeStyle=field==='b'?'#5b8ba7':'#087f80';ctx.lineWidth=editable?1.7:0;ctx.stroke();if(editable)handles.push({i,field,mirror:field==='w2',x:X,y:Y});}
+    for(const [field,y]of vals){if(!visiblePointIndices(d,field).includes(i))continue;if(which==='side'&&nodeU(d,field,i)+1e-8<Math.min(nodeU(d,'w',0),nodeU(d,'w2',0)))continue;const X=px(nodeU(d,field,i)*v.L),Y=py(y);const editable=true;ctx.beginPath();ctx.arc(X,Y,editable?5:2.1,0,2*Math.PI);const selected=selectedPoints.some(p=>p.i===i&&p.field===field);ctx.fillStyle=selected?'#f6ac55':(d.curved?.[field]?.[i]?'#c7ede7':'#fff');ctx.fill();ctx.strokeStyle=selected&&pointEditLimit?'#b05b20':field==='b'?'#5b8ba7':'#087f80';ctx.lineWidth=selected?2.3:editable?1.7:0;ctx.stroke();if(editable)handles.push({i,field,mirror:field==='w2',x:X,y:Y});}
   }
-  const curveHandles=[],chain=active;if(state.mode==='draw'&&chain&&drawTool!=='area'&&((which==='top'&&['w','w2'].includes(chain.field))||(which==='side'&&['t','b'].includes(chain.field)))){const f=chain.field,sign=f==='w2'?-1:1,middle=chainMiddle(d,f,chain.first,chain.last),X=px(middle.u*v.L),Y=py(middle.z*sign);ctx.strokeStyle='#d78337';ctx.lineWidth=1.2;ctx.beginPath();ctx.moveTo(X,Y-15);ctx.lineTo(X,Y+15);ctx.moveTo(X-15,Y);ctx.lineTo(X+15,Y);ctx.stroke();ctx.beginPath();ctx.arc(X,Y,7,0,Math.PI*2);ctx.fillStyle='#f6ac55';ctx.fill();ctx.strokeStyle='#a9541e';ctx.lineWidth=2;ctx.stroke();curveHandles.push({kind:'curve',i:chain.first,last:chain.last,field:f,x:X,y:Y});}
-  for(const c of selectionCuts())if(c.depth==null||finite(c.depth)&&c.depth>=.5&&c.depth<=100)cutProjection(c,true);canvas._handles=handles;canvas._curveHandles=curveHandles;drawCoordinateReadout(which,canvas,ctx,px,py);drawEditOverlays(canvas,ctx,px,py,which);
+  for(const c of selectionCuts())if(c.depth==null||finite(c.depth)&&c.depth>=.5&&c.depth<=100)cutProjection(c,true);canvas._handles=handles;drawCoordinateReadout(which,canvas,ctx,px,py);drawEditOverlays(canvas,ctx,px,py,which);
   ctx.font='9px Segoe UI,Arial';ctx.fillStyle='#69847e';ctx.textAlign='center';for(let x=0;x<v.L-18;x+=40)ctx.fillText(String(x),px(x),H-16);ctx.fillText(`${v.L.toFixed(0)} mm`,px(v.L),H-16);
   ctx.textAlign='left';ctx.font='bold 9px Segoe UI,Arial';ctx.fillStyle='#477a75';ctx.fillText('FRONT',px(0),12);ctx.textAlign='right';ctx.fillStyle='#a65d65';ctx.fillText('REAR',px(v.L),12);
 }
 function rememberDesign(){undoStack.push(captureEdit());if(undoStack.length>60)undoStack.shift();redoStack=[];updateUndo();}
-function updateUndo(){$('morePointsBtn').disabled=racing;const chain=selectedChain();$('undoBtn').disabled=racing||!undoStack.length;$('redoBtn').disabled=racing||!redoStack.length;$('curvePointBtn').disabled=racing||!chain;$('cornerPointBtn').disabled=racing||!chain;$('curvePointBtn').classList.toggle('active',drawTool==='curve'&&!!chain&&Array.from({length:chain.last-chain.first},(_,i)=>state.design.curves[chain.field][chain.first+i]).every(Boolean));$('cornerPointBtn').classList.toggle('active',!!chain&&Array.from({length:chain.last-chain.first},(_,i)=>state.design.curves[chain.field][chain.first+i]).every(c=>!c));if(drawTool==='select')$('sketchHint').textContent='Click to select or drag a dot. Select 2+ neighbouring dots for Curve.';if(drawTool==='curve')$('sketchHint').textContent=activeCurveChain()?'Drag the middle dot in any direction.':'Select 2+ neighbouring dots, then Curve.';$('finishEditBtn').disabled=racing||drawTool==='done';$('cutDepth').disabled=racing||$('cutThrough').checked;$('cutEndDepth').disabled=racing||$('cutThrough').checked;syncEditUI();$('applyCutBtn').disabled=racing||(!$('cutThrough').checked&&(!finite(Number($('cutDepth').value))||Number($('cutDepth').value)<.5||Number($('cutDepth').value)>100||!finite(Number($('cutEndDepth').value))||Number($('cutEndDepth').value)<.5||Number($('cutEndDepth').value)>100))||!pendingCut||(pendingCut.u1-pendingCut.u0)*state.design.L<1||pendingCut.hi-pendingCut.lo<1;if(!pendingCut)$('cutSelectionText').textContent='Select an area, then click Remove.';}
-function setDrawTool(tool){editingNose=null;drawTool=tool;pendingCut=null;editingCutIds=[];trimKeep=state.design.L;$('cutShape').value='rectangle';for(const [id,t]of [['selectPointBtn','select'],['morePointsBtn','addPoint'],['cutRegionBtn','area'],['trimLengthBtn','trim'],['axleModeBtn','axle']])$(id).classList.toggle('active',tool===t);$('sketchHint').textContent=tool==='done'?'Choose a tool to edit.':tool==='area'?'Select an area, choose the depth, then Remove.':tool==='curve'?'Drag the middle dot in any direction.':'Click to select or drag a dot. Select 2+ neighbouring dots for Curve.';$('cutActions').classList.toggle('hidden',tool!=='area');$('trimActions').classList.toggle('hidden',tool!=='trim');$('axleActions').classList.toggle('hidden',tool!=='axle');$('morePointsBtn').setAttribute('aria-pressed',String(tool==='addPoint'));if(tool==='addPoint')$('sketchHint').textContent='Optional: click an outline to add a point, then drag it or enter coordinates. Up to 16 per outline.';if(tool==='trim')$('sketchHint').textContent='Choose the cut direction, then drag the orange line.';if(tool==='axle')$('sketchHint').textContent=state.design.axlesInstalled?'Move axles freely; support is checked before saving.':'Click Axles above to add both axles.';updateUndo();scheduleUpdate();}
-function applyPointCurve(on){const chain=selectedChain();if(racing||!chain){toast('Select at least 2 neighbouring points on one outline.');return;}const d=clone(state.design),f=chain.field;if(!on){const a=nodeU(d,f,chain.first),b=nodeU(d,f,chain.last);for(let j=chain.first+1;j<chain.last;j++)d[f][j]=mix(d[f][chain.first],d[f][chain.last],(nodeU(d,f,j)-a)/(b-a));}for(let i=chain.first;i<chain.last;i++){d.curves[f][i]=on?(d.curves[f][i]||{a:1/3,b:2/3,ya:mix(d[f][i],d[f][i+1],1/3),yb:mix(d[f][i],d[f][i+1],2/3)}):null;d.curved[f][i]=false;d.curved[f][i+1]=false;mirrorSegment(d,f,i);}if(rawCurveProblem(d)){toast('Keep this curve inside the stock and protected areas.');return;}if(JSON.stringify(d)!==JSON.stringify(state.design)){rememberDesign();state.design=d;dataChanged();}setDrawTool(on?'curve':'select');$('sketchHint').textContent=on?'Drag the middle dot in any direction.':'Selected segments are straight.';}
+function updatePointHint(){
+ const hint=$('sketchHint');hint.classList.toggle('at-limit',drawTool==='select'&&pointEditLimit);
+ if(drawTool!=='select')return;
+ const smooth=selectedPoints.length&&selectedPoints.every(p=>state.design.curved[p.field][p.i]);
+ hint.textContent=pointEditMessage||(smooth?'Curve on: drag the selected dot to shape the line. Shift-click another dot to select a range.':selectedPoints.length?'Click Curve to smooth this point, then drag it. Corner makes a sharp join.':'Select one dot → Curve → drag the dot. Both Side view outlines can curve.');
+}
+function setPointFeedback(message='',limit=false){pointEditMessage=message;pointEditLimit=limit;updatePointHint();}
+function updateUndo(){
+ $('morePointsBtn').disabled=racing;const selected=drawTool==='select'&&selectedPoints.length;
+ $('undoBtn').disabled=racing||!undoStack.length;$('redoBtn').disabled=racing||!redoStack.length;
+ $('curvePointBtn').disabled=racing||!selected;$('cornerPointBtn').disabled=racing||!selected;
+ const smooth=!!selected&&selectedPoints.every(p=>state.design.curved[p.field][p.i]),corner=!!selected&&selectedPoints.every(p=>!state.design.curved[p.field][p.i]&&!state.design.curves[p.field][p.i-1]&&!state.design.curves[p.field][p.i]);
+ $('curvePointBtn').classList.toggle('active',smooth);$('cornerPointBtn').classList.toggle('active',corner);
+ $('curvePointBtn').setAttribute('aria-pressed',String(smooth));$('cornerPointBtn').setAttribute('aria-pressed',String(corner));updatePointHint();
+ $('finishEditBtn').disabled=racing||drawTool==='done';$('cutDepth').disabled=racing||$('cutThrough').checked;$('cutEndDepth').disabled=racing||$('cutThrough').checked;syncEditUI();$('applyCutBtn').disabled=racing||(!$('cutThrough').checked&&(!finite(Number($('cutDepth').value))||Number($('cutDepth').value)<.5||Number($('cutDepth').value)>100||!finite(Number($('cutEndDepth').value))||Number($('cutEndDepth').value)<.5||Number($('cutEndDepth').value)>100))||!pendingCut||(pendingCut.u1-pendingCut.u0)*state.design.L<1||pendingCut.hi-pendingCut.lo<1;if(!pendingCut)$('cutSelectionText').textContent='Select an area, then click Remove.';}
+function setDrawTool(tool){editingNose=null;pointEditMessage='';pointEditLimit=false;drawTool=tool;pendingCut=null;editingCutIds=[];trimKeep=state.design.L;$('cutShape').value='rectangle';for(const [id,t]of [['selectPointBtn','select'],['morePointsBtn','addPoint'],['cutRegionBtn','area'],['trimLengthBtn','trim'],['axleModeBtn','axle']])$(id).classList.toggle('active',tool===t);$('sketchHint').textContent=tool==='done'?'Choose a tool to edit.':tool==='area'?'Select an area, choose the depth, then Remove.':'Select one dot → Curve → drag the dot. Both Side view outlines can curve.';$('cutActions').classList.toggle('hidden',tool!=='area');$('trimActions').classList.toggle('hidden',tool!=='trim');$('axleActions').classList.toggle('hidden',tool!=='axle');$('morePointsBtn').setAttribute('aria-pressed',String(tool==='addPoint'));if(tool==='addPoint')$('sketchHint').textContent='Optional: click an outline to add a point, then drag it or enter coordinates. Up to 16 per outline.';if(tool==='trim')$('sketchHint').textContent='Choose the cut direction, then drag the orange line.';if(tool==='axle')$('sketchHint').textContent=state.design.axlesInstalled?'Move axles freely; support is checked before saving.':'Click Axles above to add both axles.';updateUndo();scheduleUpdate();}
+function applyPointCurve(on){
+ if(racing||drawTool!=='select'||!selectedPoints.length)return;
+ const d=clone(state.design);
+ for(const p of selectedPoints){
+  const f=p.field,visible=visiblePointIndices(d,f),at=visible.indexOf(p.i),left=visible[Math.max(0,at-1)],right=visible[Math.min(visible.length-1,at+1)];
+  d.curved[f][p.i]=on;
+  for(let j=left+1;j<right;j++)if(!visible.includes(j))d.curved[f][j]=on;
+  for(let j=left;j<right;j++){d.curves[f][j]=null;mirrorSegment(d,f,j);}
+ }
+ const problem=rawCurveProblem(d)?'This bend reaches the timber or hole limit. Move the dot slightly inward, then click Curve again.':cutShapeProblem(evaluateShape({design:d,L:d.L,k:1}));
+ if(problem){setPointFeedback(problem,true);scheduleUpdate();return;}
+ if(JSON.stringify(d)!==JSON.stringify(state.design)){rememberDesign();state.design=d;dataChanged();}
+ setPointFeedback(on?'Curve on: drag the dot to make a bend. Points on one straight line will stay straight until moved.':'Corner on: this point can form a sharp join. Set both ends to Corner for a straight section.');updateUndo();scheduleUpdate();
+}
+
 function applyRegionCut(){
  if(racing||!pendingCut)return false;
  if(!$('cutThrough').checked&&[$('cutDepth'),$('cutEndDepth')].some(el=>!finite(Number(el.value))||Number(el.value)<.5||Number(el.value)>100)){toast('Choose depths from 0.5 to 100 mm.');return false;}
@@ -834,13 +1032,21 @@ function coordinateNumber(value){return +value.toFixed(2);}
 // The centred geometry is retained for symmetry, cutting, 3D and mass calculations.
 function coordinateY(d,field,value){return value+(['w','w2'].includes(field)?d.stockW/2:0);}
 function pointLabel(p){return `${['w','w2'].includes(p.field)?'Top':'Side'} ${['w','t'].includes(p.field)?'upper':'lower'} · ${{w:'A',w2:'B',t:'C',b:'D'}[p.field]}${visiblePointNumber(state.design,p.field,p.i)}`;}
-function coordinateTarget(){if(!['select','curve'].includes(drawTool)||!selectedPoints.length)return null;const chain=activeCurveChain();if(chain){const p=chainMiddle(state.design,chain.field,chain.first,chain.last);return {field:chain.field,curve:true,chain,x:p.u*state.design.L,y:p.z*(chain.field==='w2'?-1:1)};}const p=selectedPoints.find(p=>p.field+':'+p.i===activePointKey)||selectedPoints.at(-1);activePointKey=p.field+':'+p.i;return {...p,curve:false,x:nodeU(state.design,p.field,p.i)*state.design.L,y:state.design[p.field][p.i]*(p.field==='w2'?-1:1)};}
+function coordinateTarget(){if(drawTool!=='select'||!selectedPoints.length)return null;const p=selectedPoints.find(p=>p.field+':'+p.i===activePointKey)||selectedPoints.at(-1);activePointKey=p.field+':'+p.i;return {...p,x:nodeU(state.design,p.field,p.i)*state.design.L,y:state.design[p.field][p.i]*(p.field==='w2'?-1:1)};}
+
 function pointXBounds(d,f,i){const visible=visiblePointIndices(d,f),at=visible.indexOf(i);if(i===0&&['w','w2'].includes(f))return [0,Math.max(0,Math.min(d.L-MIN_LENGTH,(nodeU(d,f,visible[1])-.003)*d.L))];if(i===0||i===d.u.length-1){const x=nodeU(d,f,i)*d.L;return [x,x];}return [(nodeU(d,f,visible[at-1])+.003)*d.L,(nodeU(d,f,visible[at+1])-.003)*d.L];}
-function syncPointUI(force=false){const p=coordinateTarget(),panel=$('pointActions');panel.classList.toggle('hidden',!p);if(!p)return;const top=['w','w2'].includes(p.field),options=p.curve?'<option value="curve">Curve centre</option>':selectedPoints.map(q=>`<option value="${q.field}:${q.i}">${pointLabel(q)}</option>`).join('');if($('pointChoice').innerHTML!==options)$('pointChoice').innerHTML=options;$('pointChoice').value=p.curve?'curve':activePointKey;$('pointChoice').disabled=racing||p.curve||selectedPoints.length===1;$('pointSelectionCount').textContent=`${selectedPoints.length} selected`;
- $('pointYLabel').textContent=top?'Y: from lower edge (mm)':'Z: above base (mm)';$('pointCoordinateHint').textContent=p.curve?'Adjust the middle control. Both ends stay fixed.':top?'X = 0 is the timber front. Y = 0 is the timber lower edge.':'X = 0 is the timber front. Z = 0 is the original base.';
- for(const [id,value]of [['pointX',p.x],['pointY',coordinateY(state.design,p.field,p.y)]]){if(force||document.activeElement!==$(id))$(id).value=coordinateNumber(value);$(id).disabled=racing||drawTool==='curve'&&!p.curve;}
- const d=state.design,xBounds=p.curve?[nodeU(d,p.field,p.chain.first)*d.L,nodeU(d,p.field,p.chain.last)*d.L]:pointXBounds(d,p.field,p.i);$('pointX').min=xBounds[0];$('pointX').max=xBounds[1];$('pointX').readOnly=xBounds[0]===xBounds[1];let [lo,hi]=fieldBounds(d,p.field,p.x/d.L);if(p.field==='w2')[lo,hi]=[-hi,-lo];$('pointY').min=coordinateY(d,p.field,lo);$('pointY').max=coordinateY(d,p.field,hi);
+function syncPointUI(force=false){
+ const p=coordinateTarget(),panel=$('pointActions');panel.classList.toggle('hidden',!p);if(!p)return;
+ const d=state.design,top=['w','w2'].includes(p.field),options=selectedPoints.map(q=>`<option value="${q.field}:${q.i}">${pointLabel(q)}</option>`).join('');
+ if($('pointChoice').innerHTML!==options)$('pointChoice').innerHTML=options;$('pointChoice').value=activePointKey;$('pointChoice').disabled=racing||selectedPoints.length===1;
+ $('pointSelectionCount').textContent=`${selectedPoints.length} selected · ${d.curved[p.field][p.i]||d.curves[p.field][p.i-1]||d.curves[p.field][p.i]?'Curve':'Corner'}`;
+ $('pointYLabel').textContent=top?'Y: from lower edge (mm)':'Z: above base (mm)';
+ $('pointCoordinateHint').textContent=top?'X = 0 is the timber front. Y = 0 is the timber lower edge.':p.field==='b'?'Bottom outline: move up to remove wood underneath. Curve also works at the front.':'Top outline: move down to remove wood. Curve also works at the front.';
+ for(const [id,value]of [['pointX',p.x],['pointY',coordinateY(d,p.field,p.y)]]){if(force||document.activeElement!==$(id))$(id).value=coordinateNumber(value);$(id).disabled=racing;}
+ const xBounds=pointXBounds(d,p.field,p.i);$('pointX').min=xBounds[0];$('pointX').max=xBounds[1];$('pointX').readOnly=xBounds[0]===xBounds[1];
+ let [lo,hi]=pointFieldBounds(d,p.field,p.i);if(p.field==='w2')[lo,hi]=[-hi,-lo];$('pointY').min=coordinateY(d,p.field,lo);$('pointY').max=coordinateY(d,p.field,hi);
 }
+
 function movePointGeometry(d,f,i,u,z){
  const old=clone(d),visible=visiblePointIndices(d,f),at=visible.indexOf(i),left=visible[Math.max(0,at-1)],right=visible[Math.min(visible.length-1,at+1)],x0=nodeU(old,f,i),xl=nodeU(old,f,left),xr=nodeU(old,f,right),bounds=pointXBounds(d,f,i),[lo,hi]=fieldBounds(d,f,clamp(u,bounds[0]/d.L,bounds[1]/d.L));
  const dx=clamp(u,bounds[0]/d.L,bounds[1]/d.L)-x0,dy=clamp(z,lo,hi)-old[f][i];
@@ -850,6 +1056,7 @@ function movePointGeometry(d,f,i,u,z){
   const c=old.curves[f][j],a=nodeU(old,f,j),b=nodeU(old,f,j+1),xa=mix(a,b,c.a),xb=mix(a,b,c.b),na=nodeU(d,f,j),nb=nodeU(d,f,j+1);
   d.curves[f][j]={a:(xa+dx*weight(xa)-na)/(nb-na),b:(xb+dx*weight(xb)-na)/(nb-na),ya:c.ya+dy*weight(xa),yb:c.yb+dy*weight(xb)};
  }
+ if(old.curved[f][i])for(let j=left;j<right;j++)d.curves[f][j]=null;
  constrainDesign(d);const other=oppositeField(f);
  if(state.symmetry==='symmetric'&&other){for(let j=left;j<=right;j++){d[other][j]=d[f][j];d.xs[other][j]=d.xs[f][j];}for(let j=left;j<right;j++)mirrorSegment(d,f,j);d.editPoints[other]=[...d.editPoints[f]];if(d.pointCounts)d.pointCounts[other]=d.editPoints[f].length;}
  if(i===0&&(f==='w'||f==='w2'))syncNoseReference(d);constrainDesign(d);
@@ -870,30 +1077,38 @@ function pointMoveLimitMessage(d,f,i,u,z){
  if((i===0&&!['w','w2'].includes(f))||i===d.u.length-1)return 'This end point has a fixed X position. You can only move it up or down.';
  return 'Keep neighbouring points in order. This point cannot move past the point beside it.';
 }
-function curveMoveLimitMessage(){return 'This curve has reached a design limit. Keep it inside the timber and clear of the rear hole. Try a smaller curve.';}
-function applyPointCoordinate(axis){const p=coordinateTarget();if(racing||!p||drawTool==='curve'&&!p.curve)return;const input=$(axis==='x'?'pointX':'pointY'),value=Number(input.value);if(!input.value.trim()||!finite(value)){toast('Enter a coordinate in millimetres.');syncPointUI(true);return;}const d=clone(state.design),x=axis==='x'?value:p.x,y=axis==='y'?value-coordinateY(d,p.field,0):p.y,sign=p.field==='w2'?-1:1;const bounds=p.curve?[nodeU(d,p.field,p.chain.first)*d.L,nodeU(d,p.field,p.chain.last)*d.L]:pointXBounds(d,p.field,p.i);if(x<bounds[0]-1e-7||x>bounds[1]+1e-7){toast(`Keep X between ${coordinateNumber(bounds[0])} and ${coordinateNumber(bounds[1])} mm.`);syncPointUI(true);return;}
- if(p.curve)bendChain(d,p.field,p.chain.first,p.chain.last,(y-p.y)*sign,(x-p.x)/d.L);else movePointGeometry(d,p.field,p.i,x/d.L,y*sign);
- const proposal=safeCurveProposal(state.design,d),problem=cutShapeProblem(evaluateShape({design:proposal,L:proposal.L,k:1}));if(problem){toast(problem);syncPointUI(true);return;}const limit=(!p.curve&&pointMoveLimitMessage(d,p.field,p.i,x/d.L,y*sign))||(proposal!==d&&curveMoveLimitMessage());if(JSON.stringify(proposal)!==JSON.stringify(state.design)){rememberDesign();state.design=proposal;dataChanged();}if(limit)toast(limit);syncPointUI(true);
+function curveMoveLimitMessage(){return 'Limit reached: the curve must stay inside the timber, keep 4 mm thickness and clear the rear hole. Drag back to continue.';}
+
+function applyPointCoordinate(axis){
+ const p=coordinateTarget();if(racing||!p)return;
+ const input=$(axis==='x'?'pointX':'pointY'),value=Number(input.value);
+ if(!String(input.value).trim()||!finite(value)){setPointFeedback('Enter a coordinate in millimetres.',true);syncPointUI(true);return;}
+ const d=clone(state.design),x=axis==='x'?value:p.x,y=axis==='y'?value-coordinateY(d,p.field,0):p.y,sign=p.field==='w2'?-1:1;
+ movePointGeometry(d,p.field,p.i,x/d.L,y*sign);
+ const proposal=safeCurveProposal(state.design,d),problem=cutShapeProblem(evaluateShape({design:proposal,L:proposal.L,k:1}));
+ if(problem){setPointFeedback(problem,true);syncPointUI(true);scheduleUpdate();return;}
+ const limit=(proposal!==d&&curveMoveLimitMessage())||pointMoveLimitMessage(d,p.field,p.i,x/d.L,y*sign);
+ if(JSON.stringify(proposal)!==JSON.stringify(state.design)){rememberDesign();state.design=proposal;dataChanged();}
+ setPointFeedback(limit||'',!!limit);syncPointUI(true);scheduleUpdate();
 }
-function drawCoordinateReadout(which,canvas,ctx,px,py){const p=coordinateTarget();if(!p||(['w','w2'].includes(p.field)?'top':'side')!==which)return;const x=px(p.x),y=py(p.y),label=`(${coordinateNumber(p.x)}, ${coordinateNumber(coordinateY(state.design,p.field,p.y))}) mm`;ctx.font='bold 10px Segoe UI,Arial';const width=ctx.measureText(label).width+10,plot=canvas.getBoundingClientRect(),left=clamp(x-width/2,4,plot.width-width-4),top=clamp(y-26,24,plot.height-46);ctx.fillStyle='#ffffffee';ctx.fillRect(left,top,width,17);ctx.fillStyle='#376faa';ctx.textAlign='center';ctx.fillText(label,left+width/2,top+12);ctx.strokeStyle='#376faa';ctx.lineWidth=1.5;ctx.beginPath();ctx.arc(x,y,p.curve?10:6,0,Math.PI*2);ctx.stroke();}
+
+function drawCoordinateReadout(which,canvas,ctx,px,py){const p=coordinateTarget();if(!p||(['w','w2'].includes(p.field)?'top':'side')!==which)return;const x=px(p.x),y=py(p.y),label=`(${coordinateNumber(p.x)}, ${coordinateNumber(coordinateY(state.design,p.field,p.y))}) mm`;ctx.font='bold 10px Segoe UI,Arial';const width=ctx.measureText(label).width+10,plot=canvas.getBoundingClientRect(),left=clamp(x-width/2,4,plot.width-width-4),top=clamp(y-26,24,plot.height-46);ctx.fillStyle='#ffffffee';ctx.fillRect(left,top,width,17);ctx.fillStyle='#376faa';ctx.textAlign='center';ctx.fillText(label,left+width/2,top+12);ctx.strokeStyle='#376faa';ctx.lineWidth=1.5;ctx.beginPath();ctx.arc(x,y,7,0,Math.PI*2);ctx.stroke();}
 
 function attachDrawing(which){const canvas=$(which==='top'?'topCanvas':'sideCanvas');let drag=null,cutStart=null,moved=false;
  const xy=e=>{const r=canvas.getBoundingClientRect();return {x:e.clientX-r.left,y:e.clientY-r.top};};
  const modelPoint=p=>{const plot=canvas._plot,d=state.design;return {u:clamp((p.x-plot.x0)/plot.scale/d.L,-.25,1.25),z:clamp((plot.y0-p.y)/plot.scale,-100,100)};};
  const nearest=(items,p,radius)=>{const h=items.reduce((a,h)=>!a||Math.hypot(h.x-p.x,h.y-p.y)<Math.hypot(a.x-p.x,a.y-p.y)?h:a,null);return h&&Math.hypot(h.x-p.x,h.y-p.y)<=radius?h:null;};
- canvas.addEventListener('pointerdown',e=>{if(racing||drawTool==='done'||activeDrawingCanvas&&activeDrawingCanvas!==canvas)return;activeDrawingCanvas=canvas;canvas.setPointerCapture(e.pointerId);const p=xy(e);if(drawTool==='addPoint'){activeDrawingCanvas=null;canvas.releasePointerCapture(e.pointerId);addOutlinePoint(canvas,p,which);e.preventDefault();return;}if(beginExtendedDrag(canvas,e,p,which))return;if(drawTool==='area'){cutStart=modelPoint(p);editingCutIds=[];editingNose=null;if(which==='side')$('cutEndDepth').value=$('cutDepth').value;pendingCut={view:which,u0:cutStart.u,u1:cutStart.u,lo:cutStart.z,hi:cutStart.z};canvas.setPointerCapture(e.pointerId);e.preventDefault();return;}const anchor=nearest(canvas._handles||[],p,4.5),handle=nearest(canvas._curveHandles||[],p,10);if(handle){drag={...handle,kind:'curve'};moved=false;canvas.setPointerCapture(e.pointerId);e.preventDefault();return;}const point=nearest(canvas._handles||[],p,15);if(!point){selectedPoints=[];scheduleUpdate();return;}
- activePointKey=point.field+':'+point.i;drag={...point,kind:drawTool==='curve'?'select':'point',start:p,shift:!!e.shiftKey};moved=false;canvas.setPointerCapture(e.pointerId);e.preventDefault();});
- const processMove=e=>{if(racing)return;const p=xy(e);if(moveExtendedDrag(canvas,e,p,which))return;if(cutStart){const end=modelPoint(p);pendingCut={view:which,u0:Math.min(cutStart.u,end.u),u1:Math.max(cutStart.u,end.u),lo:Math.min(cutStart.z,end.z),hi:Math.max(cutStart.z,end.z)};if($('cutShape').value!=='rectangle'){if(which!=='top'){$('cutShape').value='rectangle';}else{pendingCut=makeNoseSelection($('cutShape').value,pendingCut.u1);}}$('cutSelectionText').textContent=`${((pendingCut.u1-pendingCut.u0)*state.design.L).toFixed(0)} × ${(pendingCut.hi-pendingCut.lo).toFixed(0)} mm`;scheduleUpdate();return;}if(!drag||drag.kind==='select')return;if(!moved){if(drag.kind==='point'&&Math.hypot(p.x-drag.start.x,p.y-drag.start.y)<3)return;if(drag.kind==='point'&&!selectedPoints.some(q=>q.i===drag.i&&q.field===drag.field))selectedPoints=[{i:drag.i,field:drag.field}];rememberDesign();moved=true;}const plot=canvas._plot,before=clone(state.design),d=clone(state.design),f=drag.field,i=drag.i,sign=f==='w2'?-1:1,z=(plot.y0-p.y)/plot.scale*sign,u=(p.x-plot.x0)/plot.scale/d.L;
- if(drag.kind==='curve'){const middle=chainMiddle(d,f,i,drag.last);bendChain(d,f,i,drag.last,z-middle.z,u-middle.u);
- }else{movePointGeometry(d,f,i,u,z);}
+ canvas.addEventListener('pointerdown',e=>{if(racing||drawTool==='done'||activeDrawingCanvas&&activeDrawingCanvas!==canvas)return;activeDrawingCanvas=canvas;canvas.setPointerCapture(e.pointerId);setPointFeedback();const p=xy(e);if(drawTool==='addPoint'){activeDrawingCanvas=null;canvas.releasePointerCapture(e.pointerId);addOutlinePoint(canvas,p,which);e.preventDefault();return;}if(beginExtendedDrag(canvas,e,p,which))return;if(drawTool==='area'){cutStart=modelPoint(p);editingCutIds=[];editingNose=null;if(which==='side')$('cutEndDepth').value=$('cutDepth').value;pendingCut={view:which,u0:cutStart.u,u1:cutStart.u,lo:cutStart.z,hi:cutStart.z};canvas.setPointerCapture(e.pointerId);e.preventDefault();return;}const point=nearest(canvas._handles||[],p,15);if(!point){selectedPoints=[];scheduleUpdate();return;}
+ activePointKey=point.field+':'+point.i;drag={...point,kind:'point',start:p,shift:!!e.shiftKey};moved=false;canvas.setPointerCapture(e.pointerId);e.preventDefault();});
+ const processMove=e=>{if(racing)return;const p=xy(e);if(moveExtendedDrag(canvas,e,p,which))return;if(cutStart){const end=modelPoint(p);pendingCut={view:which,u0:Math.min(cutStart.u,end.u),u1:Math.max(cutStart.u,end.u),lo:Math.min(cutStart.z,end.z),hi:Math.max(cutStart.z,end.z)};if($('cutShape').value!=='rectangle'){if(which!=='top'){$('cutShape').value='rectangle';}else{pendingCut=makeNoseSelection($('cutShape').value,pendingCut.u1);}}$('cutSelectionText').textContent=`${((pendingCut.u1-pendingCut.u0)*state.design.L).toFixed(0)} × ${(pendingCut.hi-pendingCut.lo).toFixed(0)} mm`;scheduleUpdate();return;}if(!drag)return;if(!moved){if(drag.kind==='point'&&Math.hypot(p.x-drag.start.x,p.y-drag.start.y)<3)return;if(drag.kind==='point'&&!selectedPoints.some(q=>q.i===drag.i&&q.field===drag.field))selectedPoints=[{i:drag.i,field:drag.field}];rememberDesign();moved=true;}const plot=canvas._plot,before=clone(state.design),d=clone(state.design),f=drag.field,i=drag.i,sign=f==='w2'?-1:1,z=(plot.y0-p.y)/plot.scale*sign,u=(p.x-plot.x0)/plot.scale/d.L;
+ movePointGeometry(d,f,i,u,z);
 
  const proposal=safeCurveProposal(before,d),problem=cutShapeProblem(evaluateShape({design:proposal,L:proposal.L,k:1}));if(!problem)state.design=proposal;
- const limit=problem||(drag.kind==='point'&&pointMoveLimitMessage(d,f,i,u,z))||(proposal!==d&&curveMoveLimitMessage());
- // Show each reason once per drag, rather than restarting the toast on every frame.
- if(limit){drag.limitMessages??=new Set();if(!drag.limitMessages.has(limit)){drag.limitMessages.add(limit);toast(limit);}}
+ const limit=problem||(proposal!==d&&curveMoveLimitMessage())||pointMoveLimitMessage(d,f,i,u,z);
+ setPointFeedback(limit||'',!!limit);
  dataChanged();};
  canvas.addEventListener('pointermove',e=>{if(activeDrawingCanvas!==canvas||racing||!drag&&!cutStart&&!canvas._extendedDrag)return;pendingDrawingMove=()=>processMove(e);scheduleUpdate();});
- const end=(cancel=false)=>{if(activeDrawingCanvas!==canvas)return;const pending=pendingDrawingMove;pendingDrawingMove=null;if(pending&&!cancel)pending();endExtendedDrag(canvas,cancel);activeDrawingCanvas=null;if(!cancel&&drag&&!moved&&drag.kind!=='curve'){const hit={i:drag.i,field:drag.field};if(drag.shift&&selectedPoints.length&&selectedPoints[0].field===hit.field){const start=selectedPoints[0].i;selectedPoints=visiblePointIndices(state.design,hit.field).filter(i=>i>=Math.min(start,hit.i)&&i<=Math.max(start,hit.i)).map(i=>({i,field:hit.field}));}else{const index=selectedPoints.findIndex(q=>q.i===hit.i&&q.field===hit.field);index>=0?selectedPoints.splice(index,1):selectedPoints.push(hit);}scheduleUpdate();}drag=null;cutStart=null;scheduleUpdate();};canvas.addEventListener('pointerup',()=>end());canvas.addEventListener('lostpointercapture',()=>{if(activeDrawingCanvas===canvas)end(true);});canvas.addEventListener('pointercancel',()=>{end(true);pendingCut=null;editingCutIds=[];updateUndo();drawView('top');drawView('side');});
+ const end=(cancel=false)=>{if(activeDrawingCanvas!==canvas)return;const pending=pendingDrawingMove;pendingDrawingMove=null;if(pending&&!cancel)pending();endExtendedDrag(canvas,cancel);activeDrawingCanvas=null;if(!cancel&&drag&&!moved){const hit={i:drag.i,field:drag.field};if(drag.shift&&selectedPoints.length&&selectedPoints[0].field===hit.field){const start=selectedPoints[0].i;selectedPoints=visiblePointIndices(state.design,hit.field).filter(i=>i>=Math.min(start,hit.i)&&i<=Math.max(start,hit.i)).map(i=>({i,field:hit.field}));}else{selectedPoints=[hit];}scheduleUpdate();}drag=null;cutStart=null;scheduleUpdate();};canvas.addEventListener('pointerup',()=>end());canvas.addEventListener('lostpointercapture',()=>{if(activeDrawingCanvas===canvas)end(true);});canvas.addEventListener('pointercancel',()=>{end(true);pendingCut=null;editingCutIds=[];updateUndo();drawView('top');drawView('side');});
 }
 
 function scheduleUpdate(){if(redrawPending)return;redrawPending=true;requestAnimationFrame(()=>{const pending=pendingDrawingMove;pendingDrawingMove=null;if(pending)pending();redrawPending=false;update();});}
@@ -907,7 +1122,7 @@ function update(){
  }
  $('previewHint').textContent='Drag to rotate';
  if(key!==lastStatsKey){currentStats=statistics(current);lastStats=currentStats;lastStatsKey=key;}else currentStats=lastStats;
- $('statLength').textContent=String(coordinateNumber(currentStats.bodyLength));$('statHeight').textContent=currentStats.bodyHeight.toFixed(1);$('statMass').textContent=currentStats.mass.toFixed(1);
+ $('statLength').textContent=String(coordinateNumber(currentStats.bodyLength));$('statHeight').textContent=currentStats.bodyHeight.toFixed(1);$('statMass').textContent=currentStats.mass.toFixed(1);$('statMassLabel').textContent=state.design.axlesInstalled?'Mass with wheels':'Timber mass';$('statMassLabel').title=state.design.axlesInstalled?`Timber ${currentStats.woodMass.toFixed(1)} g + wheels ${currentStats.hardwareMass.toFixed(1)} g`:`Timber only. Adding the wheels adds ${state.design.hardware} g.`;
  renderAxleChecks(currentStats.axleChecks);
  const problem=saveProblem(currentStats);$('validationText').textContent=problem||'Ready to save';$('validationText').classList.toggle('bad',!!problem&&(state.design.axlesInstalled||!currentStats.valid.ok));$('validationText').classList.toggle('waiting',!state.design.axlesInstalled&&currentStats.valid.ok);
  $('saveCarBtn').disabled=racing||!!problem||!!pendingCut;$('saveCarLabel').textContent=`Car ${state.nextId}`;
@@ -927,10 +1142,11 @@ function openRecord(id){const r=state.records.find(r=>r.id===id);if(!r)return;op
 function useRecord(){if(racing)return;const r=state.records.find(r=>r.id===openedRecordId);if(!r)return;rememberDesign();state.design=clone(r.descriptor.design);selectedPoints=[];activePointKey='';pendingCut=null;editingCutIds=[];pendingDrawingMove=null;activeDrawingCanvas=null;cutaway=false;setDrawTool('select');$('cutawayBtn').classList.remove('active');$('cutawayBtn').setAttribute('aria-pressed','false');$('recordDialog').close();dataChanged();$('designSection').scrollIntoView({block:'start'});toast('Design loaded. Save car creates a new record.');}
 
 
-function resetResultLabels(){$('raceClock').textContent='0.00 s';$('raceStatus').textContent=state.selected.length?'Ready':'Save a car to race';}
+function resetResultLabels(){$('raceClock').textContent='0.000 s';$('raceStatus').textContent=state.selected.length?'Ready':'Save a car to race';}
+function aerodynamicDrag(stats,speed){return .5*PHYSICS.rho*stats.cdA*speed*speed;}
 function simulate(stats){
   const m=stats.mass/1000,dt=PHYSICS.dt;let t=0,x=0,v=0,maxSpeed=0;const samples=[[0,0,0]];
-  const acceleration=(time,speed)=>{const thrust=time<PHYSICS.pulseDuration?PHYSICS.pulseN*(1-.65*time/PHYSICS.pulseDuration):0;const drag=.5*PHYSICS.rho*stats.cdA*speed*speed;const roll=PHYSICS.rolling*m*PHYSICS.g;return (thrust-drag-roll)/m;};
+  const acceleration=(time,speed)=>{const thrust=time<PHYSICS.pulseDuration?PHYSICS.pulseN*(1-.65*time/PHYSICS.pulseDuration):0;const drag=aerodynamicDrag(stats,speed);const roll=PHYSICS.rolling*m*PHYSICS.g;return (thrust-drag-roll)/m;};
   for(let i=0;i<12500;i++){
     const a=acceleration(t+dt/2,v),vn=Math.max(0,v+a*dt),xn=x+(v+vn)/2*dt;maxSpeed=Math.max(maxSpeed,vn);
     if(xn>=PHYSICS.track){const f=(PHYSICS.track-x)/(xn-x);t+=dt*f;x=PHYSICS.track;v=mix(v,vn,f);samples.push([t,x,v]);return {time:t,maxSpeed,samples,finished:true};}
@@ -944,17 +1160,34 @@ function prepareRaceMeshes(cars){
  raceMeshes=cars.map((r,i)=>({mesh:makeCarMesh(evaluateShape(r.descriptor)),L:r.descriptor.L,nose:noseOffset(r.descriptor.design)}));raceMeshSources=cars.map(r=>r.descriptor);return true;
 }
 function showRaceFrame(distances){if(!raceMeshes)return;const scale=.011;raceView.setObjects(raceMeshes.map((r,i)=>({mesh:r.mesh,matrix:modelMatrix(scale,(distances[i]||0)-(r.L/2-r.nose)*scale,0,LANES[i],Math.PI)})));}
-function setRaceLock(on){for(const b of document.querySelectorAll('[data-car-color]'))b.disabled=on;for(const id of ['saveCarBtn','exportPdfBtn','bodyLength','copyRecordBtn','pointChoice','pointX','pointY','selectPointBtn','morePointsBtn','symmetryMode','curvePointBtn','cornerPointBtn','cutRegionBtn','applyCutBtn','resetTimberBtn','finishEditBtn','cutDepth','cutThrough','cancelCutBtn','trimLengthBtn','axleModeBtn','trimLength','applyTrimBtn','frontAxleInput','rearAxleInput','cutStartInput','cutEndInput','cutEndDepth','cutShape','removeAxlesBtn','clearRecordsBtn','clearSelectedRecordsBtn','undoClearRecordsBtn','undoBtn','redoBtn','playRaceAnimation'])$(id).disabled=on;for(const el of document.querySelectorAll('[data-select]'))el.disabled=on;$('skipAnimation').classList.toggle('hidden',!on);$('raceBtn').disabled=on||!state.selected.length;updateRecordActions();}
+function setRaceLock(on){for(const b of document.querySelectorAll('[data-car-color]'))b.disabled=on;for(const id of ['saveCarBtn','exportPdfBtn','bodyLength','copyRecordBtn','pointChoice','pointX','pointY','selectPointBtn','morePointsBtn','symmetryMode','curvePointBtn','cornerPointBtn','cutRegionBtn','applyCutBtn','resetTimberBtn','finishEditBtn','cutDepth','cutThrough','cancelCutBtn','trimLengthBtn','axleModeBtn','trimLength','applyTrimBtn','frontAxleInput','rearAxleInput','cutStartInput','cutEndInput','cutEndDepth','cutShape','removeAxlesBtn','clearRecordsBtn','clearSelectedRecordsBtn','undoClearRecordsBtn','undoBtn','redoBtn','playRaceAnimation','racePlaybackRate'])$(id).disabled=on;for(const el of document.querySelectorAll('[data-select]'))el.disabled=on;$('skipAnimation').classList.toggle('hidden',!on);$('raceBtn').disabled=on||!state.selected.length;updateRecordActions();syncRacePlaybackUI();}
+function racePlaybackRate(){const rate=Number($('racePlaybackRate').value);return [1,.5,.25].includes(rate)?rate:1;}
+function syncRacePlaybackUI(){
+ const enabled=$('playRaceAnimation').checked,rate=racePlaybackRate();
+ $('racePlaybackRate').disabled=racing||!enabled;
+ $('raceAnimationHint').textContent=!enabled?'Instant results. No countdown or animation.':rate===1?'1× real time. The 3-second countdown is separate.':`${1/rate}× slower to watch. Race times stay unchanged; countdown is separate.`;
+}
 function runRace(){
- if(racing||activeDrawingCanvas||!state.selected.length)return;const cars=selectedCars();if(cars.length>4)return;for(const car of cars){const issue=saveProblem(statistics(evaluateShape(car.descriptor)));if(issue){toast(car.name+': '+issue);return;}}
+ if(racing||activeDrawingCanvas||!state.selected.length)return;const cars=selectedCars();if(!cars.length||cars.length>4)return;for(const car of cars){const issue=saveProblem(statistics(evaluateShape(car.descriptor)));if(issue){toast(car.name+': '+issue);return;}}
  raceData={entries:cars.map(r=>({id:r.id,descriptor:clone(r.descriptor),result:simulate(statistics(evaluateShape(r.descriptor)))}))};prepareRaceMeshes(cars);
- raceReadyDrawn=false;raceFinished=false;racing=true;setRaceLock(true);$('raceStatus').textContent='Get ready';$('countdown').classList.remove('hidden');
- const longest=Math.max(...raceData.entries.map(e=>e.result.samples.at(-1)[0])),start=performance.now(),wait=1500,replayMs=6500,reduced=!$('playRaceAnimation').checked;
- function frame(now){if(!racing)return;const age=now-start;if(age<wait&&!reduced){$('countdown').textContent=String(Math.max(1,3-Math.floor(age/500)));showRaceFrame(cars.map(()=>0));raceRAF=requestAnimationFrame(frame);return;}
- $('countdown').classList.add('hidden');$('raceStatus').textContent='Racing';const progress=reduced?1:clamp((age-wait)/replayMs,0,1),t=longest*progress;showRaceFrame(raceData.entries.map(e=>distanceAt(e.result,t)));$('raceClock').textContent=`${t.toFixed(2)} s`;if(progress>=1){finishRace();return;}raceRAF=requestAnimationFrame(frame);}
+ raceReadyDrawn=false;raceFinished=false;racing=true;setRaceLock(true);$('raceClock').textContent='0.000 s';showRaceFrame(cars.map(()=>0));
+ if(!$('playRaceAnimation').checked){finishRace();return;}
+ $('raceStatus').textContent='Get ready';$('countdown').textContent='3';$('countdown').classList.remove('hidden');
+ const longest=Math.max(...raceData.entries.map(e=>e.result.samples.at(-1)[0])),start=performance.now(),wait=3000,rate=racePlaybackRate();
+ function frame(now){
+  if(!racing)return;
+  const age=Math.max(0,now-start);
+  if(age<wait){$('countdown').textContent=String(Math.ceil((wait-age)/1000));raceRAF=requestAnimationFrame(frame);return;}
+  $('countdown').classList.add('hidden');$('raceStatus').textContent=rate===1?'Racing':`Racing · ${rate}× playback`;
+  // Clock and positions share simulation time; only wall-clock playback is scaled.
+  const t=Math.min(longest,(age-wait)/1000*rate);
+  showRaceFrame(raceData.entries.map(e=>distanceAt(e.result,t)));$('raceClock').textContent=`${t.toFixed(3)} s`;
+  if(t>=longest){finishRace();return;}
+  raceRAF=requestAnimationFrame(frame);
+ }
  raceRAF=requestAnimationFrame(frame);
 }
-function finishRace(){if(!raceData||raceFinished)return;raceFinished=true;racing=false;cancelAnimationFrame(raceRAF);$('countdown').classList.add('hidden');const date=new Date().toISOString();for(const entry of raceData.entries){const r=state.records.find(r=>r.id===entry.id);if(r){r.time=entry.result.time;r.runs.push({date,time:r.time});}}showRaceFrame(raceData.entries.map(e=>e.result.samples.at(-1)[1]));$('raceClock').textContent=Math.max(...raceData.entries.map(e=>e.result.samples.at(-1)[0])).toFixed(2)+' s';$('raceStatus').textContent='Finished · see Record';renderHistory();setRaceLock(false);update();}
+function finishRace(){if(!raceData||raceFinished)return;raceFinished=true;racing=false;cancelAnimationFrame(raceRAF);$('countdown').classList.add('hidden');const date=new Date().toISOString();for(const entry of raceData.entries){const r=state.records.find(r=>r.id===entry.id);if(r){r.time=entry.result.time;r.runs.push({date,time:r.time});}}showRaceFrame(raceData.entries.map(e=>e.result.samples.at(-1)[1]));$('raceClock').textContent=Math.max(...raceData.entries.map(e=>e.result.samples.at(-1)[0])).toFixed(3)+' s';$('raceStatus').textContent='Finished · see Record';renderHistory();setRaceLock(false);update();}
 function renderHistory(){
  updateRecordActions();$('historyEmpty').classList.toggle('hidden',state.records.length>0);$('historyRows').innerHTML=state.records.slice().reverse().map(r=>`<tr><td><input type="checkbox" data-select="${r.id}" aria-label="Select ${esc(r.name)}" ${state.selected.includes(r.id)?'checked':''} ${racing?'disabled':''}></td><td><button class="record-link" data-record="${r.id}" aria-label="Open ${esc(r.name)} record">${r.thumbnail?`<img src="${r.thumbnail}" alt="">`:''}<span><strong>${esc(r.name)}</strong><br><small>View model</small></span></button></td><td>${coordinateNumber(bodyLength(r.descriptor.design))} mm</td><td>${r.mass.toFixed(1)} g</td><td>${r.time==null?(r.runs.length?'DNF':'—'):r.time.toFixed(3)+' s'}</td><td class="notes">${esc(r.note)}</td></tr>`).join('');renderSlots();
 }
@@ -1091,7 +1324,7 @@ function buildDesignPdf(descriptor=snapshot(),name=state.name,date=new Date()){
  }
  function dimensions(which){
   const top=which==='top';line(margin,711,W-margin,711,[.79,.86,.84]);
-  textAt(`Rear hole: diameter ${num(v.h.d)} mm  |  depth ${num(v.h.depth)} mm  |  centre Z ${num(v.h.z)} mm`,margin,729,9);
+  textAt(`Rear hole: diameter ${num(v.h.d)} mm  |  depth ${num(v.h.depth)} mm  |  centre Z ${num(v.h.z)} mm  |  bottom Z ${num(v.h.z-v.h.d/2)} mm`,margin,729,9);
   textAt(`Axles from nose: ${d.axlesInstalled?`front ${num(noseDistance(d,v.frontAxle))} mm  |  rear ${num(noseDistance(d,v.rearAxle))} mm  |  Z ${AXLE_Z} mm`:'not added'}`,margin,746,9);
   textAt(top?'Y = 0 is the original timber\'s lower edge; Y increases upwards.':'Z = 0 is the original body base.',margin,765,8,false,muted);
   textAt(`Point/cut X = timber origin; nose X = ${num(noseOffset(d))} mm. Coordinates rounded to 0.01 mm.`,margin,779,8,false,muted);
@@ -1212,7 +1445,7 @@ function assertDescriptor(input){if(!input||input.k!==1||input.L!==input.design?
 function timberFromDesign(d){return {width:d.stockW,frontHeight:d.stockFrontH,rearHeight:d.stockRearH,density:d.density,hardware:d.hardware,hole:clone(d.hole),frontAxle:d.frontAxle,rearInset:d.rearInset};}
 function readTimber(input){return timberFromDesign(assertDesign(defaultDesign(input)));}
 function captureEdit(){return {design:clone(state.design),timber:clone(state.timber)};}
-function restoreEdit(entry){state.design=entry.design||entry;if(entry.timber)state.timber=entry.timber;}
+function restoreEdit(entry){state.design=entry.design||entry;if(entry.timber)state.timber=entry.timber;pointEditMessage='';pointEditLimit=false;}
 function readRecord(r,ids){
  if(!r||!Number.isInteger(r.id)||r.id<1||ids.has(r.id))throw Error('Invalid car ID.');
  const descriptor=assertDescriptor(r.descriptor),stats=statistics(evaluateShape(descriptor));if(saveProblem(stats))throw Error('A saved car does not meet the specifications.');
@@ -1252,7 +1485,7 @@ function attachUI(){
   $('copyRecordBtn').onclick=useRecord;$('recordRearBtn').onclick=()=>{recordView.yaw=Math.PI/2;recordView.pitch=.05;recordView.zoom=.5;recordView.render();};$('record3DBtn').onclick=()=>{recordView.yaw=.66;recordView.pitch=.49;recordView.zoom=1;recordView.render();};
   const view=(id,yaw,pitch)=>{$(id).onclick=()=>{preview.yaw=yaw;preview.pitch=pitch;preview.zoom=id==='rearView'?.50:1;for(const key of ['isoView','rearView','sideView','topView'])$(key).classList.toggle('active',key===id);preview.render();};};view('isoView',.66,.49);view('rearView',Math.PI/2,.05);view('sideView',0,.05);view('topView',0,1.55);
   $('cutawayBtn').onclick=()=>{cutaway=!cutaway;$('cutawayBtn').classList.toggle('active',cutaway);$('cutawayBtn').setAttribute('aria-pressed',String(cutaway));scheduleUpdate();};
-  $('playRaceAnimation').checked=true;
+  $('playRaceAnimation').checked=true;$('racePlaybackRate').value='1';$('playRaceAnimation').onchange=syncRacePlaybackUI;$('racePlaybackRate').onchange=syncRacePlaybackUI;syncRacePlaybackUI();
   $('raceBtn').onclick=runRace;$('skipAnimation').onclick=finishRace;
   $('clearRecordsBtn').onclick=clearAllRecords;$('clearSelectedRecordsBtn').onclick=clearSelectedRecords;$('undoClearRecordsBtn').onclick=undoClearRecords;
   window.addEventListener('resize',()=>scheduleUpdate());
@@ -1262,7 +1495,7 @@ function init(){
   state=freshState();
   constrainDesign(state.design);preview=new Renderer($('previewCanvas'));raceView=new Renderer($('raceCanvas'),{track:true});attachDrawing('top');attachDrawing('side');attachUI();restoreFields();update();
   // Small inspection API for numerical regression tests; no remote services or credentials.
-  window.DragsterLab={getState:()=>clone(state),getCurrent:()=>({descriptor:snapshot(),stats:clone(currentStats)}),defaultDesign,evaluateShape,statistics,volume,validate,simulate,makeCarMesh,configProblem,readProject,buildDesignPdf,cutSection,nosePlane,noseSection,cutRect,cutGuardProblem,cutShapeProblem,rawCurveProblem,curvePoint,axlePlacementProblem,axleChecks,axleSupportProblem,balanceEstimate,trimDesign,minimumTrimKeep,minimumWheelbase,coordinateTarget,noseOffset,bodyLength,remainingCutThicknessProblem,renderer:preview,trackRenderer:raceView,physics:PHYSICS};
+  window.DragsterLab={getState:()=>clone(state),getCurrent:()=>({descriptor:snapshot(),stats:clone(currentStats)}),defaultDesign,evaluateShape,statistics,volume,validate,simulate,aerodynamicEstimate,aerodynamicDrag,makeCarMesh,configProblem,readProject,buildDesignPdf,cutSection,nosePlane,noseSection,cutRect,cutGuardProblem,cutShapeProblem,rawCurveProblem,curvePoint,axlePlacementProblem,axleChecks,axleSupportProblem,balanceEstimate,trimDesign,minimumTrimKeep,minimumWheelbase,coordinateTarget,noseOffset,bodyLength,remainingCutThicknessProblem,renderer:preview,trackRenderer:raceView,physics:PHYSICS};
 }
 init();
 })();
